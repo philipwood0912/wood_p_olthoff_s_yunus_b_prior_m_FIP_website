@@ -4,7 +4,7 @@ class Database
     // Note: specify your own database credentials
     private $host = "localhost";
 
-    private $db_name = "";
+    private $db_name = "db_fip";
 
     private $username = "root";
 
@@ -20,12 +20,6 @@ class Database
             'dbname'  => $this->db_name,
             'charset' => 'utf8',
         );
-
-        if (getenv('IDP_ENVIRONMENT') === 'docker') {
-            $db_dsn['host'] = 'mysql';
-            $this->username = 'docker_u';
-            $this->password = 'docker_p';
-        }
 
         try {
             $dsn        = 'mysql:' . http_build_query($db_dsn, '', ';');
