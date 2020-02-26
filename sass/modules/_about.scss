@@ -1,3 +1,36 @@
 #aboutCon {
+    background: $mainWhite;
+    color: $mainRed;
+    justify-content: center;
+    padding:10px;
+}
+
+#aboutDescCon{
+    max-width:90%;
+    margin:0 auto;
+}
+
+.redTitle {
+    text-align: center;
+}
+
+.aboutText{
+    color: $mainGrey;
+}
+
+.aboutList{
+    font-size:14px;
+    line-height:30px;
+    color: $mainGrey;
+}
+
+.contactCon{
     background: $mainRed;
+    height:200px;
+    display:flex;
+    margin:0 auto;
+}
+
+.whiteTitle{
+    color: $mainWhite;
 }
