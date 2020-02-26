@@ -1,6 +1,6 @@
 <?php
     require_once 'load.php';
-    if(isset($_POST['login'])){
+    if(isset($_POST['submit'])){
         $username = trim($_POST['username']);
         $password = trim($_POST['password']);
 
@@ -39,7 +39,7 @@
         <router-link to="/login">Admin Login</router-link>
     </div>
     <div v-else></div>
-<router-view></router-view>
+    <router-view></router-view>
     </main>
     <script src="public/js/main.js" type="module"></script>
 </body>

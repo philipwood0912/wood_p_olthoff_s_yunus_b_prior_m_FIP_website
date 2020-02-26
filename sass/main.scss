@@ -1,1 +1,7 @@
+@import '_vars';
 @import 'modules/_header';
+@import 'modules/_logInPage';
+
+.hidden {
+    display: none;
+}
