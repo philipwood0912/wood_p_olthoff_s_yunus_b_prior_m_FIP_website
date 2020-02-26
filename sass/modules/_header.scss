@@ -6,7 +6,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0px 25px;
-    background-color: red;
 }
 .active {
     transform: rotate(90deg);
@@ -16,4 +15,8 @@ header {
 #menu-overlay {
     display: flex;
     flex-direction: column;
+}
+
+#headerLogo {
+    max-width:70%;
 }

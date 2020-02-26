@@ -1,7 +1,1 @@
-{
-"version": 3,
-"mappings": "AACA,MAAO,CACH,MAAM,CAAE,KAAK,CACb,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,GAAG,CACnB,eAAe,CAAE,aAAa,CAC9B,WAAW,CAAE,MAAM,CACnB,OAAO,CAAE,QAAQ,CACjB,gBAAgB,CAAE,GAAG,CAEzB,OAAQ,CACJ,SAAS,CAAE,aAAa,CACxB,UAAU,CAAE,QAAQ,CAGxB,aAAc,CACV,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,MAAM",
-"sources": ["../../sass/modules/_header.scss"],
-"names": [],
-"file": "main.css"
-}
+{"version":3,"sourceRoot":"","sources":["../../sass/modules/_all.scss","../../sass/_vars.scss","../../sass/modules/_header.scss","../../sass/modules/_nav.scss","../../sass/modules/_footer.scss","../../sass/modules/_about.scss"],"names":[],"mappings":"AAAA,qBAEA,KACI,YCYO,4BDTX,GACI,eAGJ,GACI,eAGJ,GACI,eAGJ,GACI,eAGJ,EACI,eAIJ,EACI,eE3BJ,OACI,aACA,aACA,mBACA,8BACA,mBACA,iBAEJ,QACI,wBACA,oBAGJ,cACI,aACA,sBAGJ,YACI,cCpBJ,cACI,WFUQ,KETR,WAGJ,SACI,qBACA,eACA,MFGQ,KEFR,WFJM,QEKN,kBACA,gBACA,iBACA,oBCbJ,OACI,aACA,sBACA,kBACA,cAGJ,WACI,qBACA,WHJM,QGKN,YAGJ,YACI,qBACA,MHJQ,KGKR,aACA,WAGJ,kBACI,UAGJ,YACI,cACA,cACA,gBACA,mBAGJ,WACI,MHvBO,QGwBP,gBCjCJ,UACI,WJIM","file":"main.css"}
