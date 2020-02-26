@@ -26,11 +26,31 @@
 
 .contactCon{
     background: $mainRed;
-    height:200px;
-    display:flex;
     margin:0 auto;
+    padding:10px;
 }
 
 .whiteTitle{
     color: $mainWhite;
+    text-align: center;
 }
+
+#contactText{
+    color: $mainWhite;
+    line-height:20px;
+}
+
+#socialCon{
+    color: $mainWhite;
+    justify-content:space-between;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    padding: 10px;
+
+}
+
+.socialIcon{
+    color: $mainWhite;
+}
+
