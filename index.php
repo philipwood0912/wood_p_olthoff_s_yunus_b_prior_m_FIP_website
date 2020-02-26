@@ -19,6 +19,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link rel="stylesheet" href="public/css/main.css">
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
@@ -26,10 +27,20 @@
 </head>
 <body>
     <main id="app">
-    <?php include 'templates/header.php'; ?>
+    <header>
+        <img src="" alt="logo">
+        <div class="menu" :class="{'active': isActive}" @click="showTopMenu = !showTopMenu, isActive = !isActive"><i class="fas fa-bars fa-3x"></i></div>
+    </header>
+    <div id="menu-overlay" v-if="showTopMenu">
+        <router-link to="/">Home</router-link>
+        <router-link to="/learn">Learn More</router-link>
+        <router-link to="/about">About Us</router-link>
+        <router-link to="/contact">Contact</router-link>
+        <router-link to="/login">Admin Login</router-link>
+    </div>
+    <div v-else></div>
 <router-view></router-view>
-    <?php include 'templates/footer.php'; ?>
     </main>
-    <script defer src="public/js/main.js" type="module"></script>
+    <script src="public/js/main.js" type="module"></script>
 </body>
 </html>
