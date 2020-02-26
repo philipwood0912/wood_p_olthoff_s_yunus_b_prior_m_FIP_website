@@ -1,6 +1,6 @@
 <?php
     require_once 'load.php';
-    if(isset($_POST['login'])){
+    if(isset($_POST['submit'])){
         $username = trim($_POST['username']);
         $password = trim($_POST['password']);
 
@@ -27,6 +27,24 @@
 </head>
 
 <body>
+<<<<<<< HEAD
+    <main id="app">
+    <header>
+        <img src="" alt="logo">
+        <div class="menu" :class="{'active': isActive}" @click="showTopMenu = !showTopMenu, isActive = !isActive"><i class="fas fa-bars fa-3x"></i></div>
+    </header>
+    <div id="menu-overlay" v-if="showTopMenu">
+        <router-link to="/">Home</router-link>
+        <router-link to="/learn">Learn More</router-link>
+        <router-link to="/about">About Us</router-link>
+        <router-link to="/contact">Contact</router-link>
+        <router-link to="/login">Admin Login</router-link>
+    </div>
+    <div v-else></div>
+    <router-view></router-view>
+    </main>
+    <script src="public/js/main.js" type="module"></script>
+=======
 <main id="app">
 <?php include 'templates/header.php'; ?>
 
@@ -35,5 +53,6 @@
     <?php include 'templates/footer.php'; ?>
 </main>
 <script src="public/js/main.js" type="module"></script>
+>>>>>>> 0928bb4c64a75697a94ae751cf16889bdb539b32
 </body>
 </html>
