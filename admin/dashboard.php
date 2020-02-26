@@ -1,5 +1,9 @@
 <?php
+    if(!isset($_SESSION)){
+        session_start();
+    }
     require_once '../load.php';
+    $username = $_SESSION['user'];
 ?>
 
 <!DOCTYPE html>
@@ -11,6 +15,20 @@
     <title>Admin Dashboard</title>
 </head>
 <body>
-    <h1>Admin Dashboard</h1>
+    <header>
+        <img src="../public/images/fip_logo.svg" alt="logo">
+    </header>
+    <div class="dashboard">
+        <h2>Welcome back <?php echo $username;?></h2>
+        <h3>Admin Settings</h3>
+        <ul>
+            <a>Change Password</a>
+            <a>Change Username</a>
+            <a>Change Email</a>
+            <a>Manage Users</a>
+            <a>Manage Content</a>
+            <button>Log Out</button>
+        </ul>
+    </div>
 </body>
 </html>

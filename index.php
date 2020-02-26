@@ -1,8 +1,12 @@
 <?php
+    if(!isset($_SESSION)){
+        session_start();
+    }
     require_once 'load.php';
     if(isset($_POST['submit'])){
         $username = trim($_POST['username']);
         $password = trim($_POST['password']);
+        $_SESSION['user'] = $username;
 
         if(!empty($username) && !empty($password)){
             //Do login here
@@ -27,7 +31,7 @@
 </head>
 
 <body>
-
+  
 <main id="app">
     <?php include 'templates/header.php'; ?>
 
