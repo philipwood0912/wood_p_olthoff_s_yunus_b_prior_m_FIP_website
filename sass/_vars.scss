@@ -1,2 +1,24 @@
+<<<<<<< HEAD
 $mainRed: #d80000;
 $mainGrey: #4a4a4a;
+=======
+//Page Colour Styles
+
+//#d80000 - main red
+//#4a4a4a - main grey
+
+$mainRed: #d80000; //for use on logo, background, accents, buttons, etc. 
+
+$clearRed: rgba(216, 0, 0, 0.8); //for nav background
+
+$mainGrey: #4a4a4a; //for text on white backgrounds
+
+$mainWhite: white; //for text on red background, for site background
+
+//Page Text Styles
+
+$mainFont: 'century-gothic', sans-serif;
+
+
+//Other Variables
+>>>>>>> 0928bb4c64a75697a94ae751cf16889bdb539b32

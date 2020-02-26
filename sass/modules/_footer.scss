@@ -1,0 +1,35 @@
+footer{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#footerNav{
+    text-decoration: none;
+    background: $mainRed;
+    padding:5px;
+}
+
+.footerLink{
+    text-decoration: none;
+    color: $mainWhite;
+    padding: 10px;
+    opacity: 0.8;
+}
+
+.footerLink:hover{
+    opacity:1.0;
+}
+
+#footerLogo{
+    max-width:60%;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+#copyright{
+    color: $mainGrey;
+    margin-top:10px;
+}

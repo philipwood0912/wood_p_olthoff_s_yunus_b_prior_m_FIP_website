@@ -25,7 +25,9 @@
     <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
     <title>FIP</title>
 </head>
+
 <body>
+<<<<<<< HEAD
     <main id="app">
     <header>
         <img src="" alt="logo">
@@ -42,5 +44,15 @@
     <router-view></router-view>
     </main>
     <script src="public/js/main.js" type="module"></script>
+=======
+<main id="app">
+<?php include 'templates/header.php'; ?>
+
+    <router-view></router-view>
+
+    <?php include 'templates/footer.php'; ?>
+</main>
+<script src="public/js/main.js" type="module"></script>
+>>>>>>> 0928bb4c64a75697a94ae751cf16889bdb539b32
 </body>
 </html>

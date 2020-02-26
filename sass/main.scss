@@ -1,6 +1,9 @@
-@import '_vars';
+@import 'vars';
+@import 'modules/_all';
 @import 'modules/_header';
-@import 'modules/_logInPage';
+@import 'modules/_nav';
+@import 'modules/_footer';
+@import 'modules/_about';
 
 .hidden {
     display: none;
