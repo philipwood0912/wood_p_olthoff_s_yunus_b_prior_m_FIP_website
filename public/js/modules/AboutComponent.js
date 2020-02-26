@@ -47,7 +47,40 @@ export default {
         <div class="abtImageCon">Images will go here</div>
 
         <div class="contactCon">
-        <h2 class="whiteTitle">Get Involved</h2>
+            <h2 class="whiteTitle">Get Involved</h2>
+
+            <div id="contactText">
+                <p>For more information about our campaign efforts, or how to get yourself involved, please contact us though the information provided below, or contact your local Health Clinic for more information.</p>
+
+                <ul>
+                    <li>By Phone : +1 555-555-5555
+                    </li>
+                    <li>By Email : contact@gettested.ca
+                    </li>
+                    <li>By Fax : +1 555-555-5555
+                    </li>
+                    <li>In Person : 123 Main Street, 
+                    London On, Canada</li>
+                </ul>
+            </div>
+
+            <h2 class="whiteTitle">Find Us On Social Media</h2>
+
+            <div id="socialCon">
+                <a class="socialIcon" href="http://www.facebook.com">
+                    <i class="fab fa-facebook fa-3x"></i>
+                </a>
+                <a class="socialIcon" href="http://www.twitter.com">
+                    <i class="fab fa-twitter-square fa-3x"></i>
+                </a>
+                <a class="socialIcon" href="http://www.youtube.com">
+                    <i class="fab fa-youtube fa-3x"></i>
+                </a>
+                <a class="socialIcon" href="http://www.google.com">
+                    <i class="fab fa-google fa-3x"></i>
+                </a>
+            </div>
+
         </div>
 
 

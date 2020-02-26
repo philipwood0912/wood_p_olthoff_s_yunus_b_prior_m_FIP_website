@@ -31,8 +31,9 @@
 </head>
 
 <body>
+  
 <main id="app">
-<?php include 'templates/header.php'; ?>
+    <?php include 'templates/header.php'; ?>
 
     <router-view></router-view>
 

@@ -2,6 +2,7 @@
 
 body{
     font-family: $mainFont;
+    line-height:22px;
 }
 
 h1{
@@ -28,4 +29,8 @@ p{
 
 a{
     font-size: 16px;
+}
+
+ul{
+    line-height:22px;
 }

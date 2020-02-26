@@ -9,7 +9,6 @@ const routes = [
     { path: '/', name: 'home', component: HomeComponent },
     { path: '/about', name: 'about', component: AboutComponent },
     { path: '/login', name: 'login', component: LoginComponent },
-    { path: '/about', name: 'learn', component: LearnComponent },
     { path: '/contact', name: 'contact', component: ContactComponent },
     { path: '/*', name: 'error', component: ErrorComponent },
 ]
