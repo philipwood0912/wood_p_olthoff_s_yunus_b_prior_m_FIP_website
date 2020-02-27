@@ -5,7 +5,8 @@
     require_once '../load.php';
     $username = $_SESSION['user'];
     if(isset($_POST['logout'])){
-        
+        unset($_SESSION['user']);
+        redirect_to('../#/login');
     }
 ?>
 
@@ -25,7 +26,7 @@
     <div class="dashboard">
         <div id="mainTitle">
             <h2>Welcome back <?php echo $username;?></h2>
-            <form action="dashboard.php" action="post">
+            <form action="dashboard.php" method="post">
                 <button name="logout">Log Out</button>
             </form>
         </div>

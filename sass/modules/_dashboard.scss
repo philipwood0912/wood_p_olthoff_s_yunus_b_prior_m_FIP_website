@@ -23,6 +23,19 @@
         font-size: 22px;
     }
 }
+
+#mainTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    form {
+        button {
+            font-size: 22px;
+            color: $mainRed;
+            margin-left: 20px;
+        }
+    }
+}
 #mainNav {
     display: flex;
     flex-direction: column;
