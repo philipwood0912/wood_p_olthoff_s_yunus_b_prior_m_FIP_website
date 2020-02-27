@@ -22,6 +22,12 @@ const vm = new Vue({
         showTopMenu: false,
         isActive: false
     },
+    methods: {
+        closeMenu(){
+            this.showTopMenu = false;
+            this.isActive = false;
+        }
+    },
 
     router
 }).$mount("#app");
