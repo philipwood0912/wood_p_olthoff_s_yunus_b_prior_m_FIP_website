@@ -9,6 +9,9 @@
         color: white;
         font-size: 30px;
     }
+    h3 {
+        color: white;
+    }
 }
 .avatar {
     text-align: center;
@@ -37,5 +40,12 @@
         padding: 5px;
         font-size: 22px;
         color: $mainRed;
+        margin-bottom: 20px;
     }
+}
+
+#gohome {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
 }

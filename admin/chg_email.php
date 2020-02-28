@@ -1,5 +1,21 @@
 <?php
     require_once '../load.php';
+    confirm_logged_in();
+    if(isset($_POST['submit'])){
+        $oldemail = trim($_POST['oldemail']);
+        $email = trim($_POST['newemail']);
+        $conemail = trim($_POST['connewemail']);
+
+        if(empty($oldemail) || empty($email) || empty($conemail)){
+            $message = "Please fill out required fields";
+        } else {
+            if($email === $conemail){
+                $message = changeEmail($oldemail, $email);
+            } else {
+                $message = "New emails must match";
+            }
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +32,7 @@
     </header>
     <div class="sub-dashboard">
         <h3>Change your email</h3>
+        <h3><?php echo !empty($message)? $message:'';?></h3>
         <form class="dashboard-form" action="chg_email.php" method="post">
             <label class="hidden">Old Email</label>
             <input name="oldemail" type="text" value="" placeholder="Old Email">

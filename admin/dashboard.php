@@ -1,13 +1,6 @@
 <?php
-    if(!isset($_SESSION)){
-        session_start();
-    }
     require_once '../load.php';
-    $username = $_SESSION['user'];
-    if(isset($_POST['logout'])){
-        unset($_SESSION['user']);
-        redirect_to('../#/login');
-    }
+    confirm_logged_in();
 ?>
 
 <!DOCTYPE html>
@@ -24,12 +17,7 @@
         <img src="../public/images/fip_logo.svg" alt="logo">
     </header>
     <div class="dashboard">
-        <div id="mainTitle">
-            <h2>Welcome back <?php echo $username;?></h2>
-            <form action="dashboard.php" method="post">
-                <button name="logout">Log Out</button>
-            </form>
-        </div>
+        <h2>Welcome back <?php echo $_SESSION['username'];?></h2>
         <h3>Admin Settings</h3>
         <ul id="mainNav">
             <a href="chg_pass.php">Change Password <i class="fas fa-arrow-circle-right"></i></a>
@@ -37,6 +25,7 @@
             <a href="chg_email.php">Change Email <i class="fas fa-arrow-circle-right"></i></a>
             <a href="mng_users.php">Manage Users <i class="fas fa-arrow-circle-right"></i></a>
             <a href="mng_content.php">Manage Content <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="logout.php">Log Out <i class="fas fa-arrow-circle-right"></i></a>
         </ul>
     </div>
 </body>

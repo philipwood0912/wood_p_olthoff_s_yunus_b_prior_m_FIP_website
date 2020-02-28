@@ -1,22 +1,3 @@
-<?php
-    if(!isset($_SESSION)){
-        session_start();
-    }
-    require_once 'load.php';
-    if(isset($_POST['submit'])){
-        $username = trim($_POST['username']);
-        $password = trim($_POST['password']);
-        $_SESSION['user'] = $username;
-
-        if(!empty($username) && !empty($password)){
-            //Do login here
-            $message = login($username, $password);
-        }else{
-            $message = 'Please fill out required fields';
-        }
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
