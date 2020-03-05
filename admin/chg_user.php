@@ -23,6 +23,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link rel="stylesheet" href="../public/css/main.css">
     <title>Admin Dashboard</title>
 </head>
@@ -31,7 +32,7 @@
         <img src="../public/images/fip_logo.svg" alt="logo">
     </header>
     <div class="sub-dashboard">
-        <h3>Change your username</h3>
+        <h2>Change your username</h2>
         <h3><?php echo !empty($message)? $message:'';?></h3>
         <form class="dashboard-form" action="chg_user.php" method="post">
             <label class="hidden">Old Username</label>
@@ -42,7 +43,7 @@
             <input name="connewuser" type="text" value="" placeholder="Confirm New Username">
             <button name="submit">Submit</button>
         </form>
-        <a href="dashboard.php">Go Back</a>
+        <a href="dashboard.php">Go Back <i class="fas fa-arrow-circle-right"></i></a>
     </div>
 </body>
 </html>
