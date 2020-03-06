@@ -1,12 +1,19 @@
 
 header {
-    height: 120px;
+    height: 80px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 0px 25px;
+    background: $white;
+    max-width:100%;
 }
+
+#burger{
+    color: $blue;
+}
+
 .active {
     transform: rotate(90deg);
     transition: .5s ease;

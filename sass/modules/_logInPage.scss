@@ -1,27 +1,22 @@
 #signin {
-    background-color: $mainRed;
+    background-color: $red;
     width: 90%;
     margin: 0 auto;
     margin-top: 20px;
     padding: 20px;
     text-align: center;
     h2 {
-        color: white;
         font-size: 30px;
-    }
-    h3 {
-        color: white;
     }
 }
 .avatar {
     text-align: center;
     i {
-        background-color: white;
         width: 100px;
         height: 100px;
         border-radius: 100px;
         overflow: hidden;
-        border: 3px solid $mainRed;
+        border: 3px solid $red;
     }
 }
 #signinform {
@@ -39,13 +34,12 @@
         width: 100px;
         padding: 5px;
         font-size: 22px;
-        color: $mainRed;
+        color: $red;
         margin-bottom: 20px;
     }
 }
 
 #gohome {
-    color: white;
     text-decoration: none;
     font-size: 24px;
 }

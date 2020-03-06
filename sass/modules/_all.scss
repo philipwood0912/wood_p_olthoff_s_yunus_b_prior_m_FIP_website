@@ -1,36 +1,51 @@
 .hidden { display:none;}
 
 body{
+    display:flex;
+    flex-direction:column;
+    margin: 0 auto;
+    width:100%;
+
+    background: url("../images/site_bg.png") no-repeat fixed center ;
+}
+
+footer{
     font-family: $mainFont;
-    line-height:22px;
 }
 
 h1{
     font-size: 26px;
+    color: $white;
 }
 
 h2{
     font-size: 26px;
+    color: $white;
 }
 
 h3{
     font-size: 20px;
+    color: $white;
 }
 
 h4{
     font-size: 18px;
+    color: $white;
 }
 
 p{
     font-size: 14px;
     line-height:20px;
+    color: $white;
 }
 
 
 a{
     font-size: 16px;
+    color: $white;
 }
 
 ul{
     line-height:22px;
+    color: $white;
 }

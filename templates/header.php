@@ -2,7 +2,7 @@
     <img id="headerLogo" src="public/images/fip_logo.svg" alt="logo">
 
 
-<div class="menu" :class="{'active': isActive}" @click="showTopMenu = !showTopMenu, isActive = !isActive"><i class="fas fa-bars fa-3x"></i></div>
+<div class="menu" :class="{'active': isActive}" @click="showTopMenu = !showTopMenu, isActive = !isActive"><i id="burger" class="fas fa-bars fa-3x"></i></div>
     </header>
 
     <div id="menu-overlay" v-if="showTopMenu">

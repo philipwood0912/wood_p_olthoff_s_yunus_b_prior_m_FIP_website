@@ -1,29 +1,20 @@
 .dashboard {
-    background-color: $mainRed;
+    background-color: $red;
     padding: 20px;
-    h2 {
-        color: white;
-    }
-    h3 {
-        color: white;
-    }
 }
 
 .sub-dashboard {
-    background-color: $mainRed;
+    background-color: $red;
     text-align: center;
     padding: 20px;
     h2 {
-        color: white;
         font-size: 30px;
     }
     h3 {
-        color: white;
         font-size: 26px;
     }
     a {
         text-decoration: none;
-        color: white;
         font-size: 22px;
     }
 }
@@ -32,7 +23,6 @@
     flex-direction: column;
     a {
         text-decoration: none;
-        color: white;
         font-size: 20px;
         margin-bottom: 10px;
     }
@@ -53,7 +43,7 @@
         width: 100px;
         padding: 5px;
         font-size: 22px;
-        color: $mainRed;
+        color: $red;
         margin-bottom: 20px;
 
     }

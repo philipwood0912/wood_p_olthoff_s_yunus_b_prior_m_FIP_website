@@ -1,7 +1,4 @@
 <footer> 
-
-    <img id="footerLogo" src="public/images/fip_logo.svg" alt="logo">
-
     <div id="footerNav">
         <router-link class="footerLink" to="/">Home</router-link>
         <router-link class="footerLink" to="/about">About</router-link>

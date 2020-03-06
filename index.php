@@ -11,15 +11,16 @@
     <title>FIP</title>
 </head>
 
-<body>
-  
-<main id="app">
-    <?php include 'templates/header.php'; ?>
+<body id="bg">
 
-    <router-view></router-view>
+    <main id="app">
+        <?php include 'templates/header.php'; ?>
 
-    <?php include 'templates/footer.php'; ?>
-</main>
+        <router-view></router-view>
+
+        <?php include 'templates/footer.php'; ?>
+    </main>
+
 <script src="public/js/main.js" type="module"></script>
 </body>
 </html>
