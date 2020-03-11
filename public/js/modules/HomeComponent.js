@@ -4,7 +4,7 @@ export default {
     <h1 class="hidden"> Home Page </h1>
 
     <div id="heroCon"> 
-        <img src="./public/images/heroImage.svg" alt="hero image with text" id="heroImage">
+        <img src="./public/images/heroImgWeb.svg" alt="hero image with text" id="heroImage">
 
         <i class="fas fa-chevron-down fa-3x" id="chevronDown"></i>
     </div>
