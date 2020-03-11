@@ -22,25 +22,43 @@
 #popUpCon{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     margin: 0 auto;
 }
 
 // MAKE THESE SECTIONS ALTERNATE
 
 .popUpLeft{
-    height:125px;
-    width: 225px;
+    max-width:70%;
     background-color: $white;
-    margin-bottom: 30px;
+    margin-bottom:30px;
+    padding:5px;
+    border-radius:10px;
 }
 
 .popUpRight{
-    height:125px;
-    width: 225px;
+    max-width:70%;
     background-color: $white;
-    margin-bottom: 30px;
+    margin-bottom:30px;
+    padding:5px;
+    border-radius:10px;
 }
+
+//STYLING FOR POP UP TEXT
+.pinkTitle{
+    color: $pink;
+}
+
+.smBlueText{
+    color: $lightBlue;
+}
+
+//styling for popup box border
+.blueBorder{
+    border: 2px solid $lightBlue;
+    border-radius:8px;
+    padding:5px;
+}
+
 
 .button{
     max-width:180px;
@@ -48,6 +66,7 @@
     margin: 0 auto;
     border-radius: 5px;
     background: $white;
+    padding:3px;
     
 }
 
@@ -55,9 +74,12 @@
     border: 2px solid $lightBlue;
     border-radius: 5px;
     font-size: 18px;
-    color: $pink; //trbl
-    padding-top: 3px;
-    padding-bottom: 3px;
-    padding-left: 10px;
-    padding-right: 10px;
+    color: $pink;
+    padding-top:4px;
+    padding-bottom:4px;
+    padding-left:6px;
+    padding-right:6px;
 }
+
+
+
