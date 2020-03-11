@@ -1,16 +1,28 @@
 #menu-overlay {
-    background: $mainWhite;
     width:100%;
 }
 
 .navLink {
     text-decoration: none;
-    font-size:30px;
-    color: $mainWhite;
-    background: $mainRed;
+    font-size:18px;
+    color: $white;
+    background: $lightBlue;
+    padding: 10px;
+    margin-right:3px;
+    width:100%;
     text-align: center;
-    margin-top:20px;
-    padding-top:45px;
-    padding-bottom:45px;
+}
+
+.active {
+    transform: rotate(90deg);
+    transition: .5s ease;
+}
+
+#menu-overlay {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 40px;
+    background: $white;
 }
 

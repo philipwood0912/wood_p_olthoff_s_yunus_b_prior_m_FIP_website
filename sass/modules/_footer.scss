@@ -6,16 +6,19 @@ footer{
 }
 
 #footerNav{
+    display: flex;
     text-decoration: none;
-    background: $mainRed;
-    padding:5px;
+    height:40px;
+    background: $white;
+    justify-content: space-evenly;
 }
 
 .footerLink{
     text-decoration: none;
-    color: $mainWhite;
-    padding: 10px;
     opacity: 0.8;
+    background: $lightBlue;
+    color: $white;
+    padding: 5px;
 }
 
 .footerLink:hover{
@@ -30,6 +33,6 @@ footer{
 }
 
 #copyright{
-    color: $mainGrey;
+    color: $grey;
     margin-top:10px;
 }
