@@ -1,8 +1,21 @@
-.hidden { display:none;}
+.hidden { 
+    display:none;
+}
 
 body{
+    display:flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    max-width:100%;
+
     font-family: $mainFont;
     line-height:22px;
+
+    background-image: url(../images/site_bg.png);
+    background-repeat: no-repeat;
+    background-position: top, center;
+
 }
 
 h1{
@@ -25,7 +38,6 @@ p{
     font-size: 14px;
     line-height:20px;
 }
-
 
 a{
     font-size: 16px;

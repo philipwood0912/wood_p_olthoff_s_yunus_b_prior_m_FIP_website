@@ -1,22 +1,14 @@
 
 header {
-    height: 120px;
+    height: 80px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 0px 25px;
-}
-.active {
-    transform: rotate(90deg);
-    transition: .5s ease;
-}
-
-#menu-overlay {
-    display: flex;
-    flex-direction: column;
+    background: $white;
 }
 
 #headerLogo {
-    max-width:70%;
+    max-width:60%;
 }
