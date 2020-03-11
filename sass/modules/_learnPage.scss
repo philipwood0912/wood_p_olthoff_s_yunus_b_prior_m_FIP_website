@@ -1,0 +1,58 @@
+.learnCon{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    max-width:90%;
+}
+
+#factImg1{
+    margin-top:30px;
+}
+
+#didYouKnow{
+    margin-top:30px;
+}
+
+#factImg2{
+    margin-top:75px;
+    margin-bottom:30px;
+}
+
+#hivAndAids{
+    margin-top:75px;
+    margin-bottom:75px;
+}
+
+#factImg3{
+    margin-top:50px;
+}
+
+#widgetCon{
+    margin-top:40px;
+}
+
+.learnPopUp{
+    max-width:70%;
+    background: $white;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
+    padding:3px;
+}
+
+.popUpBorder{
+    border: 2px solid $lightBlue;
+    border-radius: 8px;
+    padding:10px;
+}
+
+#moreFacts{
+    margin-top:75px;
+    margin-bottom:30px;
+}
+
+.pinkTitle{
+    font-size:30px;
+    color: $white;
+}

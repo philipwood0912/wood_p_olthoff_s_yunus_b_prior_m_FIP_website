@@ -15,7 +15,7 @@ export default {
             <div class="blueBorder">
                 <h3 class="pinkTitle">Get Yourself Tested!</h3>
 
-                <p class="smBlueText">Knowing Your HIV and STD status helps you choose options to stay healthy!</p>
+                <p> Knowing Your HIV and STD status helps you choose options to stay healthy! </p>
             </div>
         </div>
 
@@ -53,7 +53,7 @@ export default {
         
     </div>
 
-    <button class="button"> <span class="buttonTxt">Get The Facts</span></button>
+    <button class="button"> <span class="buttonTxt"> Get The Facts </span></button>
 
 </div>
 
