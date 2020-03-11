@@ -6,9 +6,9 @@
 
         <router-link class="footerLink" to="/">Home</router-link>
 
-        <router-link class="footerLink" to="/about">Get The Facts</router-link>
+        <router-link class="footerLink" to="/learn">Get The Facts</router-link>
 
-        <router-link class="footerLink" to="/contact">Get Involved</router-link>
+        <router-link class="footerLink" to="/about">About Us</router-link>
 
         <!-- <router-link class="footerLink" to="/login">Admin</router-link> -->
 
