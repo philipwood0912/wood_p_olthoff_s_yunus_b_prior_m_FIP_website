@@ -2,7 +2,7 @@
 
 function login($username, $password){
     $pdo = Database::getInstance()->getConnection();
-    $check_exist_query = 'SELECT COUNT(*) FROM `tbl_users` WHERE user_name =:username';
+    $check_exist_query = 'SELECT COUNT(*) FROM `tbl_users` WHERE User_Name =:username';
     $user_set = $pdo->prepare($check_exist_query);
     $user_set->execute(
         array(
@@ -11,21 +11,21 @@ function login($username, $password){
      );
 
     if($user_set->fetchColumn()>0){
-        $check_match_query = 'SELECT * FROM `tbl_users` WHERE user_name =:username AND user_pass =:password';
+        $check_match_query = 'SELECT * FROM `tbl_users` WHERE User_Name =:username';
         $user_match = $pdo->prepare($check_match_query);
         $user_match->execute(
             array(
-                ':username'=>$username,
-                ':password'=>$password
+                ':username'=>$username
             )
         );
         while($founduser = $user_match->fetch(PDO::FETCH_ASSOC)){
             $id = $founduser['ID'];
             $_SESSION['user_id'] = $id;
             $_SESSION['username'] = $founduser['User_Name'];
+            $pass_hash = $founduser['User_Pass'];
+            $pass_ver = password_verify($password, $pass_hash);
         }
-        if(isset($id)){
-            //redirect_to('admin/dashboard.php');
+        if(isset($pass_ver)){
             redirect_to('dashboard.php');
         } else {
             return 'wrong password';

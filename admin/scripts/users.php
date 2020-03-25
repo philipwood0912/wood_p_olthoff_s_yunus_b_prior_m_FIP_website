@@ -10,6 +10,7 @@
             )
         );
         if($user_check->fetchcolumn()<1){
+            $password_hash = password_hash($password, PASSWORD_DEFAULT);
             $insert_query = 'INSERT INTO tbl_users (F_Name, L_Name, Email, User_Name, User_Pass)';
             $insert_query .= ' VALUES (:fname, :lname, :email, :username, :password)';
             $user_insert = $pdo->prepare($insert_query);
@@ -19,7 +20,7 @@
                     ':lname'=>$lname,
                     ':email'=>$email,
                     ':username'=>$username,
-                    ':password'=>$password
+                    ':password'=>$password_hash
                 )
             );
             if($user_success){
