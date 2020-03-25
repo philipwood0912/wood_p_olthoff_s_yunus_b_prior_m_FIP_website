@@ -9,16 +9,18 @@ footer{
     display: flex;
     text-decoration: none;
     height:40px;
-    background: $white;
-    justify-content: space-evenly;
+    background: $lightBlue;
+    justify-content: center;
+    
 }
 
 .footerLink{
     text-decoration: none;
     opacity: 0.8;
-    background: $lightBlue;
+    padding: 10px;
     color: $white;
-    padding: 5px;
+    justify-content: space-evenly;
+    font-size:18px;
 }
 
 .footerLink:hover{
@@ -26,13 +28,14 @@ footer{
 }
 
 #footerLogo{
-    max-width:60%;
+    max-width:40%;
     margin: 0 auto;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-top: 30px;
+    margin-bottom: 15px;
 }
 
 #copyright{
     color: $grey;
     margin-top:10px;
+    margin-bottom:15px;
 }
