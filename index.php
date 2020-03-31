@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="public/css/main.css">
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src="public/js/libraries/vue-google-maps.js"></script>
     <title>FIP</title>
 </head>
 
 <body>
-  
 <main id="app">
     <?php include 'templates/header.php'; ?>
 
@@ -20,6 +20,7 @@
 
     <?php include 'templates/footer.php'; ?>
 </main>
+<script src="config/config.js"></script>
 <script src="public/js/main.js" type="module"></script>
 </body>
 </html>

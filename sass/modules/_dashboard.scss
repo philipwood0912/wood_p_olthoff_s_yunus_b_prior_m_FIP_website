@@ -57,4 +57,26 @@
         margin-bottom: 20px;
 
     }
+    label {
+        font-size: 24px;
+        color: white;
+        margin-bottom: 10px;
+    }
+}
+
+.table-form {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    table {
+        width: 100%;
+        border: 2px solid white;
+        tr, td, tr th {
+            border: 2px solid white;
+            color: white;
+        }
+        td, tr th {
+            height: 50px;
+        }
+    }
 }

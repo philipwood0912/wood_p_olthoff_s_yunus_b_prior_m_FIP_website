@@ -20,10 +20,8 @@
         <h2>Welcome back <?php echo $_SESSION['username'];?></h2>
         <h3>Admin Settings</h3>
         <ul id="mainNav">
-            <a href="chg_pass.php">Change Password <i class="fas fa-arrow-circle-right"></i></a>
-            <a href="chg_user.php">Change Username <i class="fas fa-arrow-circle-right"></i></a>
-            <a href="chg_email.php">Change Email <i class="fas fa-arrow-circle-right"></i></a>
-            <a href="mng_users.php">Manage Users <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="mng_currentuser.php">Manage Current User <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="mng_users.php">Manage All Users <i class="fas fa-arrow-circle-right"></i></a>
             <a href="mng_content.php">Manage Content <i class="fas fa-arrow-circle-right"></i></a>
             <a href="logout.php">Log Out <i class="fas fa-arrow-circle-right"></i></a>
         </ul>

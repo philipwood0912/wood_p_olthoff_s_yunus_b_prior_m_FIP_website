@@ -13,24 +13,11 @@
             $message_create = createUser($fname, $lname, $email, $username, $password);
         }
     }
-    if(isset($_POST['search'])){
-        $username = trim($_POST['username']);
-        if(empty($username)){
-            $message_search = "Please fill out the required fields";
-        } else {
-            $user_search = searchUser($username);
-            if($user_search === null){
-                $message_search = "User does not exist!";
-            }
-        }
-    }
-    if(isset($_POST['delete'])){
-        $username = trim($_POST['username']);
-        if(empty($username)){
-            $message_delete = "Please fill out the required fields";
-        } else {
-            $message_delete = deleteUser($username);
-        }
+    $users = getAllUsers();
+    if(isset($_GET['id'])){
+        $id = $_GET['id'];
+        //$id = 1000;
+        $message = deleteUser($id);
     }
 ?>
 
@@ -49,7 +36,7 @@
     </header>
     <div class="sub-dashboard">
         <h2>Manage Users</h2>
-        <form action="mng_users.php" method="post">
+        <form class="dashboard-form" action="mng_users.php" method="post">
             <h3>Create New User</h3>
             <h3><?php echo !empty($message_create)? $message_create:'';?></h3>
             <label class="hidden">First Name</label>
@@ -64,25 +51,29 @@
             <input name="password" type="text" value="" placeholder="Password">
             <button name="create">Create User</button>
         </form>
-        <form action="mng_users.php" method="post">
-            <h3>Search for User</h3>
-            <h3><?php echo !empty($message_search)? $message_search:'';?></h3>
-            <label class="hidden">Username</label>
-            <input name="username" type="text" value="" placeholder="Username">
-            <button name="search">Search User</button>
-            <h3>First Name: <?php if(isset($user_search)){echo $user_search[0]['F_Name'];}?></h3>
-            <h3>Last Name: <?php if(isset($user_search)){echo $user_search[0]['L_Name'];}?></h3>
-            <h3>Email: <?php if(isset($user_search)){echo $user_search[0]['Email'];}?></h3>
-            <h3>Username: <?php if(isset($user_search)){echo $user_search[0]['User_Name'];}?></h3>
-            <h3>Password: <?php if(isset($user_search)){echo $user_search[0]['User_Pass'];}?></h3>
-        </form>
-        <form action="mng_users.php" method="post">
-            <h3>Delete User</h3>
-            <h3><?php echo !empty($message_delete)? $message_delete:'';?></h3>
-            <label class="hidden">Username</label>
-            <input name="username" type="text" value="" placeholder="Username">
-            <button name="delete">Delete User</button>
-        </form>
+        <div class="table-form">
+            <h3><?php echo !empty($message_create)? $message_create:'';?></h3>
+            <table>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Username</th>
+                    <th>Delete</th>
+                </tr>
+                <tbody>
+                    <?php while($founduser = $users->fetch(PDO::FETCH_ASSOC)):?>
+                        <tr>
+                            <td><?php echo $founduser['F_Name'];?></td>
+                            <td><?php echo $founduser['L_Name'];?></td>
+                            <td><?php echo $founduser['Email'];?></td>
+                            <td><?php echo $founduser['User_Name'];?></td>
+                            <td><?php if($_SESSION['user_id'] === $founduser['ID']){continue;}?><a href="mng_users.php?id=<?php echo $founduser['ID'];?>">Delete</a></td>
+                        <tr>
+                    <?php endwhile;?>
+                </tbody>
+            </table>
+        </div>
         <a href="dashboard.php">Go Back <i class="fas fa-arrow-circle-right"></i></a>
     </div>
 </body>
