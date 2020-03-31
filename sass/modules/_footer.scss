@@ -11,6 +11,7 @@ footer{
     height:40px;
     background: $darkBlue;
     justify-content: center;
+    padding-top:5px;
     
 }
 
@@ -27,15 +28,25 @@ footer{
     opacity:1.0;
 }
 
-#footerLogo{
-    max-width:40%;
-    margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 15px;
+#copyright{
+    background: $darkBlue;
+    color:white;
+    padding-bottom:10px;
+    font-size: 14px;
 }
 
-#copyright{
-    color: $grey;
+#socialCon{
+    color: white;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    background: $darkBlue;
+}
+.fab{
+    opacity:0.8;
     margin-top:10px;
-    margin-bottom:15px;
+}
+.fab:hover{
+    opacity:1.0;
 }

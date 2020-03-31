@@ -1,6 +1,9 @@
 <footer> 
-
-    <img id="footerLogo" src="public/images/fip_logo.svg" alt="logo">
+    <div id="socialCon">
+        <i class="fab fa-youtube fa-2x"></i>
+        <i class="fab fa-facebook fa-2x"></i>
+        <i class="fab fa-twitter fa-2x"></i>
+    </div>
 
     <div id="footerNav">
 

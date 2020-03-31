@@ -4,7 +4,8 @@ export default {
     <h1 class="hidden">About Our Campaign</h1>
     
     <div class="aboutIntro">
-        <p id="introText">#GETTESTED (Get Tested) is a campaign encouraging young Canadians to get tested for HIV and AIDS.</p>
+    <img src="./public/images/aboutHero-06.svg" alt="hero image with text" id="aboutHero">
+    <img src="./public/images/hiv-aids.svg" alt="Hiv& Aids" id="hivAndAids">
     </div>
 
     <div class="aboutPopUp">
@@ -58,10 +59,6 @@ export default {
                     London On, Canada</li>
             </ul>
         </div>
-    </div>
-
-    <div id="socialCon">
-        social media icons here
     </div>
 
 </div>
