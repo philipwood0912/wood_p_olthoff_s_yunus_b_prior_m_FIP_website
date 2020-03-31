@@ -1,18 +1,25 @@
 #signin {
-    background-color: $red;
+    background-color: $grey;
     width: 90%;
     margin: 0 auto;
     margin-top: 20px;
     padding: 20px;
     text-align: center;
     h2 {
-        color: $white;
-        font-size: 30px;
+        color: $pink;
+        font-size: 32px;
+        margin-bottom:50px;
     }
     h3 {
         color: $white;
+        background: $red;
+        width:250px;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom:15px;
     }
 }
+
 .avatar {
     text-align: center;
     i {
@@ -24,6 +31,7 @@
         border: 3px solid $red;
     }
 }
+
 #signinform {
     display: flex;
     flex-direction: column;
@@ -34,18 +42,32 @@
         text-align: center;
         margin-bottom: 20px;
     }
-    button {
-        margin: 0 auto;
-        width: 100px;
-        padding: 5px;
-        font-size: 22px;
-        color: $red;
-        margin-bottom: 20px;
-    }
+}
+
+button{
+    max-width:220px;
+    height:40px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background: $white;
+    padding:3px;
+    margin-bottom:20px;
+}
+
+.buttonTxt{
+    border: 2px solid $lightBlue;
+    border-radius: 5px;
+    font-size: 18px;
+    color: $pink;
+    padding-top:4px;
+    padding-bottom:4px;
+    padding-left:6px;
+    padding-right:6px;
 }
 
 #gohome {
-    color: $white;
+    color: $darkBlue;
     text-decoration: none;
     font-size: 24px;
 }
+

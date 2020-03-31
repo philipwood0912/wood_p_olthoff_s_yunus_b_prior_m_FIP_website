@@ -1,29 +1,31 @@
 .dashboard {
-    background-color: $red;
+    background-color: $white;
     padding: 20px;
     h2 {
-        color: white;
+        color:$pink;
+        margin-bottom:50px;
     }
     h3 {
-        color: white;
+        color:$darkBlue;
     }
 }
 
 .sub-dashboard {
-    background-color: $red;
+    background-color: $white;
     text-align: center;
     padding: 20px;
     h2 {
-        color: $white;
+        color: $pink;
         font-size: 30px;
+        margin-bottom:50px;
     }
     h3 {
-        color: $white;
+        color: $darkBlue;
         font-size: 26px;
     }
     a {
         text-decoration: none;
-        color: $white;
+        color: $darkBlue;
         font-size: 22px;
     }
 }
@@ -32,7 +34,7 @@
     flex-direction: column;
     a {
         text-decoration: none;
-        color: $white;
+        color: $darkBlue;
         font-size: 20px;
         margin-bottom: 10px;
     }
@@ -56,15 +58,16 @@
     }
     button {
         margin: 0 auto;
-        width: 150px;
+        max-width: 60%;
         padding: 5px;
         font-size: 22px;
-        color: $red;
-        margin-bottom: 20px;
+        color: $lightBlue;
+        margin-bottom: 30px;
+
     }
     label {
         font-size: 24px;
-        color: white;
+        color: $darkBlue;
         margin-bottom: 10px;
     }
 }
