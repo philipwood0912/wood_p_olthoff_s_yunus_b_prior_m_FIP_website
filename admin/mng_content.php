@@ -31,10 +31,8 @@
             'oldimage'=>$_POST['oldimage'],
             'image'=>$_FILES['image']
         );
-        $edit = editHomeItem($args);
-        if(!$edit){
-            $home_message = "Something went wrong..";
-        }
+        $home_message = editHomeItem($args);
+        
     }
 ?>
 
