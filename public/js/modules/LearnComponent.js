@@ -7,11 +7,11 @@ export default {
     <h1 class="hidden">Get The Facts</h1>
     <img src="./public/images/factImg1.svg" alt="Fact Information 1" id="factImg1">
 
-    <div id="threeIconCon">
+    <div class="learnPopUp">
         <div class="popUpBorder">
-            <img src="./public/images/3icons.svg" alt="3 Icons in a Row" class="3icons">
+            <img src="./public/images/3icons.svg" alt="3 Icons in a Row" class="threeicons">
         </div>
-        </div>
+    </div>
    
     <img src="./public/images/didYouKnow.svg" alt="Did You Know?" id="didYouKnow">
 
