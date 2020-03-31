@@ -13,13 +13,13 @@
 </head>
 
 <body>
-<main id="app">
-    <?php include 'templates/header.php'; ?>
+    <main id="app">
+            <?php include 'templates/header.php'; ?>
 
-    <router-view></router-view>
+            <router-view></router-view>
 
-    <?php include 'templates/footer.php'; ?>
-</main>
+            <?php include 'templates/footer.php'; ?>
+    </main>
 <script src="config/config.js"></script>
 <script src="public/js/main.js" type="module"></script>
 </body>

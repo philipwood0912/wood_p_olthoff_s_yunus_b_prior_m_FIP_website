@@ -1,9 +1,9 @@
 <header>
-
+<div id="headerCon">
     <img id="headerLogo" src="public/images/fip_logo.svg" alt="logo">
 
     <div class="menu" :class="{'active': isActive}" @click="showTopMenu = !showTopMenu, isActive = !isActive"><i class="fas fa-bars fa-2x" id="burger"></i></div>
-    
+</div>  
 </header>
 
 <div id="menu-overlay" v-if="showTopMenu">

@@ -1,8 +1,22 @@
+@mixin for-tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
+  }
+  @mixin for-tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+  }
+  @mixin for-desktop-up {
+    @media (min-width: 1200px) { @content; }
+  }
+  @mixin for-big-desktop-up {
+    @media (min-width: 1800px) { @content; }
+  }
+
 footer{
     display:flex;
     flex-direction: column;
     text-align: center;
     margin: 0 auto;
+    margin-top:50px;
 }
 
 #footerNav{
@@ -20,8 +34,12 @@ footer{
     opacity: 0.8;
     padding: 10px;
     color: $white;
-    justify-content: space-evenly;
-    font-size:18px;
+    justify-content: space-between;
+    font-size:14px;
+
+    @include for-tablet-portrait-up{
+        font-size:18px;
+    }
 }
 
 .footerLink:hover{
@@ -37,12 +55,26 @@ footer{
 
 #socialCon{
     color: white;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-evenly;
     margin-top: 30px;
     background: $darkBlue;
 }
+
+#socialIconCon{
+    
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:50%;
+
+    @include for-tablet-portrait-up{
+        width:40%;
+    }
+
+    @include for-desktop-up{
+        width:20%;
+    }
+}
+
 .fab{
     opacity:0.8;
     margin-top:10px;

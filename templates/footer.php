@@ -1,8 +1,10 @@
 <footer> 
     <div id="socialCon">
-        <i class="fab fa-youtube fa-2x"></i>
-        <i class="fab fa-facebook fa-2x"></i>
-        <i class="fab fa-twitter fa-2x"></i>
+        <div id="socialIconCon">
+            <i class="fab fa-youtube fa-2x"></i>
+            <i class="fab fa-facebook fa-2x"></i>
+            <i class="fab fa-twitter fa-2x"></i>
+</div>
     </div>
 
     <div id="footerNav">

@@ -1,31 +1,50 @@
+@mixin for-tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
+  }
+  @mixin for-tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+  }
+  @mixin for-desktop-up {
+    @media (min-width: 1200px) { @content; }
+  }
+  @mixin for-big-desktop-up {
+    @media (min-width: 1800px) { @content; }
+  }
+
+
 .dashboard {
     background-color: $white;
-    padding: 20px;
+    padding: 40px;
+    max-width:100%;
+
     h2 {
         color:$pink;
         margin-bottom:50px;
     }
     h3 {
-        color:$darkBlue;
+        color:$lightBlue;
     }
 }
 
 .sub-dashboard {
     background-color: $white;
-    text-align: center;
     padding: 20px;
+    max-width:100%;
+
+    
+
     h2 {
         color: $pink;
         font-size: 30px;
         margin-bottom:50px;
     }
     h3 {
-        color: $darkBlue;
+        color: $lightBlue;
         font-size: 26px;
     }
     a {
         text-decoration: none;
-        color: $darkBlue;
+        color: $lightBlue;
         font-size: 22px;
     }
 }
@@ -34,15 +53,23 @@
     flex-direction: column;
     a {
         text-decoration: none;
-        color: $darkBlue;
+        color: $lightBlue;
         font-size: 20px;
-        margin-bottom: 10px;
+        padding: 5px;
     }
 }
 
 .dashboard-form {
     display: flex;
     flex-direction: column;
+
+    padding: 40px;
+    max-width:100%;
+
+    @include for-tablet-landscape-up{
+        max-width: 60%;
+        margin: 0 auto;
+    }
     input {
         width: 60%;
         margin: 0 auto;
@@ -67,7 +94,7 @@
     }
     label {
         font-size: 24px;
-        color: $darkBlue;
+        color: $lightBlue;
         margin-bottom: 10px;
     }
 }

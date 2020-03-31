@@ -1,14 +1,45 @@
 
+ @mixin for-tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
+  }
+  @mixin for-tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+  }
+  @mixin for-desktop-up {
+    @media (min-width: 1200px) { @content; }
+  }
+  @mixin for-big-desktop-up {
+    @media (min-width: 1800px) { @content; }
+  }
+
 header {
-    height: 80px;
-    display: flex;
+    background: $white;
+    max-width:100%;
+    padding:20px;
+
+    
+}
+
+#headerCon{
+    display:flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 25px;
-    background: $white;
+
+    @include for-desktop-up{
+        max-width:80%;
+        margin: 0 auto;
+    }
 }
 
 #headerLogo {
-    max-width:60%;
+    width:60%;
+
+    @include for-tablet-portrait-up{
+        width: 40%;
+    }
+
+    @include for-desktop-up{
+        width:20%;
+    }
 }
