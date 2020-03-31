@@ -8,11 +8,12 @@ export default {
 
     <div class="learnPopUp">
         <div class="popUpBorder">
-            <img src="./public/images/3icons.svg" alt="3 Icons in a Row" class="threeicons">
+            <img src="./public/images/hiv_transmission.svg" alt="HIV transmission methods" class="threeicons">
         </div>
     </div>
-   
-    <img src="./public/images/didYouKnow.svg" alt="Did You Know?" id="didYouKnow">
+    
+        <img src="./public/images/didYouKnow.svg" alt="Did You Know?" id="didYouKnow">
+
 
         <div class="learnPopUp">
             <div class="popUpBorder">
