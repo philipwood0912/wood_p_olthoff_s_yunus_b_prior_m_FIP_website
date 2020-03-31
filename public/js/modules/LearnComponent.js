@@ -6,7 +6,6 @@ export default {
         <h1 class="hidden">Get The Facts</h1>
         <img src="./public/images/factImg1.svg" alt="Fact Information 1" id="factImg1">
 
-
     <div class="learnPopUp">
         <div class="popUpBorder">
             <img src="./public/images/hiv_transmission.svg" alt="HIV transmission methods" class="threeicons">

@@ -76,35 +76,54 @@ function addHomeItem($args){
         $error = $e->getMessage();
         return $error;
     }
-    // $pdo = Database::getInstance()->getConnection();
-    // $insert_query = 'INSERT INTO tbl_home(Title, Text) VALUES(:title, :text)';
-    // $insert_item = $pdo->prepare($insert_query);
-    // $insert_success = $insert_item->execute(
-    //     array(
-    //         ':title'=>$args['title'],
-    //         ':text'=>$args['text']
-    //     )
-    // );
-    // if($insert_success){
-    //     redirect_to('mng_content.php');
-    // } else {
-    //     return false;
-    // }
 }
 function editHomeItem($args){
-    $pdo = Database::getInstance()->getConnection();
-    $update_query = 'UPDATE tbl_home SET Title =:title, Text =:text WHERE ID =:id';
-    $update_item = $pdo->prepare($update_query);
-    $update_success = $update_item->execute(
-        array(
-            ':title'=>$args['title'],
-            ':text'=>$args['text'],
-            ':id'=>$args['id']
-        )
-    );
-    if($update_success){
+    try{
+        $pdo = Database::getInstance()->getConnection();
+        $image = $args['image'];
+        // check if image has been selected, if it has, handle new upload
+        if($image['name'] != ""){
+            $upload_file = pathinfo($image['name']);
+            $accepted_types = array('svg');
+            if(!in_array($upload_file['extension'], $accepted_types)){
+                throw new Exception('Wrong file type!');
+            }
+            $image_path = '../public/images/';
+            //delete old image file 
+            unlink($image_path.$args['oldimage']);
+            $generated_name = md5($upload_file['filename'].time());
+            $generated_filename = $generated_name.'.'.$upload_file['extension'];
+            $targetpath = $image_path.$generated_filename;
+            if(!move_uploaded_file($image['tmp_name'], $targetpath)){
+                throw new Exception('Failed to move uploaded file, check permission!');
+            }
+            // update query for item
+            $update_query = 'UPDATE tbl_home SET Title =:title, Text =:text, Image =:image';
+            $update_query .= ' WHERE ID =:id';
+            $update_item = $pdo->prepare($update_query);
+            $update_success = $update_item->execute(
+                array(
+                    ':title'=>$args['title'],
+                    ':text'=>$args['text'],
+                    ':image'=>$generated_filename,
+                    ':id'=>$args['id']
+                )
+            );
+        } else { // if it hasnt run update query without image
+            $update_query = 'UPDATE tbl_home SET Title =:title, Text =:text';
+            $update_query .= ' WHERE ID =:id';
+            $update_item = $pdo->prepare($update_query);
+            $update_success = $update_item->execute(
+                array(
+                    ':title'=>$args['title'],
+                    ':text'=>$args['text'],
+                    ':id'=>$args['id']
+                )
+            );
+        }
         redirect_to('mng_content.php');
-    } else {
-        return false;
+    }catch(Exception $e){
+        $error = $e->getMessage();
+        return $error;
     }
 }
