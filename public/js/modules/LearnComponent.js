@@ -8,8 +8,10 @@ export default {
     <img src="./public/images/factImg1.svg" alt="Fact Information 1" id="factImg1">
 
     <div id="threeIconCon">
-        <img src="./public/images/3icons.svg" alt="3 Icons in a Row" class="3icons">
-    </div>
+        <div class="popUpBorder">
+            <img src="./public/images/3icons.svg" alt="3 Icons in a Row" class="3icons">
+        </div>
+        </div>
    
     <img src="./public/images/didYouKnow.svg" alt="Did You Know?" id="didYouKnow">
 
