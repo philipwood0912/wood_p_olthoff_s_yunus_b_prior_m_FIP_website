@@ -12,76 +12,32 @@ export default {
 
         <div id="homeBottom">
 
-            <div class="popUp" id="popUp1">
+        <div v-for="(content, index) in this.$parent.homeContent" :key="index">
+            <div class="popUp" :id="content.id">
                 <div class="blueBorder">
-                    
                     <div class="iconCon">
-                        <img class="icons" alt="Clipboard and Stethoscope Icon" src="./public/images/doctor.svg">
-                        <h3 class="pink"> Get Yourself Tested! </h3>
+                        <img class="icons" alt="icon" :src="'./public/images/' + content.image">
+                        <h3 class="pinkTitle">{{content.title}}</h3>
                     </div>
-
-                    <p class="smBlueText"> Knowing Your HIV and STD status helps you choose options to stay healthy! </p>
+                    <p class="smBlueText">{{content.text}}</p>
                 </div>
             </div>
+        </div>
 
-            <div class="popUp" id="popUp2">
-                <div class="blueBorder">
+        <button class="button"> <span class="buttonTxt"> Get The Facts </span></button>
 
-                <div class="iconCon">
-                    <h3 class="pink">Talk About PeEP!</h3>
-                    <img src="./public/images/drugs.svg" alt="PReP Icon" class="icons">
-                </div>
+        </div>
 
-                    <p class="smBlueText">Talk to your doctor abuot pre-exposure prophylaxis (PrEP) as it can greatly reduce your risk of infection. </p>
-                </div>
+        <div id="widget">
+
+            <div id="postal-wrp">
+                <h2>{{postalMessage}}</h2>
+                <form @submit.prevent="pullLocation(postal)">
+                    <label>Your Postal Code</label>
+                    <input v-model="postal" maxlength="6" name="postal">
+                    <button name="submit">Submit</button>
+                </form>
             </div>
-
-            <div class="popUp" id="popUp3">
-                <div class="blueBorder">
-
-                <div class="iconCon">
-                    <img src="./public/images/condom2.svg" alt="Condom Icon #2" class="icons">
-                    <h3 class="pink">Use A Condom!</h3>
-                </div>
-
-                    <p class="smBlueText"> Condoms are highly effective at preventing both HIV, AIDS and other STDs.</p>
-                </div>
-            </div>
-
-            <div class="popUp" id="popUp4">
-                <div class="blueBorder">
-
-                <div class="iconCon">
-                    <h3 class="pink">HIV Treatment!</h3>
-                    <img src="./public/images/doctor2.svg" alt="Medical Bag Icon" class="icons">
-                </div>
-
-
-                    <div id="postal-wrp">
-                        <h2>{{postalMessage}}</h2>
-                        <form @submit.prevent="pullLocation(postal)">
-                            <label>Your Postal Code</label>
-                            <input v-model="postal" maxlength="6" name="postal">
-                            <button name="submit">Submit</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-           
-
-            <div class="popUp" id="popUp5">
-                <div class="blueBorder">
-
-                <div class="iconCon">
-                    <img src="./public/images/needle.svg" alt="Needle Icon" class="icons">
-                    <h3 class="pink">Don't Inject Drugs!</h3>
-                </div>
-
-                    <p class="smBlueText">But if you do,only use sterile equiptment and water. Most importantly, never share your gear!</p>
-                </div>
-            </div>
-
-            <button class="button"> <span class="buttonTxt"> Get The Facts </span></button>
 
         </div>
 

@@ -11,12 +11,8 @@
             $result['content_id'] = $data['ID'];
             $result['title'] = $data['Title'];
             $result['text'] = $data['Text'];
-            if($data['ID'] % 2){
-                $result['class'] = "popUpLeft";
-            } else {
-                $result['class'] = "popUpRight";
-            }
             $result['id'] = "popUp" .$data['ID'];
+            $result['image'] = $data['Image'];
             $content[] = $result;
         }
         echo json_encode($content); 
