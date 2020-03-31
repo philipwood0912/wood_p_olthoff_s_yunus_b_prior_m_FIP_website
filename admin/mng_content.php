@@ -16,15 +16,22 @@
         }
     }
     if(isset($_POST['addhome'])){
-        $title = trim($_POST['title']);
-        $text = trim($_POST['text']);
-        $add = addHomeItem($title, $text);
+        $args = array(
+            'title'=>$_POST['title'],
+            'text'=>$_POST['text'],
+            'image'=>$_FILES['image']
+        );
+        $home_message = addHomeItem($args);
     }
     if(isset($_POST['edithome'])){
-        $id = $_POST['id'];
-        $title = trim($_POST['title']);
-        $text = trim($_POST['text']);
-        $edit = editHomeItem($id, $title, $text);
+        $args = array(
+            'id'=>$_POST['id'],
+            'title'=>$_POST['title'],
+            'text'=>$_POST['text'],
+            'oldimage'=>$_POST['oldimage'],
+            'image'=>$_FILES['image']
+        );
+        $edit = editHomeItem($args);
         if(!$edit){
             $home_message = "Something went wrong..";
         }
@@ -49,22 +56,27 @@
         <h3>Home Page - <a href="mng_content.php?add=true&home=true">Add Content <i class="fas fa-arrow-circle-right"></i></a></h3>
         <?php echo !empty($home_message)? $home_message:'';?>
         <?php if(isset($_GET['add']) && isset($_GET['home'])):?>
-            <form action="mng_content.php" method="post" class="dashboard-form">
+            <form action="mng_content.php" method="post" class="dashboard-form" enctype="multipart/form-data">
                 <label>Title</label>
                 <input name="title" type="text" value="">
                 <label>Text</label>
                 <textarea name="text" type="text" value=""></textarea>
+                <label>Image</label>
+                <input type="file" name="image" value="">
                 <button name="addhome">Add Content</button>
             </form>
         <?php endif;?>
         <?php if(isset($edit_item) && isset($_GET['home'])):?>
             <?php while($edit = $edit_item->fetch(PDO::FETCH_ASSOC)):?>
-                <form action="mng_content.php" method="post" class="dashboard-form">
+                <form action="mng_content.php" method="post" class="dashboard-form" enctype="multipart/form-data">
                     <input class="hidden" type="text" name="id" value="<?php echo $edit['ID']?>">
                     <label>Title</label>
                     <input type="text" name="title" value="<?php echo $edit['Title']?>">
                     <label>Text</label>
                     <textarea type="text" name="text" value=""><?php echo $edit['Text']?></textarea>
+                    <label>Image</label>
+                    <input class="hidden" type="text" name="oldimage" value="<?php echo $edit['Image']?>">
+                    <input type="file" name="image" value="">
                     <button name="edithome">Edit Content</button>
                 </form>
             <?php endwhile;?>
