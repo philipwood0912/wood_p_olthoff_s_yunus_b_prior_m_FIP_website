@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Mar 25, 2020 at 07:49 AM
+-- Generation Time: Mar 31, 2020 at 05:47 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.3.8
 
@@ -67,19 +67,20 @@ INSERT INTO `tbl_clinics` (`ID`, `Clinic_Name`, `Address`, `Phone`, `Website`, `
 CREATE TABLE `tbl_home` (
   `ID` int(11) NOT NULL,
   `Title` varchar(64) NOT NULL,
-  `Text` text NOT NULL
+  `Text` text NOT NULL,
+  `Image` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_home`
 --
 
-INSERT INTO `tbl_home` (`ID`, `Title`, `Text`) VALUES
-(1, 'Get Yourself Tested!', 'Knowing Your HIV and STD status helps you choose options to stay healthy!'),
-(2, 'Talk About PrEP!', 'Talk to your doctor about pre-exposure prophylaxis (PrEP) as it can greatly reduce your risk of infection.'),
-(3, 'Use A Condom!', 'Condoms are highly effective at preventing both HIV, AIDS and other STDs.'),
-(4, 'HIV Treatment!', 'HIV treatment keeps you healthy and minimizes the risk of spreading the disease to others.'),
-(5, 'Don\'t Inject Drugs!', 'But if you do, only use sterile equipment and water. Most importantly, never share your gear!');
+INSERT INTO `tbl_home` (`ID`, `Title`, `Text`, `Image`) VALUES
+(1, 'Get Yourself Tested!', 'Knowing Your HIV and STD status helps you choose options to stay healthy!', 'doctor.svg'),
+(2, 'Talk About PrEP!', 'Talk to your doctor about pre-exposure prophylaxis (PrEP) as it can greatly reduce your risk of infection.', 'drugs.svg'),
+(3, 'Use A Condom!', 'Condoms are highly effective at preventing both HIV, AIDS and other STDs.', 'condom2.svg'),
+(4, 'HIV Treatment!', 'HIV treatment keeps you healthy and minimizes the risk of spreading the disease to others.', 'doctor2.svg'),
+(5, 'Don\'t Inject Drugs!', 'But if you do, only use sterile equipment and water. Most importantly, never share your gear!', 'needle.svg');
 
 -- --------------------------------------------------------
 
@@ -101,7 +102,8 @@ CREATE TABLE `tbl_users` (
 --
 
 INSERT INTO `tbl_users` (`ID`, `F_Name`, `L_Name`, `Email`, `User_Name`, `User_Pass`) VALUES
-(1, 'Philip', 'Wood', 'philipwood0912@gmail.com', 'Philly0912', '$2y$10$3Hv5.KFWWqE/VrJyB5focuSYFb01fLyyne.LdYxMj.1yTFnz0XLPS');
+(1, 'Philip', 'Wood', 'philipwood0912@gmail.com', 'Philly0912', '$2y$10$3Hv5.KFWWqE/VrJyB5focuSYFb01fLyyne.LdYxMj.1yTFnz0XLPS'),
+(4, 'Philip', 'Wood', 'a_wood60810@fanshaweonline.ca', 'phil', '$2y$10$jC7sPFVTp2g8f7R6haN0quEkdyT3HpT5dlFvVNTP6sY1Wpyh57Iem');
 
 --
 -- Indexes for dumped tables
@@ -139,13 +141,13 @@ ALTER TABLE `tbl_clinics`
 -- AUTO_INCREMENT for table `tbl_home`
 --
 ALTER TABLE `tbl_home`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tbl_users`
 --
 ALTER TABLE `tbl_users`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
