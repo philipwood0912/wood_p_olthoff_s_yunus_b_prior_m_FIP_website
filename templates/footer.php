@@ -1,14 +1,17 @@
 <footer> 
-
-    <img id="footerLogo" src="public/images/fip_logo.svg" alt="logo">
+    <div id="socialCon">
+        <i class="fab fa-youtube fa-2x"></i>
+        <i class="fab fa-facebook fa-2x"></i>
+        <i class="fab fa-twitter fa-2x"></i>
+    </div>
 
     <div id="footerNav">
 
         <router-link class="footerLink" to="/">Home</router-link>
 
-        <router-link class="footerLink" to="/about">Get The Facts</router-link>
+        <router-link class="footerLink" to="/learn">Get The Facts</router-link>
 
-        <router-link class="footerLink" to="/contact">Get Involved</router-link>
+        <router-link class="footerLink" to="/about">About Us</router-link>
 
         <!-- <router-link class="footerLink" to="/login">Admin</router-link> -->
 
