@@ -28,10 +28,10 @@ export default {
 
         </div>
 
-        <div id="widget">
-
+        <div class="popUpMap">
+            <div class="blueBorder">
             <widget></widget>
-
+            </div>
         </div>
 
     </div>
