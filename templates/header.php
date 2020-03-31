@@ -10,9 +10,9 @@
 
     <router-link @click.native="closeMenu" class="navLink" to="/">Home</router-link>
 
-    <router-link @click.native="closeMenu" class="navLink" to="/about">Get The Facts</router-link>
+    <router-link @click.native="closeMenu" class="navLink" to="/learn">Get The Facts</router-link>
 
-    <router-link @click.native="closeMenu" class="navLink" to="/contact">Get Involved</router-link>
+    <router-link @click.native="closeMenu" class="navLink" to="/about">About Us</router-link>
 
     <!-- <router-link @click.native="closeMenu" class="navLink" to="/login">Administrator Settings</router-link> -->
 </div>

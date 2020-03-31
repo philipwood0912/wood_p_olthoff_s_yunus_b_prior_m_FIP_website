@@ -7,23 +7,41 @@ export default {
         <div id="heroCon"> 
             <img src="./public/images/heroImgWeb.svg" alt="hero image with text" id="heroImage">
 
-            <i class="fas fa-chevron-down fa-3x" id="chevronDown"></i>
-        </div>
+        <i class="fas fa-chevron-down fa-3x" id="chevronDown"> </i>
+    </div>
 
-        <div id="popUpCon">
-            <div v-for="(content, index) in this.$parent.homeContent" :key="index">
-                <div :class="content.class" :id="content.id">
-                    <div class="blueBorder">
-                        <h3 class="pinkTitle">{{content.title}}</h3>
-                        <p class="smBlueText">{{content.text}}</p>
-                    </div>
-                </div>
+    <div id="homeBottom">
+
+        <div class="popUp" id="popUp1">
+            <div class="blueBorder">
+                <h3 class="pink"> Get Yourself Tested! </h3>
+
+                <p class="smBlueText"> Knowing Your HIV and STD status helps you choose options to stay healthy! </p>
             </div>
         </div>
 
-        <button class="button"> <span class="buttonTxt">Get The Facts</span></button>
+        <div class="popUp" id="popUp2">
+            <div class="blueBorder">
 
-        <div id="widget">
+                <h3 class="pink">Talk About PeEP!</h3>
+
+                <p class="smBlueText">Talk to your doctor abuot pre-exposure prophylaxis (PrEP) as it can greatly reduce your risk of infection. </p>
+            </div>
+        </div>
+
+        <div class="popUp" id="popUp3">
+            <div class="blueBorder">
+
+                <h3 class="pink">Use A Condom!</h3>
+
+                <p class="smBlueText"> Condoms are highly effective at preventing both HIV, AIDS and other STDs.</p>
+            </div>
+        </div>
+
+        <div class="popUp" id="popUp4">
+            <div class="blueBorder">
+                <h3 class="pink">HIV Treatment!</h3>
+
 
             <div id="postal-wrp">
                 <h2>{{postalMessage}}</h2>
@@ -34,7 +52,19 @@ export default {
                 </form>
             </div>
 
+        <div class="popUp" id="popUp5">
+            <div class="blueBorder">
+                <h3 class="pink">Don't Inject Drugs!</h3>
+
+                <p class="smBlueText">But if you do,only use sterile equiptment and water. Most importantly, never share your gear!</p>
+            </div>
         </div>
+
+        <button class="button"> <span class="buttonTxt"> Get The Facts </span></button>
+
+    </div>
+
+</div>
 
     </div>`,
     components: {
