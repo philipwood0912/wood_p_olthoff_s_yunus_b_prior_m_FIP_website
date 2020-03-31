@@ -1,6 +1,8 @@
 #homeCon{
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
     text-align: center;
     max-width:95%;
 }
@@ -14,6 +16,7 @@
 
 #heroImage{
     width: 100%;
+    justify-content: center;
 }
 
 #chevronDown{
@@ -23,15 +26,18 @@
 // MAKE THESE SECTIONS ALTERNATE
 
 #homeBottom{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
     margin: 0 auto;
 }
 
 .popUp{
-    max-width:70%;
     margin-bottom:30px;
     padding:5px;
     border-radius:10px;
     background: $white;
+    width:300px;
 }
 
 
@@ -42,7 +48,7 @@
 .blueBorder{
     border: 2px solid $lightBlue;
     border-radius:8px;
-    padding:5px;
+    padding:10px;
 }
 
 .pink{
@@ -75,5 +81,15 @@
     padding-right:6px;
 }
 
+//ICON STYLING
+.iconCon{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+
+.icons{
+    max-width:25%;
+}
 
 
