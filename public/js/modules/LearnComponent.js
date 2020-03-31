@@ -7,6 +7,7 @@ export default {
         <img src="./public/images/factImg1.svg" alt="Fact Information 1" id="factImg1">
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div class="learnPopUp">
         <div class="popUpBorder">
             <img src="./public/images/3icons.svg" alt="3 Icons in a Row" class="threeicons">
@@ -15,12 +16,17 @@ export default {
    
     <img src="./public/images/didYouKnow.svg" alt="Did You Know?" id="didYouKnow">
 =======
+=======
+>>>>>>> d024d527c09e6f725f934d28bc433e3290d9fd4e
         <div id="threeIconCon">
             <img src="./public/images/3icons.svg" alt="3 Icons in a Row" class="3icons">
         </div>
     
         <img src="./public/images/didYouKnow.svg" alt="Did You Know?" id="didYouKnow">
+<<<<<<< HEAD
 >>>>>>> 34551be0f5d417ec66b648c15282454679955412
+=======
+>>>>>>> d024d527c09e6f725f934d28bc433e3290d9fd4e
 
         <div class="learnPopUp">
             <div class="popUpBorder">
