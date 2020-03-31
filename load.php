@@ -13,3 +13,4 @@
     require_once ADMIN_SCRIPTS.'/login.php';
     require_once ADMIN_SCRIPTS.'/change.php';
     require_once ADMIN_SCRIPTS.'/users.php';
+    require_once ADMIN_SCRIPTS.'/content.php';
