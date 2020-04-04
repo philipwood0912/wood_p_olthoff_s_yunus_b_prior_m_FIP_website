@@ -127,6 +127,24 @@
     max-width:25%;
 }
 
+#promoVideo{
+    max-width: 100%;
+}
 
+#videoCon{
+    margin: 0 auto;
+    max-width:100%;
 
+    margin-top:40px;
+
+    @include for-tablet-portrait-up {
+        margin-top:80px;
+        max-width:80%;
+    }
+
+    @include for-desktop-up{
+        margin-top:100px;
+        max-width:60%;
+    }
+}
 

@@ -2,6 +2,14 @@ export default {
     template: `
 <div id="aboutCon">
     <h1 class="hidden">About Our Campaign</h1>
+
+    <div id="videoCon">
+        <video  id="promoVideo" controls>
+            <source src="./public/video/promo_video_2020.mp4" type="video/mp4">
+            <source src="./public/video/promo_video_2020.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+    </div>
     
     <div class="aboutIntro">
     <img src="./public/images/aboutHero-06.svg" alt="hero image with text" id="aboutHero">
