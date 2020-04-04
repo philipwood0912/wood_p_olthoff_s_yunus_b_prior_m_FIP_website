@@ -17,6 +17,7 @@
     margin-top:40px;
 
     @include for-tablet-portrait-up {
+        max-width:80%;
         margin-top:80px;
     }
 
@@ -28,8 +29,17 @@
 }
 
 .aboutIntro{
+    margin: 0 auto;
     padding:10px;
     width: 100%;
+    
+}
+
+#hivAndAids{
+    display:flex;
+    margin: 0 auto;
+    max-width:90%;
+
     margin-top:40px;
 
     @include for-tablet-portrait-up {
@@ -38,11 +48,8 @@
 
     @include for-desktop-up{
         margin-top:100px;
-        width: 70%;
-        margin: 0 auto;
     }
 }
-
 
 .aboutPopUp{
     background:$white;
@@ -79,4 +86,19 @@
     margin-top: 40px;
     background: $darkBlue;
     padding: 10px;
+}
+
+#imgCon{
+    max-width:90%;
+    margin: 0 auto;
+
+    margin-top:40px;
+
+    @include for-tablet-portrait-up {
+        margin-top:80px;
+    }
+
+    @include for-desktop-up{
+        margin-top:100px;
+    }
 }

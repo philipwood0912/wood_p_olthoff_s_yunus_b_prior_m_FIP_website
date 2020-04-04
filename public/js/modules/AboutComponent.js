@@ -12,8 +12,8 @@ export default {
     </div>
     
     <div class="aboutIntro">
-    <img src="./public/images/aboutHero-06.svg" alt="hero image with text" id="aboutHero">
-    <img src="./public/images/hiv-aids.svg" alt="Hiv& Aids" id="hivAndAids">
+        <img src="./public/images/aboutHero-06.svg" alt="hero image with text" id="aboutHero">
+        <img src="./public/images/hiv-aids.svg" alt="Hiv& Aids" id="hivAndAids">
     </div>
 
     <div class="aboutPopUp">
