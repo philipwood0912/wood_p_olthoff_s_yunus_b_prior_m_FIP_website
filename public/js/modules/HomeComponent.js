@@ -30,7 +30,12 @@ export default {
 
         <div class="popUpMap">
             <div class="blueBorder">
-            <widget></widget>
+                <div class="iconCon iconMap">
+                    <img class="icons" alt="icon" src="./public/images/condom1.svg">
+                    <h3 class="pinkTitle">Get Tested Now!</h3>
+                </div>
+                <p class="smBlueText">Find a clinic near you.</p>
+                <widget></widget>
             </div>
         </div>
 
