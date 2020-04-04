@@ -18,24 +18,29 @@
     justify-content: center;
     text-align: center;
     max-width:95%;
+
+    margin-top:40px;
+
+    @include for-tablet-portrait-up {
+        margin-top:80px;
+    }
+
+    @include for-desktop-up{
+        margin-top:100px;
+        max-width:60%;
+    }
+
 }
 
 #heroCon{
     display: flex;
     flex-direction: column;
-    margin-top:30px;
-    margin-bottom: 65px;
 }
 
 #heroImage{
-    max-width: 95%;
     justify-content: center;
     margin: 0 auto;
 
-    @include for-desktop-up{
-        margin-top:80px;
-        max-width: 75%;
-    }
 }
 
 #chevronDown{
@@ -56,11 +61,20 @@
 }
 
 .popUp{
-    margin-bottom:30px;
     padding:5px;
     border-radius:10px;
     background: $white;
     width:300px;
+
+    margin-top:40px;
+
+    @include for-tablet-portrait-up {
+        margin-top:80px;
+    }
+
+    @include for-desktop-up{
+        margin-top:100px;
+    }
 }
 
 .popUpMap {
@@ -127,5 +141,7 @@
     height: 80px;
     
 }
+
+
 
 
