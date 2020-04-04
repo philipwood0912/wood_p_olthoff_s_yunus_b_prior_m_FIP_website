@@ -63,6 +63,15 @@
     width:300px;
 }
 
+.popUpMap {
+    margin: 0 auto;
+    margin-bottom:30px;
+    margin-top: 30px;
+    padding: 5px;
+    background: $white;
+    width: 80%;
+}
+
 //STYLING FOR POP UP TEXT
 
 //styling for popup box border
@@ -111,6 +120,12 @@
 
 .icons{
     max-width:25%;
+}
+
+.iconMap {
+    justify-content: center;
+    height: 80px;
+    
 }
 
 
