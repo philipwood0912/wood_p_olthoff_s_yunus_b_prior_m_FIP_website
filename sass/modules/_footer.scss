@@ -12,11 +12,9 @@
   }
 
 footer{
-    display:flex;
-    flex-direction: column;
     text-align: center;
     margin: 0 auto;
-    margin-top:50px;
+    width: 100%;
 }
 
 #footerNav{
@@ -25,7 +23,6 @@ footer{
     height:40px;
     background: $darkBlue;
     justify-content: center;
-    padding-top:5px;
     
 }
 
@@ -37,11 +34,11 @@ footer{
     justify-content: space-between;
     font-size:14px;
 
+
     @include for-tablet-portrait-up{
-        font-size:18px;
+        font-size:20px;
     }
 }
-
 .footerLink:hover{
     opacity:1.0;
 }
@@ -55,8 +52,9 @@ footer{
 
 #socialCon{
     color: white;
-    margin-top: 30px;
     background: $darkBlue;
+    display:flex;
+    flex-direction: column;
 }
 
 #socialIconCon{
@@ -65,11 +63,9 @@ footer{
     flex-direction: row;
     justify-content: space-between;
     width:50%;
-
     @include for-tablet-portrait-up{
         width:40%;
     }
-
     @include for-desktop-up{
         width:20%;
     }
@@ -81,4 +77,18 @@ footer{
 }
 .fab:hover{
     opacity:1.0;
+}
+
+#socialTxt{
+    color: white;
+    background: $darkBlue;
+
+
+    @include for-tablet-portrait-up {
+        margin-top:80px;
+    }
+
+    @include for-desktop-up{
+        margin-top:100px;
+    }
 }

@@ -1,3 +1,16 @@
+@mixin for-tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
+  }
+  @mixin for-tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+  }
+  @mixin for-desktop-up {
+    @media (min-width: 1200px) { @content; }
+  }
+  @mixin for-big-desktop-up {
+    @media (min-width: 1800px) { @content; }
+  }
+
 .hidden { 
     display:none;
 }
@@ -8,14 +21,12 @@ body{
     margin: 0 auto;
     justify-content: center;
     max-width:100%;
-
-    font-family: $mainFont;
-    line-height:22px;
-
     background-image: url(../images/site_bg.png);
     background-repeat: no-repeat;
     background-position: top, center;
 
+    font-family: $mainFont;
+    line-height:22px;
 }
 
 h1{
