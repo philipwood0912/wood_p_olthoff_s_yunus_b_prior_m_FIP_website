@@ -64,7 +64,8 @@
     padding:5px;
     border-radius:10px;
     background: $white;
-    width:300px;
+    max-width:90%;
+    margin: 0 auto;
 
     margin-top:40px;
 
@@ -79,11 +80,20 @@
 
 .popUpMap {
     margin: 0 auto;
-    margin-bottom:30px;
-    margin-top: 30px;
     padding: 5px;
     background: $white;
-    width: 80%;
+    max-width: 90%;
+    border-radius:8px;
+
+    margin-top:40px;
+
+    @include for-tablet-portrait-up {
+        margin-top:80px;
+    }
+
+    @include for-desktop-up{
+        margin-top:100px;
+    }
 }
 
 //STYLING FOR POP UP TEXT
@@ -111,6 +121,15 @@
     border-radius: 5px;
     background: $white;
     padding:3px;
+    margin-top:40px;
+
+    @include for-tablet-portrait-up {
+        margin-top:80px;
+    }
+
+    @include for-desktop-up{
+        margin-top:100px;
+    }
     
 }
 
