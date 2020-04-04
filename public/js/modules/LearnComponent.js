@@ -14,29 +14,9 @@ export default {
     
         <img src="./public/images/didYouKnow.svg" alt="Did You Know?" id="didYouKnow">
 
-
-        <div class="learnPopUp">
-            <div class="popUpBorder">
-            
-                <p class="smBlueText"> HIV is a virus that attacks the immune system, decreasing your ability to fight off other incetions and dieseases.</p>
-            </div>
-        </div>
-
         <img src="./public/images/factImg2.svg" alt="Fact Information 2" id="factImg2">
 
-        <div class="learnPopUp">
-            <div class="popUpBorder">
-                <p class="smBlueText"> HIV testing blurb.</p>
-            </div>
-        </div>
-
         <img src="./public/images/hiv-aids.svg" alt="Hiv& Aids" id="hivAndAids">
-        
-        <div class="learnPopUp">
-            <div class="popUpBorder">
-                <p class="smBlueText"> Are diseases spread mainly through the exchange of bodily fluids such as blood, semen or vaginal fluids.</p>
-            </div>
-        </div>
         
         <img src="./public/images/factImg3.svg" alt="Fact Information 3" id="factImg3">
 
