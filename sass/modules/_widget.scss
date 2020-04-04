@@ -1,12 +1,19 @@
 .popUpMap {
     margin: 0 auto;
-    margin-bottom:30px;
-    margin-top: 30px;
     padding:5px;
     border-radius:10px;
     background: $white;
     width: 80%;
     
+    margin-top:40px;
+
+    @include for-tablet-portrait-up {
+        margin-top:80px;
+    }
+
+    @include for-desktop-up{
+        margin-top:100px;
+    }
 }
 #map {
     position: relative;

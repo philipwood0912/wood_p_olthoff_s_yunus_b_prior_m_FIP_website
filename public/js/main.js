@@ -16,16 +16,16 @@ const router = new VueRouter({
     routes
 })
 
-var mykey = config.MY_KEY;
+//var mykey = config.MY_KEY;
 
-Vue.use(VueGoogleMaps, {
+//Vue.use(VueGoogleMaps, {
     //vue library plugin rules
-    load: {
-      key: mykey,
-      v: '3.26'
-    },
-    installComponents: true
-  })
+    //load: {
+     // key: mykey,
+     // v: '3.26'
+    //},
+    //installComponents: true
+  //})
 
 const vm = new Vue({
     data: {
