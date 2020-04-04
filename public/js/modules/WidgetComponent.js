@@ -2,12 +2,12 @@ import MapComponent from './MapComponent.js';
 export default {
     template: `
     <div>
-        <div id="postal-wrp">
-            <h2>{{postalMessage}}</h2>
+        <h2 class="postal-msg">{{postalMessage}}</h2>
+        <div class="postal-wrp">
             <form @submit.prevent="pullLocation(postal)">
-                <label>Your Postal Code</label>
+                <label>Postal Code:</label>
                 <input v-model="postal" maxlength="6" name="postal">
-                <button name="submit">Submit</button>
+                <button name="submit"><i class="fas fa-arrow-circle-right fa-3x"></i></button>
             </form>
         </div>
         <mapcomp></mapcomp>
