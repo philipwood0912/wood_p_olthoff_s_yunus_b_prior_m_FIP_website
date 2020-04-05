@@ -33,6 +33,7 @@ const vm = new Vue({
         isActive: false,
         clinics: [],
         homeContent: [],
+        aboutContent: []
     },
     methods: {
         closeMenu(){
@@ -56,17 +57,37 @@ const vm = new Vue({
             fetch(url)
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                //console.log(data);
                 for(var i=0; i<data.length; i++){
                     this.homeContent.push(data[i]);
                 }
             })
             .catch(err => console.log(err))
         },
+        fetchAboutContent(){
+            let url = `./admin/about.php`;
+            fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                //console.log(data);
+                for(var i=0; i<data.length; i++){
+                    let string = '-';
+                    let textSplit = data[i].text.split('^');
+                    for(var n=0; n<textSplit.length; n++){
+                        textSplit[n] = string.concat(' ', textSplit[n]);
+                    }
+                    data[i].text = textSplit;
+                    this.aboutContent.push(data[i]);
+                }
+                console.log(this.aboutContent);
+            })
+            .catch(err => console.log(err))
+        }
     },
     created: function(){
         this.pullClinics();
         this.fetchHomeContent();
+        this.fetchAboutContent();
     },
     router
 }).$mount("#app");

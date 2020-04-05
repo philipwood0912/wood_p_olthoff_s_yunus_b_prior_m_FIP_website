@@ -36,7 +36,7 @@ function deleteItem($id, $tbl){
     if($delete_success && $count > 0 ){
         redirect_to('mng_content.php');
     } else {
-        return false;
+        return "Something went wrong..";
     }
 }
 function addHomeItem($args){
@@ -65,8 +65,6 @@ function addHomeItem($args){
                 ':image'=>$generated_filename
             )
         );
-        $last_uploaded_id = $pdo->lastInsertId();
-        // insert info link table for gender / category
         if($insert_success){
             redirect_to('mng_content.php');
         } else {
@@ -125,5 +123,39 @@ function editHomeItem($args){
     }catch(Exception $e){
         $error = $e->getMessage();
         return $error;
+    }
+}
+
+function editAboutItem($args){
+    $pdo = Database::getInstance()->getConnection();
+    $update_query = 'UPDATE tbl_about SET Title =:title, Text =:text WHERE ID =:id';
+    $update_item = $pdo->prepare($update_query);
+    $update_success = $update_item->execute(
+        array(
+            ':title'=>$args['title'],
+            ':text'=>$args['text'],
+            ':id'=>$args['id']
+        )
+    );
+    if($update_success){
+        redirect_to('mng_content.php');
+    } else {
+        return 'Something went wrong..';
+    }
+}
+function addAboutItem($args){
+    $pdo = Database::getInstance()->getConnection();
+    $insert_query = 'INSERT INTO tbl_about(Title, Text) VALUES(:title, :text)';
+    $insert_item = $pdo->prepare($insert_query);
+    $insert_success = $insert_item->execute(
+        array(
+            ':title'=>$args['title'],
+            ':text'=>$args['text']
+        )
+    );
+    if($insert_success){
+        redirect_to('mng_content.php');
+    } else {
+        return "Something went wrong..";
     }
 }
