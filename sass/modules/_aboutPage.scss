@@ -32,6 +32,16 @@
     margin: 0 auto;
     padding:10px;
     width: 100%;
+
+    margin-top:40px;
+
+    @include for-tablet-portrait-up {
+        margin-top:80px;
+    }
+
+    @include for-desktop-up{
+        margin-top:100px;
+    }
     
 }
 
