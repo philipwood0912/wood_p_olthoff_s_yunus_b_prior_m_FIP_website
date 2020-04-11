@@ -14,7 +14,7 @@
 </head>
 <body>
     <header>
-        <img src="../public/images/fip_logo.svg" alt="logo">
+        <img class="headerLogo" src="../public/images/gettested_logo.svg" alt="logo">
     </header>
     <div class="dashboard">
         <h2>Welcome back <?php echo $_SESSION['username'];?></h2>

@@ -1,0 +1,59 @@
+//HOME PAGE POP UP
+//styling for popup box border
+.blueBorder{
+    border: 2px solid $lightBlue;
+    border-radius:8px;
+    padding:10px;
+}
+
+.iconCon{
+    padding: 15px;
+}
+
+.popUp{
+    padding:5px;
+    border-radius:10px;
+    background: $white;
+    max-width:80%;
+    margin: 0 auto;
+
+    margin-top:40px;
+
+    @include for-tablet-portrait-up {
+        margin-top:80px;
+    }
+
+    @include for-desktop-up{
+        margin-top:100px;
+    }
+}
+
+.popUpTitle{
+    color: $pink;
+    font-size:22px;
+    display: flex;
+    margin: 0 auto;
+    padding-top:30px;
+    padding-bottom:30px;
+}
+
+.popUpSmall{
+    color: $lightBlue;
+    padding: 15px;
+}
+
+//ABOUT POP UPS
+.aboutPopUp{
+    background:$white;
+    padding: 5px;
+    border-radius:8px;
+    margin-top:40px;
+
+    @include for-tablet-portrait-up {
+        margin-top:80px;
+    }
+
+    @include for-desktop-up{
+        margin-top:100px;
+    }
+}

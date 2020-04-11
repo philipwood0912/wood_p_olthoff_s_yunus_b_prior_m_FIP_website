@@ -1,5 +1,5 @@
  @mixin for-tablet-portrait-up {
-    @media (min-width: 600px) { @content; }
+    @media (min-width: 800px) { @content; }
   }
   @mixin for-tablet-landscape-up {
     @media (min-width: 900px) { @content; }
@@ -23,18 +23,27 @@
 
     @include for-desktop-up{
         margin-top:100px;
-        max-width:60%;
+        max-width:50%;
     }
 
+}
+
+#aboutHero{
+    margin-top:20px;
+    @include for-tablet-portrait-up {
+        margin-top:40px;
+    }
+
+    @include for-desktop-up{
+        margin-top:60px;
+    }
 }
 
 .aboutIntro{
     margin: 0 auto;
     padding:10px;
     width: 100%;
-
     margin-top:40px;
-
     @include for-tablet-portrait-up {
         margin-top:80px;
     }
@@ -44,6 +53,7 @@
     }
     
 }
+
 
 #hivAndAids{
     display:flex;
@@ -61,31 +71,8 @@
     }
 }
 
-.aboutPopUp{
-    background:$white;
-    padding: 5px;
-    border-radius:8px;
-    margin-top:40px;
-
-    @include for-tablet-portrait-up {
-        margin-top:80px;
-    }
-
-    @include for-desktop-up{
-        margin-top:100px;
-    }
-}
-
 .aboutList{
     list-style: none;
-}
-
-.aboutPopUp h3{
-    padding:10px;
-}
-
-.aboutPopUp p{
-    padding:10px;
 }
 
 #socialCon{
@@ -99,7 +86,6 @@
 }
 
 #imgCon{
-    max-width:90%;
     margin: 0 auto;
 
     margin-top:40px;
@@ -111,4 +97,10 @@
     @include for-desktop-up{
         margin-top:100px;
     }
+}
+
+#aboutLogo{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
 }
