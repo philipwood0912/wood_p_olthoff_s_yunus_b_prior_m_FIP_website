@@ -28,7 +28,7 @@ export default {
 
                 <div id="widget">
 
-                    <widget></widget>
+                     <!-- <widget></widget> -->
 
                 </div>
 

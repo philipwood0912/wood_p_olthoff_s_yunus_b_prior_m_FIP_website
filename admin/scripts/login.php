@@ -24,7 +24,7 @@ function login($username, $password){
             $pass_hash = $founduser['User_Pass'];
             $pass_ver = password_verify($password, $pass_hash);
         }
-        if(isset($pass_ver)){
+        if($pass_ver){
             redirect_to('dashboard.php');
         } else {
             return 'wrong password';
