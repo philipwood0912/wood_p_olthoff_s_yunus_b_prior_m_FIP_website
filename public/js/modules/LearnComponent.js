@@ -21,10 +21,10 @@ export default {
         <img src="./public/images/factImg3.svg" alt="Fact Information 3" id="factImg3">
 
         <div class="learnPopUp" id="widgetCon">
-            <div class="popUpBorder">
-                <h3 class="pinkTitle">Take the First Step!</h3>
-                <p class="smBlueText">Getting tested for HIV and other common STDs is the first step towards taking control of your overall health. Knowing your status can help keep you and the ones around you safe and healthy.</p>
-                <h4 class="smBlueText">Enter your postal code below to find medical clinics offering free testing in your area.</h4>
+            <div class="blueBorder">
+                <h3 class="popUpTitle">Take the First Step!</h3>
+                <p class="popUpSmall">Getting tested for HIV and other common STDs is the first step towards taking control of your overall health. Knowing your status can help keep you and the ones around you safe and healthy.</p>
+                <h4 class="popUpSmall">Enter your postal code below to find medical clinics offering free testing in your area.</h4>
 
                 <div id="widget">
 

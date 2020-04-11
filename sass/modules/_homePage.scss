@@ -1,5 +1,5 @@
 @mixin for-tablet-portrait-up {
-    @media (min-width: 600px) { @content; }
+    @media (min-width: 800px) { @content; }
   }
   @mixin for-tablet-landscape-up {
     @media (min-width: 900px) { @content; }
@@ -40,7 +40,11 @@
 #heroImage{
     justify-content: center;
     margin: 0 auto;
+    max-width:80%;
 
+    @include for-desktop-up {
+       max-width: 60%;
+      }
 }
 
 #chevronDown{
@@ -51,67 +55,11 @@
     }
 }
 
-// MAKE THESE SECTIONS ALTERNATE
-
 #homeBottom{
     display:flex;
     flex-direction:column;
     justify-content: center;
     margin: 0 auto;
-}
-
-.popUp{
-    padding:5px;
-    border-radius:10px;
-    background: $white;
-    max-width:90%;
-    margin: 0 auto;
-
-    margin-top:40px;
-
-    @include for-tablet-portrait-up {
-        margin-top:80px;
-    }
-
-    @include for-desktop-up{
-        margin-top:100px;
-    }
-}
-
-.popUpMap {
-    margin: 0 auto;
-    padding: 5px;
-    background: $white;
-    max-width: 90%;
-    border-radius:8px;
-
-    margin-top:40px;
-
-    @include for-tablet-portrait-up {
-        margin-top:80px;
-    }
-
-    @include for-desktop-up{
-        margin-top:100px;
-    }
-}
-
-//STYLING FOR POP UP TEXT
-
-//styling for popup box border
-.blueBorder{
-    border: 2px solid $lightBlue;
-    border-radius:8px;
-    padding:10px;
-}
-
-.pink{
-    color: $pink;
-    font-size: 24px;
-}
-
-.smBlueText{
-    color: $lightBlue;
 }
 
 .button{
@@ -161,17 +109,15 @@
 
 #videoCon{
     margin: 0 auto;
-    max-width:100%;
+    max-width:90%;
     margin-top:40px;
 
     @include for-tablet-portrait-up {
         margin-top:80px;
-        max-width:80%;
     }
 
     @include for-desktop-up{
         margin-top:100px;
-        max-width:60%;
     }
 }
 

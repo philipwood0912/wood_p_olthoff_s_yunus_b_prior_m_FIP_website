@@ -1,5 +1,5 @@
 @mixin for-tablet-portrait-up {
-    @media (min-width: 600px) { @content; }
+    @media (min-width: 800px) { @content; }
   }
   @mixin for-tablet-landscape-up {
     @media (min-width: 900px) { @content; }
@@ -48,6 +48,7 @@
         font-size: 22px;
     }
 }
+
 #mainNav {
     display: flex;
     flex-direction: column;
@@ -63,7 +64,7 @@
     display: flex;
     flex-direction: column;
 
-    padding: 40px;
+    padding: 20px;
     max-width:100%;
 
     @include for-tablet-landscape-up{
@@ -100,11 +101,10 @@
 }
 
 .table-form {
-    width: 100%;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
     margin-bottom: 25px;
     table {
-        width: 100%;
         border: 2px solid $darkBlue;
         tr, td, tr th {
             border: 2px solid $darkBlue;
@@ -112,7 +112,7 @@
             font-size: 20px;
         }
         td, tr th {
-            padding: 10px;
+            padding: 3px;
         }
     }
 }

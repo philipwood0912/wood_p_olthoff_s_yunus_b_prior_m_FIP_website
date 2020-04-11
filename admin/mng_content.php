@@ -82,8 +82,8 @@
     <title>Admin Dashboard</title>
 </head>
 <body>
-    <header>
-        <img src="../public/images/fip_logo.svg" alt="logo">
+<header>
+        <img class="headerLogo" src="../public/images/gettested_logo.svg" alt="logo">
     </header>
     <div class="sub-dashboard">
         <h2>Manage Content</h2>

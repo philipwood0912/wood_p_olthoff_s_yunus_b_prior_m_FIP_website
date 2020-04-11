@@ -23,7 +23,7 @@
 </head>
 <body>
 <header>
-    <img id="headerLogo" src="../public/images/fip_logo.svg" alt="logo">
+    <img class="headerLogo" src="../public/images/gettested_logo.svg" alt="logo">
 </header>
 <div id="signin">
     <h2>Sign in to your account</h2>

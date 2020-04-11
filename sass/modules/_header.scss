@@ -1,40 +1,46 @@
+@mixin for-tablet-small {
+  @media (min-width: 700px) { @content; }
+}
 
- @mixin for-tablet-portrait-up {
-    @media (min-width: 600px) { @content; }
-  }
-  @mixin for-tablet-landscape-up {
-    @media (min-width: 900px) { @content; }
-  }
-  @mixin for-desktop-up {
-    @media (min-width: 1200px) { @content; }
-  }
-  @mixin for-big-desktop-up {
-    @media (min-width: 1800px) { @content; }
-  }
+@mixin for-tablet-portrait-up {
+  @media (min-width: 800px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
 
 header {
-    background: $white;
-    max-width:100%;
+  display:flex;
+  width: 100%;
+  background-color: white;
+}
+
+.headerLogo {
+    width:33%;
+    padding: 15px;
+
+    @include for-tablet-portrait-up{
+      width:20%;
+  }
+
+  @include for-desktop-up{
     padding:25px;
+  }
 }
 
-#headerCon{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    max-width:100%;
+#burger{
+  position: absolute;
+  right: 0;
+  top:0;
+  padding:15px;
 
-    @include for-desktop-up{
-        max-width:70%;
-        margin: 0 auto;
-    }
-}
-
-#headerLogo {
-    width:40%;
-
-    @include for-desktop-up{
-      width:25%;
+  @include for-tablet-small{
+    padding:20px;
   }
 }
