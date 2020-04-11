@@ -5,7 +5,7 @@ export default {
         <h1 class="hidden"> Home Page </h1>
 
         <div id="heroCon"> 
-            <img src="./public/images/heroImgWeb.svg" alt="hero image with text" id="heroImage">
+            <img src="./public/images/heroImgWeb.png" alt="hero image with text" id="heroImage">
 
             <i class="fas fa-chevron-down fa-3x" id="chevronDown"> </i>
         </div>
@@ -17,9 +17,9 @@ export default {
                     <div class="blueBorder">
                         <div class="iconCon">
                             <img class="icons" alt="icon" :src="'./public/images/' + content.image">
-                            <h3 class="pinkTitle">{{content.title}}</h3>
+                            <h3 class="popUpTitle">{{content.title}}</h3>
                         </div>
-                        <p class="smBlueText">{{content.text}}</p>
+                        <p class="popUpSmall">{{content.text}}</p>
                     </div>
                 </div>
             </div>
@@ -40,9 +40,9 @@ export default {
             <div class="blueBorder">
                 <div class="iconCon iconMap">
                     <img class="icons" alt="icon" src="./public/images/condom1.svg">
-                    <h3 class="pinkTitle">Get Tested Now!</h3>
+                    <h3 class="popUpTitle">Get Tested Now!</h3>
                 </div>
-                <p class="smBlueText">Find a clinic near you.</p>
+                <p class="popUpSmall">Find a clinic near you.</p>
                 <widget></widget>
             </div>
             </div>

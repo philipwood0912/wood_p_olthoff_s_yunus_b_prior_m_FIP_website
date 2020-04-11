@@ -1,5 +1,5 @@
 @mixin for-tablet-portrait-up {
-    @media (min-width: 600px) { @content; }
+    @media (min-width: 800px) { @content; }
   }
   @mixin for-tablet-landscape-up {
     @media (min-width: 900px) { @content; }
@@ -19,8 +19,7 @@ body{
     display:flex;
     flex-direction: column;
     margin: 0 auto;
-    justify-content: center;
-    max-width:100%;
+    width:100%;
     background-image: url(../images/site_bg.png);
     background-repeat: no-repeat;
     background-position: top, center;
@@ -57,3 +56,26 @@ a{
 ul{
     line-height:20px;
 }
+
+video{
+    max-width: 100%;
+}
+
+.app{
+    display: flex;
+    width:100%;
+}
+
+button:hover{
+    border: 1px solid $darkBlue;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  a:hover{
+    cursor: pointer;
+  }
+  
+  i:hover {
+    cursor: pointer;
+  }
