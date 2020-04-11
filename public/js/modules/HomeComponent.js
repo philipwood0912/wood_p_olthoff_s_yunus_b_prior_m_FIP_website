@@ -43,7 +43,7 @@ export default {
                     <h3 class="pinkTitle">Get Tested Now!</h3>
                 </div>
                 <p class="smBlueText">Find a clinic near you.</p>
-                <widget></widget>
+                <!-- <widget></widget> -->
             </div>
             </div>
     </div>
