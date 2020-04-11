@@ -42,6 +42,7 @@ export default {
                     <img class="icons" alt="icon" src="./public/images/condom1.svg">
                     <h3 class="popUpTitle">Get Tested Now!</h3>
                 </div>
+
                 <p class="popUpSmall">Find a clinic near you.</p>
                 <widget></widget>
             </div>
