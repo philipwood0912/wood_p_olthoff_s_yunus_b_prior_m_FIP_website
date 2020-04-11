@@ -13,18 +13,20 @@
     <title>Admin Dashboard</title>
 </head>
 <body>
-    <header>
+    <header class="dash-header">
         <img class="headerLogo" src="../public/images/gettested_logo.svg" alt="logo">
     </header>
+    <div class="dashboard-con">
     <div class="dashboard">
         <h2>Welcome back <?php echo $_SESSION['username'];?></h2>
         <h3>Admin Settings</h3>
         <ul id="mainNav">
-            <a href="mng_currentuser.php">Manage Current User <i class="fas fa-arrow-circle-right"></i></a>
-            <a href="mng_users.php">Manage All Users <i class="fas fa-arrow-circle-right"></i></a>
-            <a href="mng_content.php">Manage Content <i class="fas fa-arrow-circle-right"></i></a>
-            <a href="logout.php">Log Out <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="mng_currentuser.php"><button>Manage Current User <i class="fas fa-arrow-circle-right"></i></button></a>
+            <a href="mng_users.php"><button>Manage All Users <i class="fas fa-arrow-circle-right"></i></button></a>
+            <a href="mng_content.php"><button>Manage Content <i class="fas fa-arrow-circle-right"></i></button></a>
+            <a href="logout.php"><button>Log Out <i class="fas fa-arrow-circle-right"></i></button></a>
         </ul>
+    </div>
     </div>
 </body>
 </html>
