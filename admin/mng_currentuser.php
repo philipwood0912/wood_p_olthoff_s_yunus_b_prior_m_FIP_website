@@ -32,25 +32,26 @@
 <header>
         <img class="headerLogo" src="../public/images/gettested_logo.svg" alt="logo">
     </header>
+    <div class="sub-dashboard-wrap">
     <div class="sub-dashboard">
-    <h2>Edit Current User</h2>
-    <?php echo !empty($message)? $message:'';?>
-    <form class="dashboard-form" action="mng_currentuser.php" method="post">
-    <?php if($current_user):?>
-        <?php while($user_info = $current_user->fetch(PDO::FETCH_ASSOC)):?>
-        <label>First Name</label>
-        <input type="text" name="fname" value="<?php echo $user_info['F_Name'];?>">
-        <label>Last Name</label>
-        <input type="text" name="lname" value="<?php echo $user_info['L_Name'];?>">
-        <label>Email</label>
-        <input type="text" name="email" value="<?php echo $user_info['Email'];?>">
-        <label>Username</label>
-        <input type="text" name="username" value="<?php echo $user_info['User_Name'];?>">
-        <button name="submit">Edit Account</button>
-        <?php endwhile;?>
-    <?php endif;?>
-    </form>
-    <a href="dashboard.php">Go Back <i class="fas fa-arrow-circle-right"></i></a>
+        <div class="sub-dash-title"><h2><?php echo !empty($message)? $message:'Edit Current User';?></h2><a href="dashboard.php"><button><i class="fas fa-arrow-circle-left"></i> Go Back</button></a></div>
+        
+        <form class="dashboard-form" action="mng_currentuser.php" method="post">
+        <?php if($current_user):?>
+            <?php while($user_info = $current_user->fetch(PDO::FETCH_ASSOC)):?>
+            <label>First Name</label>
+            <input type="text" name="fname" value="<?php echo $user_info['F_Name'];?>">
+            <label>Last Name</label>
+            <input type="text" name="lname" value="<?php echo $user_info['L_Name'];?>">
+            <label>Email</label>
+            <input type="text" name="email" value="<?php echo $user_info['Email'];?>">
+            <label>Username</label>
+            <input type="text" name="username" value="<?php echo $user_info['User_Name'];?>">
+            <button name="submit">Edit Account</button>
+            <?php endwhile;?>
+        <?php endif;?>
+        </form>
+    </div>
     </div>
 </body>
 </html>

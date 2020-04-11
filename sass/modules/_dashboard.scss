@@ -11,14 +11,14 @@
     @media (min-width: 1800px) { @content; }
   }
 
-.dash-header {
-    img {
-        width:40%;
-        @include for-desktop-up{
-        width:25%;
-        }
-    }
-}
+// .dash-header {
+//     img {
+//         width:40%;
+//         @include for-desktop-up{
+//         width:25%;
+//         }
+//     }
+// }
 .dashboard-con {
     width: 100%;
     height: 80vh;
@@ -42,6 +42,9 @@
     @include for-tablet-portrait-up {
         max-width: 60%;
     }
+    @include for-desktop-up {
+        max-width: 40%;
+    }
     h2 {
         color:$pink;
         font-size: 40px;
@@ -58,9 +61,43 @@
 
 .sub-dashboard {
     background-color: $white;
-    padding: 20px;
+    margin: 0 auto;
+    margin-top: 60px;
+    padding: 30px 30px 0px 30px;
     max-width:100%;
-
+    @include for-tablet-portrait-up {
+        max-width: 80%;
+    }
+    @include for-desktop-up {
+        max-width: 60%;
+    }
+    .sub-dash-title {
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        h2 {
+            margin: 0;
+            font-size: 40px;
+            line-height: 40px;
+        }
+        button {
+            max-width:250px;
+            height:40px;
+            margin: 0 auto;
+            border-radius: 5px;
+            background: $white;
+            padding:5px 10px;
+            border: 2px solid $lightBlue;
+            border-radius: 5px;
+            font-size: 20px;
+            color: $pink;
+            cursor: pointer;
+            font-family: $mainFont;
+            margin-left: 20px;
+        }
+    }
     
 
     h2 {
@@ -71,11 +108,6 @@
     h3 {
         color: $lightBlue;
         font-size: 26px;
-    }
-    a {
-        text-decoration: none;
-        color: $lightBlue;
-        font-size: 22px;
     }
 }
 #mainNav {
@@ -100,11 +132,10 @@
         }
     }
 }
-
 .dashboard-form {
     display: flex;
     flex-direction: column;
-
+    text-align: center;
     padding: 40px;
     max-width:100%;
 
@@ -126,18 +157,24 @@
         margin-bottom: 20px;
     }
     button {
-        margin: 0 auto;
-        max-width: 60%;
-        padding: 5px;
-        font-size: 22px;
-        color: $lightBlue;
-        margin-bottom: 30px;
-
+            max-width:250px;
+            height:40px;
+            margin: 0 auto;
+            border-radius: 5px;
+            background: $white;
+            padding:5px 10px;
+            border: 2px solid $lightBlue;
+            border-radius: 5px;
+            font-size: 20px;
+            color: $pink;
+            cursor: pointer;
+            font-family: $mainFont;
+            margin-top: 10px;
     }
     label {
-        font-size: 24px;
+        font-size: 27px;
         color: $lightBlue;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
 }
 
