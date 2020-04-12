@@ -35,6 +35,7 @@ const vm = new Vue({
         aboutContent: []
     },
     methods: {
+        
         closeMenu(){
             this.showTopMenu = false;
             this.isActive = false;

@@ -42,7 +42,6 @@ footer{
     margin-top:5px;
     margin-bottom: 5px;
     padding:5px;
-    border-radius: 8px;
 
     @include for-tablet-portrait-up {
         margin-top:10px;
@@ -51,8 +50,9 @@ footer{
 }
 
 .footerLink:hover{
-    box-shadow: 0 0 4px 4px $grey;
-    transition: all .25s ease-out;
+    box-shadow: inset 0 -2px 0 0 $darkBlue; 
+    transition: all .25s ease-in-out;
+
 }
 
 #copyright{
@@ -98,7 +98,20 @@ footer{
 }
 .fab:hover{
     opacity:1.0;
-    box-shadow: 0 0 4px 4px $grey;
+    box-shadow: inset 0 0 4px 4px $grey;
+    border-radius: 3px;
+    transition: all .25s ease-out;
+}
+
+#tiktokIcon{
+    display: flex;
+    width:35px;
+    height: 35px;
+    padding:2px;
+}
+#tiktokIcon:hover{
+    opacity:1.0;
+    box-shadow: inset 0 0 4px 4px $grey;
     border-radius: 3px;
     transition: all .25s ease-out;
 }

@@ -6,24 +6,24 @@ export default {
         <h1 class="hidden">Get The Facts</h1>
 
         <div class="imgPaddingAbt">
-            <img src="./public/images/factImg1.svg" alt="Fact Information 1" id="factImg1">
+            <img class="animated fadeIn" src="./public/images/factImg1.svg" alt="Fact Information 1" id="factImg1">
         </div>
     
         <div class="imgPaddingAbt">
-            <img src="./public/images/hiv_transmission.svg" alt="HIV transmission methods" class="aboutPic">
+            <img class="animated fadeIn" src="./public/images/hiv_transmission.png" alt="HIV transmission methods" class="aboutPic">
         </div>
     
         <div class="imgPaddingAbt">
-            <img src="./public/images/didYouKnow.svg" alt="Did You Know?" id="didYouKnow">
+            <img class="animated fadeIn" src="./public/images/didYouKnow.svg" alt="Did You Know?" id="didYouKnow">
         </div>
         <div class="imgPaddingAbt">
-            <img src="./public/images/factImg2.svg" alt="Fact Information 2" id="factImg2">
+            <img class="animated fadeIn" src="./public/images/factImg2.svg" alt="Fact Information 2" id="factImg2">
         </div>
         <div class="imgPaddingAbt">
-            <img src="./public/images/hiv-aids.svg" alt="Hiv& Aids" id="hivAndAids">
+            <img class="animated fadeIn" src="./public/images/hiv-aids.svg" alt="Hiv& Aids" id="hivAndAids">
         </div>
         <div class="imgPaddingAbt">   
-            <img src="./public/images/factImg3.svg" alt="Fact Information 3" id="factImg3">
+            <img class="animated fadeIn" src="./public/images/factImg3.svg" alt="Fact Information 3" id="factImg3">
         </div>
 
         <div class="learnPopUp" id="widgetCon">
@@ -34,7 +34,7 @@ export default {
 
                 <div id="widget">
 
-                     <!-- <widget></widget> -->
+                <widget></widget>
 
                 </div>
 
