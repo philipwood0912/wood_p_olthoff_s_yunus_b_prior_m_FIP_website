@@ -19,7 +19,6 @@
             <?php include 'templates/footer.php'; ?>
     </main>
 <script src="config/config.js"></script>
-<!-- <script src="config/config.js"></script> -->
 <script src="public/js/main.js" type="module"></script>
 </body>
 </html>

@@ -27,16 +27,27 @@
     <a class="headerLogo" href="../#"><img src="../public/images/gettested_logo.svg" alt="logo"></a>
 </header>
 <div class="signin-body">
+<div class="dashboardIconCon">
+    <div class="dashboardIconPad" ><a href="../#"><button class="buttonMain"><i class="fas fa-home"></i> Home</button></a></div>
+</div>
 <div id="signin">
-    <a id="gohome" href="../index.php"><button><i class="fas fa-arrow-circle-left fa-1x"></i> Go Back</button></a>
+    <div class="blueBorder">
     <h2><?php echo !empty($message)? $message:'Sign in to your account';?></h2>
     <form id="signinform" action="admin_login.php" method="post">
-        <label class="hidden">Username</label>
-        <input name="username" type="text" value="" placeholder="Username">
-        <label class="hidden">Password</label>
-        <input name="password" type="password" value="" placeholder="Password">
-        <button name="submit" type="submit">Sign In <i class="fas fa-arrow-circle-right"></i></button>
+        <div class="labelWrapLogin">
+            <label>Username:</label>
+            <input name="username" type="text" value="" placeholder="Username">
+        </div>
+        <div class="labelWrapLogin">
+            <label>Password:</label>
+            <input name="password" type="password" value="" placeholder="Password">
+        </div>
+        <div class="buttonWrapLogin">
+            <a href="../#"><button type="button" class="buttonMain"><i class="fas fa-arrow-circle-left fa-1x"></i> Go Back</button></a>
+            <button class="buttonMain" name="submit" type="submit">Sign In <i class="fas fa-arrow-circle-right"></i></button>
+        </div>
     </form>
+    </div>
 </div>
 </div>
 </body>
