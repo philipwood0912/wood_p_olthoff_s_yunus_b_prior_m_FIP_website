@@ -14,31 +14,34 @@
 footer{
     text-align: center;
     margin: 0 auto;
-    width: 100%;
+    max-width: 100%;
 }
 
 #footerNav{
     display: flex;
+    flex-direction: column;
     text-decoration: none;
-    height:40px;
+    margin: 0 auto;
     background: $darkBlue;
     justify-content: center;
-    
+    padding:20px;
 }
 
 .footerLink{
+    display: flex;
     text-decoration: none;
     opacity: 0.8;
-    padding: 10px;
     color: $white;
-    justify-content: space-between;
-    font-size:14px;
+    margin: 0 auto;
+    margin-top:5px;
+    margin-bottom: 5px;
 
-
-    @include for-tablet-portrait-up{
-        font-size:20px;
+    @include for-tablet-portrait-up {
+        margin-top:10px;
+    margin-bottom: 10px;
     }
 }
+
 .footerLink:hover{
     opacity:1.0;
 }
@@ -46,7 +49,6 @@ footer{
 #copyright{
     background: $darkBlue;
     color:white;
-    padding-bottom:10px;
     font-size: 14px;
 }
 
@@ -55,14 +57,15 @@ footer{
     background: $darkBlue;
     display:flex;
     flex-direction: column;
+    
 }
 
 #socialIconCon{
-    
     display:flex;
     flex-direction: row;
     justify-content: space-between;
     width:50%;
+    padding-top:20px;
     @include for-tablet-portrait-up{
         width:40%;
     }

@@ -12,7 +12,7 @@ export default {
     </div>
         
     <div class="aboutIntro">
-        <img id="aboutLogo" src="public/images/gettested_logo.svg" alt="logo" id="aboutLogo">
+        <img id="aboutLogo" src="public/images/gettested_logo.svg" alt="logo">
         <img src="./public/images/aboutHero-06.svg" alt="hero image with text" id="aboutHero">
         <img src="./public/images/hiv-aids.svg" alt="Hiv&Aids" id="hivAndAids">
     </div>

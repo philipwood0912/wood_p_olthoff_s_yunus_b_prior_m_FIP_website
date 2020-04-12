@@ -19,11 +19,13 @@ header {
   display:flex;
   width: 100%;
   background-color: white;
+  opacity: 0.8;
 }
 
 .headerLogo {
     width:33%;
     padding: 15px;
+    opacity: 1.0;
 
     @include for-tablet-portrait-up{
       width:20%;
@@ -31,15 +33,17 @@ header {
 
   @include for-desktop-up{
     padding:25px;
+    margin-left:40px;
   }
 }
 
 #burger{
+  color: $red;
   position: absolute;
   right: 0;
   top:0;
-  padding:15px;
-
+  padding-right:20px;
+  padding-top:12px;
   @include for-tablet-small{
     padding:20px;
   }

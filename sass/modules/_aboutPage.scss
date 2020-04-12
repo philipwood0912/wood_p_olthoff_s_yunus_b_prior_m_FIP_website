@@ -12,18 +12,18 @@
   }
 
 #aboutCon{
-    margin: 0 auto;
-    max-width:100%;
+    width:100%;
     margin-top:40px;
+    margin: 0 auto;
 
     @include for-tablet-portrait-up {
-        max-width:80%;
+        width:80%;
         margin-top:80px;
     }
 
     @include for-desktop-up{
         margin-top:100px;
-        max-width:50%;
+        width:50%;
     }
 
 }
@@ -42,7 +42,7 @@
 .aboutIntro{
     margin: 0 auto;
     padding:10px;
-    width: 100%;
+    max-width: 100%;
     margin-top:40px;
     @include for-tablet-portrait-up {
         margin-top:80px;
@@ -71,9 +71,6 @@
     }
 }
 
-.aboutList{
-    list-style: none;
-}
 
 #socialCon{
     color: $white;
@@ -103,4 +100,15 @@
     display: flex;
     width: 80%;
     margin: 0 auto;
+}
+
+.aboutList{
+    padding-left:0;
+    padding: 5px;
+}
+
+.aboutList li{
+    list-style: none;
+    text-decoration: none;
+
 }
