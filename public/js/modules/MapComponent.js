@@ -21,13 +21,13 @@ export default {
                 @click="clinicClick(c, index)"
             />
         </gmap-map>
-        <div id="info-wrp" v-if="windowOpen">
+        <div @click="windowClose()" id="info-wrp" v-if="windowOpen">
             <div id="infowindow">
                 <h2>{{windowInfoTitle}}</h2>
                 <h3>Address: {{windowInfoAddress}}</h3>
                 <h3>Phone: {{windowInfoPhone}}</h3>
                 <h4>Distance: {{windowInfoDistance}}</h4>
-                <a target="_blank" :href="windowInfoWebsite">Website: {{windowInfoWebsite}}</a>
+                <h4>Website:  <a target="_blank" :href="windowInfoWebsite">Click Here</a></h4>
             </div>
         </div>
     </div>
