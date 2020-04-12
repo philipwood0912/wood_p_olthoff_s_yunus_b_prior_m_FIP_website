@@ -20,7 +20,7 @@ function login($username, $password){
         );
         while($founduser = $user_match->fetch(PDO::FETCH_ASSOC)){
             $_SESSION['user_id'] = $founduser['ID'];
-            $_SESSION['username'] = $founduser['User_Name'];
+            $_SESSION['name'] = $founduser['F_Name'];
             $pass_hash = $founduser['User_Pass'];
             $pass_ver = password_verify($password, $pass_hash);
         }

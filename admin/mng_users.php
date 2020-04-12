@@ -35,41 +35,61 @@ if(isset($_GET['id'])){
     <a class="headerLogo" href="dashboard.php"><img src="../public/images/gettested_logo.svg" alt="logo"></a>
 </header>
 <div class="sub-dash-wrap">
+    <div class="dashboardSubIconCon">
+        <div class="dashboardSubIconPad"><a href="logout.php"><button class="buttonMain"><i class="fas fa-home"></i> Home</button></a></div>
+    </div>
     <div class="sub-dashboard">
-        <div class="sub-dash-title"><h2>Manage Users</h2><a href="dashboard.php"><button><i class="fas fa-arrow-circle-left"></i> Go Back</button></a></div>
-        <form class="dashboard-form" action="mng_users.php" method="post">
-            <h3><?php echo !empty($message_create)? $message_create:'Create New User';?></h3>
-            <label class="hidden">First Name</label>
-            <input name="fname" type="text" value="" placeholder="First Name">
-            <label class="hidden">Last Name</label>
-            <input name="lname" type="text" value="" placeholder="Last Name">
-            <label class="hidden">Email</label>
-            <input name="email" type="email" value="" placeholder="Email">
-            <label class="hidden">Username</label>
-            <input name="username" type="text" value="" placeholder="Username">
-            <label class="hidden">Password</label>
-            <input name="password" type="text" value="" placeholder="Password">
-            <button name="create">Create User</button>
-        </form>
-        <div class="table-form">
-            <table>
-                <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Username</th>
-                    <th>Delete</th>
-                </tr>
-                <tbody>
-                    <?php while($founduser = $users->fetch(PDO::FETCH_ASSOC)):?>
+        <div class="blueBorder">
+            <div class="dashboardSubContent">
+                <div class="sub-dash-title"><h2>Manage Users</h2></div>
+                <form class="dashboard-form" action="mng_users.php" method="post">
+                    <h3><?php echo !empty($message_create)? $message_create:'Create New User';?></h3>
+                    <div class="labelWrapDashboard">
+                        <label>First Name:</label>
+                        <input name="fname" type="text" value="" placeholder="First Name">
+                    </div>
+                    <div class="labelWrapDashboard">
+                        <label>Last Name:</label>
+                        <input name="lname" type="text" value="" placeholder="Last Name">
+                    </div>
+                    <div class="labelWrapDashboard">
+                        <label>Email:</label>
+                        <input name="email" type="email" value="" placeholder="Email">
+                    </div>
+                    <div class="labelWrapDashboard">
+                        <label>Username:</label>
+                        <input name="username" type="text" value="" placeholder="Username">
+                    </div>
+                    <div class="labelWrapDashboard">
+                        <label>Password:</label>
+                        <input name="password" type="text" value="" placeholder="Password">
+                    </div>
+                    <div class="buttonWrapSubDash">
+                        <a href="dashboard.php"><button type="button" class="buttonMain"><i class="fas fa-arrow-circle-left"></i> Go Back</button></a>
+                        <button class="buttonMain" name="create">Create User</button>
+                    </div>
+                </form>
+                <div class="table-form">
+                    <table>
                         <tr>
-                            <td><?php echo $founduser['F_Name'];?></td>
-                            <td><?php echo $founduser['L_Name'];?></td>
-                            <td><?php echo $founduser['User_Name'];?></td>
-                            <td><?php if($_SESSION['user_id'] === $founduser['ID']){continue;}?><a href="mng_users.php?id=<?php echo $founduser['ID'];?>"><i class="fas fa-times-circle fa-2x"></i></a></td>
-                        <tr>
-                    <?php endwhile;?>
-                </tbody>
-            </table>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
+                            <th>Delete</th>
+                        </tr>
+                        <tbody>
+                            <?php while($founduser = $users->fetch(PDO::FETCH_ASSOC)):?>
+                                <tr>
+                                    <td><?php echo $founduser['F_Name'];?></td>
+                                    <td><?php echo $founduser['L_Name'];?></td>
+                                    <td><?php echo $founduser['User_Name'];?></td>
+                                    <td><?php if($_SESSION['user_id'] === $founduser['ID']){continue;}?><a href="mng_users.php?id=<?php echo $founduser['ID'];?>"><i class="fas fa-times-circle fa-2x"></i></a></td>
+                                <tr>
+                            <?php endwhile;?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 </div>

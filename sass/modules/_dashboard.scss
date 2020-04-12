@@ -10,7 +10,9 @@
   @mixin for-big-desktop-up {
     @media (min-width: 1800px) { @content; }
   }
-
+// gets rid of focus outline on buttons / input / textarea
+input:focus, button:focus, textarea:focus {outline:none;}
+// main dashboard styles
 .dashboard-con {
     width: 100%;
     display: flex;
@@ -59,6 +61,10 @@
     @include for-desktop-up {
         max-width: 40%;
     }
+    //dashboard content 
+    .dashboardContent {
+        padding: 20px;
+    }
     h2 {
         color: $pink;
         font-size: 40px;
@@ -73,6 +79,10 @@
     }
 }
 
+<<<<<<< HEAD
+// dashboard nav
+=======
+>>>>>>> 2b15b665f908b5588f93f9402a5e58a0e2f54711
 #mainNav {
     display: flex;
     flex-direction: column;
@@ -96,16 +106,38 @@
     }
 } 
 
-
-.sub-dash-wrap {
-    padding: 50px 0px 50px 0px;
+// sub dashboard styles
+// sub dashboard home icon
+.dashboardSubIconCon {
+    margin: 0 auto;
+    max-width: 80%;
+    margin-bottom: 20px;
+    padding: 5px;
+    .dashboardSubIconPad {
+        background-color: white;
+        padding: 5px;
+        border-radius: 5px;
+        max-width:120px;
+    }
+    button {
+        height:50px;
+        width: 100%;
+        border: 2px solid $lightBlue;
+        border-radius: 5px;
+        font-size: 18px;
+        color: $pink;
+    }
 }
-
+// sub dashboard main wrap
+.sub-dash-wrap {
+    padding: 40px 0px;
+}
+// subdashboard
 .sub-dashboard {
     background-color: $white;
     margin: 0 auto;
-    //margin-top: 60px;
-    padding: 30px;
+    padding: 5px;
+    border-radius: 8px;
     max-width:100%;
     @include for-tablet-portrait-up {
         max-width: 80%;
@@ -113,7 +145,33 @@
     @include for-desktop-up {
         max-width: 60%;
     }
-    // sub-dashboard title wrap
+    .dashboardSubContent {
+        padding: 20px;
+    }
+    // sub-dashboard button wrap
+    .buttonWrapSubDash {
+        text-align: center;
+        margin: 0;
+        margin-bottom: 20px;
+        button {
+            max-width:250px;
+            height:40px;
+            border-radius: 5px;
+            background: $white;
+            padding:5px 10px;
+            border: 2px solid $darkBlue;
+            border-radius: 5px;
+            font-size: 20px;
+            color: $pink;
+            cursor: pointer;
+            font-family: $mainFont;
+        }
+    }
+    //subdash button wrap unique
+    .formBut {
+        margin-bottom: 20px;
+    }
+    // sub dash main title wrap
     .sub-dash-title {
         width: 100%;
         margin-top: 10px;
@@ -124,21 +182,7 @@
             margin: 0;
             font-size: 40px;
             line-height: 40px;
-        }
-        button {
-            max-width:250px;
-            height:40px;
-            margin: 0 auto;
-            border-radius: 5px;
-            background: $white;
-            padding:5px 10px;
-            border: 2px solid $darkGrey;
-            border-radius: 5px;
-            font-size: 20px;
-            color: $darkGrey;
-            cursor: pointer;
-            font-family: $mainFont;
-            margin-left: 20px;
+            color: $pink;
         }
     }
     // current user title style
@@ -152,6 +196,7 @@
         margin: 0;
         margin-top: 25px;
         margin-bottom: 25px;
+        color: $pink;
     }
 }
 // sub-dashboard-form title wrap
@@ -164,47 +209,25 @@
         justify-content: center;
     h3 {
         margin: 0;
-        color: $black;
+        color: $pink;
         font-size: 30px;
         text-align: center;
         line-height: 40px;
     }
-    button {
-        max-width:250px;
-        height:40px;
-        margin: 0 auto;
-        border-radius: 5px;
-        background: $white;
-        padding: 5px 10px;
-        border: 2px solid $darkGrey;
-        border-radius: 5px;
-        font-size: 20px;
-        color: $darkGrey;
-        cursor: pointer;
-        font-family: $mainFont;
-        margin-left: 20px;
-        -webkit-transition: .5s ease;
-        -moz-transition: .5s ease;
-        transition: .5s ease;
-    }
-    button:hover {
-        color: $black;
-        border-color: $black;
-    }
 }
-input:focus, button:focus, textarea:focus {outline:none;}
+// sub dashboard form styles 
 .dashboard-form {
     display: flex;
     flex-direction: column;
     text-align: center;
     max-width:100%;
-    padding-bottom: 20px;
     @include for-tablet-landscape-up{
         max-width: 60%;
         margin: 0 auto;
     }
     h3 {
         font-size: 30px;
+        color: $darkBlue;
     }
     input {
         width: 65%;
@@ -212,9 +235,7 @@ input:focus, button:focus, textarea:focus {outline:none;}
         font-size: 22px;
         margin-bottom: 20px;
         color: $darkGrey;
-    }
-    input:hover {
-        color: $black;
+        float: right;
     }
     textarea {
         width: 65%;
@@ -222,9 +243,7 @@ input:focus, button:focus, textarea:focus {outline:none;}
         font-size: 22px;
         color: $darkGrey;
         margin-bottom: 20px;
-    }
-    textarea:hover {
-        color: $black;
+        float: right;
     }
     button {
             max-width:250px;
@@ -233,46 +252,41 @@ input:focus, button:focus, textarea:focus {outline:none;}
             border-radius: 5px;
             background: $white;
             padding:5px 10px;
-            border: 2px solid $darkGrey;
+            border: 2px solid $darkBlue;
             border-radius: 5px;
             font-size: 20px;
-            color: $darkGrey;
+            color: $pink;
             cursor: pointer;
             font-family: $mainFont;
-            //margin-top: 10px;
-            -webkit-transition: .5s ease;
-            -moz-transition: .5s ease;
-            transition: .5s ease;
     }
-    button:hover {
-        color: $black;
-        border-color: $black;
-    }
-    button:first-child {
-        margin-bottom: 15px;
-    }
+    // button:first-child {
+    //     margin-bottom: 15px;
+    // }
     label {
-        font-size: 27px;
-        color: $black;
+        font-size: 22px;
+        color: $darkBlue;
         margin-bottom: 15px;
+        line-height: 30px;
     }
 }
 
 .table-form {
     width: 100%;
     margin: 0 auto;
-    margin-bottom: 25px;
     table {
         width: 100%;
-        border: 2px solid $black;
-        tr, td, tr th {
-            border: 2px solid $black;
-            color: $darkGrey;
+        border: 2px solid $darkBlue;
+        td, th {
+            border: 2px solid $darkBlue;
             font-size: 20px;
-        }
-        td, tr th {
             padding: 10px;
             text-align: center;
+        }
+        td {
+            color: $darkGrey;
+        }
+        th {
+            color: $pink;
         }
         a {
             color: $darkGrey;
@@ -281,7 +295,7 @@ input:focus, button:focus, textarea:focus {outline:none;}
             transition: .5s ease;
         }
         a:hover {
-            color: $black;
+            color: $pink;
         }
     }
 }
