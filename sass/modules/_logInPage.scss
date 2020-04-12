@@ -34,6 +34,9 @@
     @include for-tablet-portrait-up {
         max-width: 60%;
     }
+    @include for-desktop-up {
+        max-width: 40%;
+    }
     a {
         button {
             max-width:220px;

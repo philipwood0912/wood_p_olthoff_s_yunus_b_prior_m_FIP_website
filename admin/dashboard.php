@@ -14,7 +14,7 @@
 </head>
 <body>
     <header class="dash-header">
-        <img class="headerLogo" src="../public/images/gettested_logo.svg" alt="logo">
+        <a class="headerLogo" href="logout.php"><img src="../public/images/gettested_logo.svg" alt="logo"></a>
     </header>
     <div class="dashboard-con">
     <div class="dashboard">
