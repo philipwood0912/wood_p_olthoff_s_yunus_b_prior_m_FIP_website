@@ -41,8 +41,8 @@
 <div class="signin-body">
     <div class="signin">
         <div class="blueBorder">
-            <div href="../#">
-                <button class="backwardBtn" id="homeBtn3"><i class="fas fa-home"></i> Home</button>
+            <div>
+                <form action="logout.php" method="get"><button class="backwardBtn" id="homeBtn3"><i class="fas fa-home"></i> Home</button></form>
             </div>
             
             <div class="dashboardContent">
@@ -78,9 +78,9 @@
                             <input type="text" name="newpass" value="">
                         </div>  
 
-                        <button class="backwardBtn" id="backBtn"><i class="fas fa-arrow-circle-left fa-1x"></i> Go Back</button>
+                        <a href="dashboard.php" class="backwardBtn" id="backBtn"><i class="fas fa-arrow-circle-left fa-1x"></i> Go Back</a>
                     
-                        <button class="forwardBtn" name="submit" id="passreset">Reset Password</button>
+                        <button class="forwardBtn" name="passreset" id="passreset">Reset Password</button>
                         
                         
                 <?php endif;?>

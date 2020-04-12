@@ -89,11 +89,11 @@
 <div class="signin-body">
     <div class="signin">
         <div class="blueBorder">
-            <button class="backwardBtn homeBtn" id="homeBtn"><i class="fas fa-home"></i> Home</button>
+            <form action="logout.php" method="get"><button class="backwardBtn homeBtn" id="homeBtn"><i class="fas fa-home"></i> Home</button></form>
                 <div class="sub-dash-title"><h2 class="dash-head">Manage Content</h2></div>
                 <div class="sub-form-title"><h3 class="popUpSmall"><?php echo !empty($home_message)? $home_message:'Home Page';?></h3></div>
                 
-                <form action="mng_content.php?add=true&home=true" method="get"><button class="forwardBtn">Add Content <i class="fas fa-arrow-circle-right"></i></button></form>
+               <a href="mng_content.php?add=true&home=true" class="forwardBtn">Add Content <i class="fas fa-arrow-circle-right"></i></a>
                 
                 <?php if(isset($_GET['add']) && isset($_GET['home'])):?>
                     <form action="mng_content.php" method="post" class="dashboard-form" enctype="multipart/form-data">
@@ -156,7 +156,7 @@
                 </div>
                 <div class="sub-form-title"><h3 class="popUpSmall"><?php echo !empty($about_message)? $about_message:'About Page';?></h3></div>
 
-                <form action="mng_content.php?add=true&about=true" method="get"><button class="forwardBtn">Add Content <i class="fas fa-arrow-circle-right"></i></button></form>
+                <a href="mng_content.php?add=true&about=true" class="forwardBtn">Add Content <i class="fas fa-arrow-circle-right"></i></a>
                 
                 <?php if(isset($_GET['add']) && isset($_GET['about'])):?>
                     <?php
@@ -186,7 +186,7 @@
                             <?php endforeach;?>
                         <?php endif;?>
                         <a class="forwardBtn" href="mng_content.php?&add=true&about=true&new=true">More Text</a>
-                            <button class="forwardBtn" name="addabout">Add Content</button>
+                        <button class="forwardBtn" name="addabout">Add Content</button>
                         
                     </form>
                 <?php endif;?>
@@ -212,7 +212,7 @@
                                     <textarea type="text" name="text[]"><?php echo $value;?></textarea><hr>
                                 <?php endforeach;?>
 
-                                <span class="forwardBtn" href="mng_content.php?id=<?php echo $edit['ID']?>&edit=true&about=true&new=true">More Text</span>
+                                <a class="forwardBtn" href="mng_content.php?id=<?php echo $edit['ID']?>&edit=true&about=true&new=true">More Text</a>
                                 <hr>
                             
                                 <button class="forwardBtn" name="editabout">Edit Content</button>
@@ -242,9 +242,9 @@
                         </tbody>
                     </table>
 
-                <button class="backwardBtn"><i class="fas fa-arrow-circle-left"></i> Go Back</button>
+                <a href="dashboard.php" class="backwardBtn"><i class="fas fa-arrow-circle-left"></i> Go Back</a>
                 
-                </div> 
+            </div> 
         </div>
     </div>
 </div>
