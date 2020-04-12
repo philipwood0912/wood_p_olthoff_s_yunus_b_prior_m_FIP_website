@@ -19,7 +19,7 @@
     <div class="signin-body">
         <div class="signin">
             <div class="blueBorder">
-                <button class="backwardBtn" id="homeBtn2"><i class="fas fa-home"></i> Home</button>
+                <form action="logout.php" method="get"><button class="backwardBtn" id="homeBtn2"><i class="fas fa-home"></i> Home</button></form>
                 
                 <div class="dashboardContent">
                 <h2 class="dash-head">Welcome To The Site CMS <?php echo $_SESSION['name'];?></h2>

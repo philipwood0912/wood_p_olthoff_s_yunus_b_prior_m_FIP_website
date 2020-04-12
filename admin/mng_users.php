@@ -38,7 +38,7 @@ if(isset($_GET['id'])){
     <div class="signin">
         <div class="blueBorder">
         
-            <a href="../#"><button class="backwardBtn homeBtn" id="homeBtn4"><i class="fas fa-home"></i> Home</button></a>
+            <form action="logout.php" method="get"><button class="backwardBtn homeBtn" id="homeBtn4"><i class="fas fa-home"></i> Home</button></form>
             
             <div class="dashboardContent">
                 <div class="dash-head"><h2>Manage Users</h2>
@@ -60,7 +60,7 @@ if(isset($_GET['id'])){
                         <button class="forwardBtn" name="create">Create User</button>
                         <hr>
                         
-                        <button class="backwardBtn"><i class="fas fa-arrow-circle-left"></i> Go Back</button>
+                        <a href="dashboard.php" class="backwardBtn"><i class="fas fa-arrow-circle-left"></i> Go Back</a>
                     </div>
                 </form>
                 <div class="table-form">
