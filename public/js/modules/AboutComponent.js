@@ -13,17 +13,17 @@ export default {
                 </div>
             </div>
         
-        <img id="aboutLogo" src="public/images/gettested_logo.svg" alt="logo">
+        <img id="aboutLogo" src="public/images/gettested_logo.svg" alt="logo" class="animated fadeIn">
     
     <div class="imgPaddingAbt">
-        <img src="./public/images/aboutHero-06.svg" alt="hero image with text" id="aboutHero">
+        <img src="./public/images/aboutHero-06.svg" alt="hero image with text" id="aboutHero" class="animated fadeIn">
     </div>
     <div class="imgPaddingAbt">
-        <img src="./public/images/hiv-aids.svg" alt="Hiv&Aids" id="hivAndAids">
+        <img src="./public/images/hiv-aids.svg" alt="Hiv&Aids" id="hivAndAids" class="animated fadeIn">
     </div>
     
 
-    <div class="aboutPop" v-for="(content, index) in this.$parent.aboutContent" :key="index">
+    <div class="aboutPop" v-for="(content, index) in this.$parent.aboutContent" :key="index" >
         <div class="blueBorder">
             <h3 class="popUpTitle">{{content.title}}</h3>
             <ul>
