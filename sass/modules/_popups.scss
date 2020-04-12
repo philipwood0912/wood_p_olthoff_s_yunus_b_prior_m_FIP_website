@@ -28,16 +28,10 @@
     border-radius:10px;
     background: $white;
     margin: 0 auto;
-    margin-top:40px;
+    margin-top:50px;
+    margin-bottom: 50px;
     max-width: 100%;
 
-    @include for-tablet-portrait-up {
-        margin-top:80px;
-    }
-
-    @include for-desktop-up{
-        margin-top:100px;
-    }
 }
 
 .popUpTitle{

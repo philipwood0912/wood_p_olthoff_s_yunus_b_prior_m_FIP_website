@@ -48,12 +48,12 @@ footer{
 
 #copyright{
     background: $darkBlue;
-    color:white;
+    color:$white;
     font-size: 14px;
 }
 
 #socialCon{
-    color: white;
+    color: $white;
     background: $darkBlue;
     display:flex;
     flex-direction: column;
@@ -64,6 +64,7 @@ footer{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 0 auto;
     width:50%;
     padding-top:20px;
     @include for-tablet-portrait-up{
@@ -83,7 +84,7 @@ footer{
 }
 
 #socialTxt{
-    color: white;
+    color: $white;
     background: $darkBlue;
 
 
