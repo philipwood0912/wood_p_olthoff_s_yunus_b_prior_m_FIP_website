@@ -5,11 +5,10 @@ export default {
         <h1 class="hidden"> Home Page </h1>
 
         <div class="imgPaddingAbt">
-            <img src="./public/images/heroImgWeb.svg" alt="hero image with text" id="heroImage">
+            <img class="animated fadeIn" src="./public/images/heroImgWeb.svg" alt="hero image with text" id="heroImage">
         </div>
 
         <div id="homeBottom">
-
                 <div v-for="(content, index) in this.$parent.homeContent" :key="index">
                     <div class="popUp" :id="content.id">
                         <div class="blueBorder">
@@ -36,14 +35,19 @@ export default {
             <div class="videoCon mapContainer">
                 <div class="blueBorder mapBorder">
                     <div class="iconMap">
+                        
+                        <img class="mapicons" alt="icon" src="./public/images/doctor.svg">
                         <img class="mapicons" alt="icon" src="./public/images/condom1.svg">
                         <img class="mapicons" alt="icon" src="./public/images/needle.svg">
-                        <img class="mapicons" alt="icon" src="./public/images/doctor2.svg">
+                        
 
                         <h3 class="popUpTitle">Get Tested Now!</h3>
                     
 
-                        <p class="popUpSmall">Enter your postal code below to find the clinic closest you.</p>
+
+                        <p class="popUpSmall">Getting tested for HIV and other common STDs is the first step towards taking control of your overall health. Knowing your status can help keep you and the ones around you safe and healthy.</p>
+                <h4 class="popUpSmall">Enter your postal code below to find medical clinics offering free testing in your area.</h4>
+
 
                         <widget></widget>
                     </div>

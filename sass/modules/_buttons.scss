@@ -1,34 +1,24 @@
 //from home
-.button{
-    max-width:180px;
-    height:40px;
-    margin: 0 auto;
-    border-radius: 5px;
-    background: $white;
-    padding:3px;
-    margin-top:40px;
-
-    @include for-tablet-portrait-up {
-        margin-top:80px;
-    }
-
-    @include for-desktop-up{
-        margin-top:100px;
-    }
-    
-}
-
-.buttonTxt{
-    border: 2px solid $lightBlue;
-    border-radius: 5px;
-    font-size: 18px;
-    color: $pink;
-    padding-top:4px;
-    padding-bottom:4px;
-    padding-left:6px;
-    padding-right:6px;
-}
-
 button{
+    width:40%;
+    padding: 5px;
+    border-radius: 5px;
+    color: $white;
+    background: linear-gradient(to right, $white 50%, $darkBlue 50%);
+    background-color: $darkBlue;
+    background-size: 200% 100%;
+    margin-bottom: 20px;
+
+    background-position: right bottom;
+    transition: all .25s ease-out;
+}
+
+button:hover{
     cursor: pointer;
+    text-decoration: none;
+        color: $darkBlue;
+        opacity: 1.0;
+        background-position: left bottom;
+        box-shadow: inset 0 0 2px 2px $darkBlue;
+        transition: all .25s ease-in-out;
 }

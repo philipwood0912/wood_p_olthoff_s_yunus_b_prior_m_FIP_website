@@ -20,16 +20,12 @@
     max-width:95%;
     margin: 0 auto;
 
-    margin-top:40px;
-
     @include for-tablet-portrait-up {
-        margin-top:80px;
 
         max-width: 80%;
     }
 
     @include for-desktop-up{
-        margin-top:100px;
 
         max-width: 40%;
     }
@@ -41,20 +37,12 @@
 }
 
 #heroImage{
-    justify-content: center;
-    margin: 0 auto;
+    margin-top: -70px;
 }
 
-#chevronDown{
-    color: $white;
-
-    @include for-desktop-up{
-        margin-bottom:80px;
-    }
-}
 
 #homeBottom{
-    //display:flex;
+    display:flex;
     flex-direction:column;
     justify-content: center;
     margin: 0 auto;
@@ -73,4 +61,3 @@
 .promoVideo{
     border-radius: 8px 8px 0px 0px;
 }
-

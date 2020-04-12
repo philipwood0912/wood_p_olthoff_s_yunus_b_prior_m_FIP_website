@@ -7,11 +7,11 @@
 
 
     <div id="desktopNav">
-        <router-link @click.native="closeMenu" class="navLink desk" to="/">Home</router-link>
+        <router-link @click.native="closeMenu" class="desk" to="/">Home</router-link>
 
-        <router-link @click.native="closeMenu" class="navLink desk" to="/learn">The Facts</router-link>
+        <router-link @click.native="closeMenu" class="desk" to="/learn">The Facts</router-link>
 
-        <router-link @click.native="closeMenu" class="navLink desk" to="/about">About Us</router-link>
+        <router-link @click.native="closeMenu" class="desk" to="/about">About Us</router-link>
     </div>
 </header>
 

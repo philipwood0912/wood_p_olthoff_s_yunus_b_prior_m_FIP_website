@@ -41,6 +41,10 @@
     margin: 0 auto;
     max-width:90%;
     margin-bottom: 40px;
+
+    @include for-desktop-up {
+        margin-bottom: 80px;
+    }
 }
 
 
