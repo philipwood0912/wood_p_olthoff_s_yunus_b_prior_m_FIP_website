@@ -1,3 +1,16 @@
+@mixin for-tablet-portrait-up {
+    @media (min-width: 800px) { @content; }
+  }
+  @mixin for-tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+  }
+  @mixin for-desktop-up {
+    @media (min-width: 1200px) { @content; }
+  }
+  @mixin for-big-desktop-up {
+    @media (min-width: 1800px) { @content; }
+  }
+
 .popUpMap {
     display: flex;
     flex-direction: column;
@@ -29,7 +42,6 @@
     font-size:30px;
     color: $pink;
 }
-
 .widgetCon{
     display: flex;
     flex-direction:column;
@@ -42,25 +54,41 @@
     font-size: 20px;
     color: $red;
 }
-
 #map {
     display: block;
     position: relative;
     margin: 0 auto;
     width: 100%;
     height: 350px;
-    border: 2px solid $darkBlue;
+    //border: 2px solid $darkBlue;
     #info-wrp {
         position: absolute;
         bottom: 0;
         text-align: left;
+        width: 100%;
         #infowindow {
-            background-color: rgba(0,0,0,0.6);
-            h2, h3, h4, a {
+            background-color: rgba(250, 250, 250, 1);
+            padding: 15px 10px 5px 10px;
+            border: 2px solid $darkBlue;
+            h3, h4, a {
                 text-decoration: none;
                 margin: 0;
                 font-weight: normal;
-                color: $white;
+                color: $darkBlue;
+                margin-bottom: 5px;
+                font-size: 20px;
+            }
+            h2 {
+                margin: 0;
+                font-weight: normal;
+                color: $darkBlue;
+                font-size: 27px;
+                margin-bottom: 10px;
+                line-height: 25px;
+
+            }
+            a:hover {
+                opacity: 0.6;
             }
         }
     }
