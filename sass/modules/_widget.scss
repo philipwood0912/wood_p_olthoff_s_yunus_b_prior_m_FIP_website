@@ -33,14 +33,17 @@
             padding:10px;
             margin: 0 auto;
             border-radius: 3px;
-            margin-bottom: 20px;
-            margin-left:5px;
         }
+    button{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
     }
 }
 
 .inputLabel{
-    color: $pink;
+    color: $darkBlue;
+    padding: 5px;
 }
 
 .pinkTitle{
