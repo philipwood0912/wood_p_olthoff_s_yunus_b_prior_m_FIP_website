@@ -39,11 +39,9 @@
     <a class="headerLogo" href="dashboard.php"><img src="../public/images/gettested_logo.svg" alt="logo"></a>
 </header>
 <div class="sub-dash-wrap">
-    <div class="dashboardSubIconCon">
-        <div class="dashboardSubIconPad"><a href="logout.php"><button class="buttonMain"><i class="fas fa-home"></i> Home</button></a></div>
-    </div>
     <div class="sub-dashboard">
         <div class="blueBorder">
+        <div class="loginIconPad"><a href="../#"><button class="backwardBtn"><i class="fas fa-home"></i> Home</button></a></div>
             <div class="dashboardSubContent">
                 <div class="sub-dash-title current-user"><h2><?php echo !empty($message)? $message:'Edit Current User';?></h2></div>
                 <form class="dashboard-form" action="mng_currentuser.php" method="post">
@@ -65,7 +63,7 @@
                         <label>Username:</label>
                         <input type="text" name="username" value="<?php echo $user_info['User_Name'];?>">
                     </div>
-                    <button class="buttonMain" name="submit">Edit Account</button>
+                    <button class="forwardBtn" name="submit">Edit Account</button>
                     <?php endwhile;?>
                 <?php endif;?>
                 </form>
@@ -81,8 +79,8 @@
                         <input type="text" name="newpass" value="">
                     </div>
                     <div class="buttonWrapSubDash">
-                        <a href="dashboard.php"><button class="buttonMain" type="button"><i class="fas fa-arrow-circle-left"></i> Go Back</button></a>
-                        <button class="buttonMain" name="passreset">Edit Password</button>
+                        <a href="dashboard.php"><button class="backwardBtn" type="button"><i class="fas fa-arrow-circle-left"></i> Go Back</button></a>
+                        <button class="forwardBtn" name="passreset">Edit Password</button>
                     </div>
                 <?php endif;?>
                 </form>

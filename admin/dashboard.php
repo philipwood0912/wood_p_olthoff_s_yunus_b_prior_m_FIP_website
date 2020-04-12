@@ -16,20 +16,17 @@
     <header class="dash-header">
         <a class="headerLogo" href="logout.php"><img src="../public/images/gettested_logo.svg" alt="logo"></a>
     </header>
-    <div class="dashboard-con">
-        <div class="dashboardIconCon">
-            <div class="dashboardIconPad"><a href="logout.php"><button class="buttonMain"><i class="fas fa-home"></i> Home</button></a></div>
-        </div>
-        <div class="dashboard">
-            <div class="blueBorder">
+    <div class="signin-body">
+        <div class="signin">
+            <div class="blueBorder"><a href="../#"><button class="backwardBtn homeBtn"><i class="fas fa-home"></i> Home</button></a>
                 <div class="dashboardContent">
-                <h2>Welcome back <?php echo $_SESSION['name'];?></h2>
-                <h3>Admin Settings</h3>
+                <h2 class="dash-head">Welcome To The Site CMS <?php echo $_SESSION['name'];?></h2>
+                <h2 class="popUpSmall">What would you like to change?</h2>
                 <ul id="mainNav">
-                    <a href="mng_currentuser.php"><button class="buttonMain">Manage Current User <i class="fas fa-arrow-circle-right"></i></button></a>
-                    <a href="mng_users.php"><button class="buttonMain">Manage All Users <i class="fas fa-arrow-circle-right"></i></button></a>
-                    <a href="mng_content.php"><button class="buttonMain">Manage Content <i class="fas fa-arrow-circle-right"></i></button></a>
-                    <a href="logout.php"><button class="buttonMain">Log Out <i class="fas fa-arrow-circle-right"></i></button></a>
+                    <a href="mng_currentuser.php"><button class="forwardBtn">Manage Current User <i class="fas fa-arrow-circle-right"></i></button></a>
+                    <a href="mng_users.php"><button class="forwardBtn">Manage All Users <i class="fas fa-arrow-circle-right"></i></button></a>
+                    <a href="mng_content.php"><button class="forwardBtn">Manage Content <i class="fas fa-arrow-circle-right"></i></button></a>
+                    <a href="logout.php"><button class="forwardBtn">Log Out <i class="fas fa-arrow-circle-right"></i></button></a>
                 </ul>
                 <div>
             <div>

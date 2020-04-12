@@ -35,11 +35,9 @@ if(isset($_GET['id'])){
     <a class="headerLogo" href="dashboard.php"><img src="../public/images/gettested_logo.svg" alt="logo"></a>
 </header>
 <div class="sub-dash-wrap">
-    <div class="dashboardSubIconCon">
-        <div class="dashboardSubIconPad"><a href="logout.php"><button class="buttonMain"><i class="fas fa-home"></i> Home</button></a></div>
-    </div>
     <div class="sub-dashboard">
         <div class="blueBorder">
+            
             <div class="dashboardSubContent">
                 <div class="sub-dash-title"><h2>Manage Users</h2></div>
                 <form class="dashboard-form" action="mng_users.php" method="post">
