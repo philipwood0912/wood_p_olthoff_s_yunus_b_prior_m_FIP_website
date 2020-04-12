@@ -11,7 +11,7 @@ export default {
     
         <div class="popUp">
             <div class="blueBorder">
-            <img class="animated fadeIn" src="./public/images/hiv_transmission.png" alt="HIV transmission methods" class="aboutPic">
+            <img class="animated fadeIn aboutPic" src="./public/images/hiv_transmission.png" alt="HIV transmission methods" >
             </div>
         </div>
     

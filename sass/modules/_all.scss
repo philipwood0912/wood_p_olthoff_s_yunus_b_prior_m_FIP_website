@@ -68,17 +68,15 @@ video{
   
 i:hover {
     cursor: pointer;
-  }
+}
 
 input{
     background-color: $grey;
     border-radius: 5px;
-    color: $grey2;
     text-align: left;
-    padding: 3px;
+    color: $darkGrey;
+    padding: 8px;
 }
-
-
 
 .animated {
     background-image: url(/css/images/logo.png);
@@ -93,6 +91,11 @@ input{
     transition: all .25s ease-out;
  }
  
+ ::placeholder{
+     color: $grey2;
+     opacity: 1;
+     font-size: 12px;
+ }
  
  .fadeIn {
     -webkit-animation-name: fadeIn;
