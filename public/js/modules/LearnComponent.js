@@ -9,8 +9,10 @@ export default {
             <img class="animated fadeIn" src="./public/images/factImg1.svg" alt="Fact Information 1" id="factImg1">
         </div>
     
-        <div class="imgPaddingAbt">
+        <div class="popUp">
+            <div class="blueBorder">
             <img class="animated fadeIn" src="./public/images/hiv_transmission.png" alt="HIV transmission methods" class="aboutPic">
+            </div>
         </div>
     
         <div class="imgPaddingAbt">

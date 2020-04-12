@@ -1,19 +1,45 @@
 //from home
-button{
+.forwardBtn{
     width:40%;
-    padding: 5px;
+    padding: 8px;
     border-radius: 5px;
     color: $white;
-    background: linear-gradient(to right, $white 50%, $darkBlue 50%);
+    background: linear-gradient(to left, $darkBlue 50%, $white 50%);
     background-color: $darkBlue;
     background-size: 200% 100%;
     margin-bottom: 20px;
+    margin: 0 auto;
 
     background-position: right bottom;
     transition: all .25s ease-out;
 }
 
-button:hover{
+.forwardBtn:hover{
+    cursor: pointer;
+    text-decoration: none;
+        color: $darkBlue;
+        opacity: 1.0;
+        background-position: left bottom;
+        box-shadow: inset 0 0 2px 2px $darkBlue;
+        transition: all .25s ease-in-out;
+}
+
+.backwardBtn{
+    width:40%;
+    padding: 8px;
+    border-radius: 5px;
+    color: $white;
+    background: linear-gradient(to left, $darkBlue 50%, $white 50%);
+    background-color: $darkBlue;
+    background-size: 200% 100%;
+    margin-bottom: 20px;
+    margin: 0 auto;
+
+    background-position: right bottom;
+    transition: all .25s ease-out;
+}
+
+.backwardBtn:hover{
     cursor: pointer;
     text-decoration: none;
         color: $darkBlue;

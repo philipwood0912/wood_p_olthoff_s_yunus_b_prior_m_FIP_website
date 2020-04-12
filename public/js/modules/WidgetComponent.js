@@ -9,7 +9,7 @@ export default {
                 <label class="inputLabel">Postal Code:</label>
                 <input v-model="postal" maxlength="6" name="postal" placeholder="X1X1X1">
 
-                <button class="arrow-btn" name="submit">Go!</button>
+                <button class="forwardBtn" name="submit">Go!</button>
             </form>
         </div>
         <mapcomp></mapcomp>

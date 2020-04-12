@@ -85,19 +85,16 @@
 <header>
     <a class="headerLogo" href="dashboard.php"><img src="../public/images/gettested_logo.svg" alt="logo"></a>
 </header>
-<div class="sub-dash-wrap">
-    <div class="dashboardSubIconCon">
-        <form action="logout.php" method="get" class="dashboardSubIconPad"><button class="buttonMain"><i class="fas fa-home"></i> Home</button></form>
-    </div>
-    <div class="sub-dashboard">
+
+<div class="signin-body">
+    <div class="signin">
         <div class="blueBorder">
-            <div class="dashboardSubContent">
-                <div class="sub-dash-title"><h2>Manage Content</h2></div>
-                <div class="sub-form-title"><h3><?php echo !empty($home_message)? $home_message:'Home Page';?></h3></div>
-                <div class="buttonWrapSubDash">
-                    <form action="dashboard.php" method="get"><button class="buttonMain"><i class="fas fa-arrow-circle-left"></i> Go Back</button></form>
-                    <form action="mng_content.php?add=true&home=true" method="get"><button class="buttonMain">Add Content <i class="fas fa-arrow-circle-right"></i></button></form>
-                </div>
+            <button class="backwardBtn homeBtn" id="homeBtn"><i class="fas fa-home"></i> Home</button>
+                <div class="sub-dash-title"><h2 class="dash-head">Manage Content</h2></div>
+                <div class="sub-form-title"><h3 class="popUpSmall"><?php echo !empty($home_message)? $home_message:'Home Page';?></h3></div>
+                
+                <form action="mng_content.php?add=true&home=true" method="get"><button class="forwardBtn">Add Content <i class="fas fa-arrow-circle-right"></i></button></form>
+                
                 <?php if(isset($_GET['add']) && isset($_GET['home'])):?>
                     <form action="mng_content.php" method="post" class="dashboard-form" enctype="multipart/form-data">
                         <div class="labelWrapDashboard">
@@ -121,22 +118,17 @@
                     <?php while($edit = $edit_item->fetch(PDO::FETCH_ASSOC)):?>
                         <form action="mng_content.php" method="post" class="dashboard-form" enctype="multipart/form-data">
                             <input class="hidden" type="text" name="id" value="<?php echo $edit['ID']?>">
-                            <div class="labelWrapDashboard">
                                 <label>Title:</label>
                                 <input type="text" name="title" value="<?php echo $edit['Title']?>">
-                            </div>
-                            <div class="labelWrapDashboard">
+                           
                                 <label>Text:</label>
                                 <textarea type="text" name="text" value=""><?php echo $edit['Text']?></textarea>
-                            </div>
-                            <div class="labelWrapDashboard">
                                 <label>Image:</label>
                                 <input class="hidden" type="text" name="oldimage" value="<?php echo $edit['Image']?>">
-                            </div>
+                            
                             <input type="file" name="image" value="">
-                            <div class="buttonWrapSubDash formBut">
-                                <button class="buttonMain" name="edithome">Edit Content</button>
-                            </div>
+                            
+                            <button class="buttonMain" name="edithome">Edit Content</button>
                         </form>
                     <?php endwhile;?>
                 <?php endif;?>
@@ -162,11 +154,10 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="sub-form-title"><h3><?php echo !empty($about_message)? $about_message:'About Page';?></h3></div>
-                <div class="buttonWrapSubDash">
-                    <form action="dashboard.php" method="get"><button class="buttonMain"><i class="fas fa-arrow-circle-left"></i> Go Back</button></form>
-                    <form action="mng_content.php?add=true&about=true" method="get"><button class="buttonMain">Add Content <i class="fas fa-arrow-circle-right"></i></button></form>
-                </div>
+                <div class="sub-form-title"><h3 class="popUpSmall"><?php echo !empty($about_message)? $about_message:'About Page';?></h3></div>
+
+                <form action="mng_content.php?add=true&about=true" method="get"><button class="forwardBtn">Add Content <i class="fas fa-arrow-circle-right"></i></button></form>
+                
                 <?php if(isset($_GET['add']) && isset($_GET['about'])):?>
                     <?php
                         if(!isset($_GET['new'])){
@@ -253,8 +244,10 @@
                             <?php endwhile;?>
                         </tbody>
                     </table>
-                </div>
-            </div>
+
+                <button class="backwardBtn"><i class="fas fa-arrow-circle-left"></i> Go Back</button>
+                
+                </div> 
         </div>
     </div>
 </div>
