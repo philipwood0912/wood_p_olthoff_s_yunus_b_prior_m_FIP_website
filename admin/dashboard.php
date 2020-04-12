@@ -18,7 +18,7 @@
     </header>
     <div class="dashboard-con">
         <div class="dashboardIconCon">
-            <div class="dashboardIconPad"><a href="logout.php"><button class="buttonMain"><i class="fas fa-home"></i> Home</button></a></div>
+            <form action="logout.php" method="get" class="dashboardIconPad"><button class="buttonMain"><i class="fas fa-home"></i> Home</button></form>
         </div>
         <div class="dashboard">
             <div class="blueBorder">
@@ -26,10 +26,10 @@
                 <h2>Welcome back <?php echo $_SESSION['name'];?></h2>
                 <h3>Admin Settings</h3>
                 <ul id="mainNav">
-                    <a href="mng_currentuser.php"><button class="buttonMain">Manage Current User <i class="fas fa-arrow-circle-right"></i></button></a>
-                    <a href="mng_users.php"><button class="buttonMain">Manage All Users <i class="fas fa-arrow-circle-right"></i></button></a>
-                    <a href="mng_content.php"><button class="buttonMain">Manage Content <i class="fas fa-arrow-circle-right"></i></button></a>
-                    <a href="logout.php"><button class="buttonMain">Log Out <i class="fas fa-arrow-circle-right"></i></button></a>
+                    <form action="mng_currentuser.php" method="get"><button class="buttonMain">Manage Current User <i class="fas fa-arrow-circle-right"></i></button></form>
+                    <form action="mng_users.php" method="get"><button class="buttonMain">Manage All Users <i class="fas fa-arrow-circle-right"></i></button></form>
+                    <form action="mng_content.php" method="get"><button class="buttonMain">Manage Content <i class="fas fa-arrow-circle-right"></i></button></form>
+                    <form action="logout.php" method="get"><button class="buttonMain">Log Out <i class="fas fa-arrow-circle-right"></i></button></form>
                 </ul>
                 <div>
             <div>

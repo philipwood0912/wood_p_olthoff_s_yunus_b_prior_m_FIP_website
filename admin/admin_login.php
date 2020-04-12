@@ -28,7 +28,7 @@
 </header>
 <div class="signin-body">
 <div class="loginIconCon">
-    <div class="loginIconPad" ><a href="../#"><button class="buttonMain"><i class="fas fa-home"></i> Home</button></a></div>
+    <form action="../#" method="get" class="loginIconPad"><button class="buttonMain"><i class="fas fa-home"></i> Home</button></form>
 </div>
 <div id="signin">
     <div class="blueBorder">
@@ -43,7 +43,7 @@
             <input name="password" type="password" value="" placeholder="Password">
         </div>
         <div class="buttonWrapLogin">
-            <a href="../#"><button type="button" class="buttonMain"><i class="fas fa-arrow-circle-left fa-1x"></i> Go Back</button></a>
+            <form action="../#" method="get"><button class="buttonMain"><i class="fas fa-arrow-circle-left fa-1x"></i> Go Back</button></form>
             <button class="buttonMain" name="submit" type="submit">Sign In <i class="fas fa-arrow-circle-right"></i></button>
         </div>
     </form>

@@ -36,7 +36,7 @@ if(isset($_GET['id'])){
 </header>
 <div class="sub-dash-wrap">
     <div class="dashboardSubIconCon">
-        <div class="dashboardSubIconPad"><a href="logout.php"><button class="buttonMain"><i class="fas fa-home"></i> Home</button></a></div>
+        <form action="logout.php" method="get" class="dashboardSubIconPad"><button class="buttonMain"><i class="fas fa-home"></i> Home</button></form>
     </div>
     <div class="sub-dashboard">
         <div class="blueBorder">
@@ -65,7 +65,7 @@ if(isset($_GET['id'])){
                         <input name="password" type="text" value="" placeholder="Password">
                     </div>
                     <div class="buttonWrapSubDash">
-                        <a href="dashboard.php"><button type="button" class="buttonMain"><i class="fas fa-arrow-circle-left"></i> Go Back</button></a>
+                        <div class="forwardBtn"><a href="dashboard.php"><i class="fas fa-arrow-circle-left"></i> Go Back</a></div>
                         <button class="buttonMain" name="create">Create User</button>
                     </div>
                 </form>
