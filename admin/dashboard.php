@@ -23,7 +23,7 @@
         <div class="dashboard">
             <div class="blueBorder">
                 <div class="dashboardContent">
-                <h2>Welcome back <?php echo $_SESSION['username'];?></h2>
+                <h2>Welcome back <?php echo $_SESSION['name'];?></h2>
                 <h3>Admin Settings</h3>
                 <ul id="mainNav">
                     <a href="mng_currentuser.php"><button class="buttonMain">Manage Current User <i class="fas fa-arrow-circle-right"></i></button></a>

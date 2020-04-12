@@ -27,8 +27,8 @@
     <a class="headerLogo" href="../#"><img src="../public/images/gettested_logo.svg" alt="logo"></a>
 </header>
 <div class="signin-body">
-<div class="dashboardIconCon">
-    <div class="dashboardIconPad" ><a href="../#"><button class="buttonMain"><i class="fas fa-home"></i> Home</button></a></div>
+<div class="loginIconCon">
+    <div class="loginIconPad" ><a href="../#"><button class="buttonMain"><i class="fas fa-home"></i> Home</button></a></div>
 </div>
 <div id="signin">
     <div class="blueBorder">

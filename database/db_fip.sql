@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:8889
--- Generation Time: Apr 05, 2020 at 07:00 AM
+-- Host: 127.0.0.1:3306
+-- Generation Time: Apr 12, 2020 at 11:34 AM
 -- Server version: 5.7.26
--- PHP Version: 7.3.8
+-- PHP Version: 7.2.18
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -26,22 +28,23 @@ SET time_zone = "+00:00";
 -- Table structure for table `tbl_about`
 --
 
-CREATE TABLE `tbl_about` (
-  `ID` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_about`;
+CREATE TABLE IF NOT EXISTS `tbl_about` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
   `Title` varchar(63) NOT NULL,
-  `Text` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `Text` text NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_about`
 --
 
 INSERT INTO `tbl_about` (`ID`, `Title`, `Text`) VALUES
-(1, 'Our Campaign Aims To:', 'Make young Canadians aware of HIV and AIDS, and how to prevent them.^Connect Canadians of all ages to testing services.^Promote an Open discussions with partners, peers and Health Care Providers.'),
-(2, 'Title 2:', 'Getting Tested for HIV / AIDs is important for all Canadians, regardless of race, gender, ethnicity or sexual preference.^Although many young Canadians are not sexually active, learning the importance of preventing these diseases can make young people more comfortable when talking about their overall sexual health.'),
-(3, 'Our Goals:', 'Make young Canadians more aware of the benefits of testing for sexually transmitted diseases.^Provide proper links and information about HIV and AIDS testing to young people.^Make testing an act of pride, and a vital part of a young person\'s lifestyle, in order to reduce the fear and or shame they may feel about testing.^Empower and Inspire young Canadians to know who they are, Including their HIV, AIDS and STD status.'),
-(4, 'Title 4:', 'A campaign like ours can help young people feel pride and encouragement in taking control of their sexual health.^It also aids in helping make them aware of the necessary prevention methods against HIV, AIDS and STD\'s.^Having proper access to factual information can aid young Canadians on understanding how important it is to get tested if they are having or are thinking about having sexual interactions.'),
-(5, 'Get Involved:', 'By Phone : +1 555-555-5555^By Email : contact@gettested.ca^By Fax : +1 555-555-5555^In Person : 123 Main Street, London On, Canada');
+(1, 'Our Campaign Goals', 'Make young Canadians aware of HIV and AIDS, and how to prevent them.^Connect Canadians of all ages to testing services.^Promote an Open discussions with partners, peers and Health Care Providers.'),
+(2, 'Why Get Tested?', 'Getting Tested for HIV / AIDs is important for all Canadians, regardless of race, gender, ethnicity or sexual preference.^Although many young Canadians are not sexually active, learning the importance of preventing these diseases can make young people more comfortable when talking about their overall sexual health.'),
+(4, 'What Sets Us Apart', 'A campaign like ours can help young people feel pride and encouragement in taking control of their sexual health.^It also aids in helping make them aware of the necessary prevention methods against HIV, AIDS and STD\'s.^Having proper access to factual information can aid young Canadians on understanding how important it is to get tested if they are having or are thinking about having sexual interactions.'),
+(5, 'How To Get Involved', 'By Phone : +1 555-555-5555^By Email : contact@gettested.ca^By Fax : +1 555-555-5555^In Person : 123 Main Street, London On, Canada');
 
 -- --------------------------------------------------------
 
@@ -49,16 +52,18 @@ INSERT INTO `tbl_about` (`ID`, `Title`, `Text`) VALUES
 -- Table structure for table `tbl_clinics`
 --
 
-CREATE TABLE `tbl_clinics` (
-  `ID` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_clinics`;
+CREATE TABLE IF NOT EXISTS `tbl_clinics` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
   `Clinic_Name` varchar(100) NOT NULL,
   `Address` varchar(100) NOT NULL,
   `Phone` varchar(15) NOT NULL,
   `Website` varchar(150) NOT NULL,
   `Latt` decimal(8,6) NOT NULL,
   `Longt` decimal(9,6) NOT NULL,
-  `Distance` decimal(10,3) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `Distance` decimal(10,3) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_clinics`
@@ -87,23 +92,25 @@ INSERT INTO `tbl_clinics` (`ID`, `Clinic_Name`, `Address`, `Phone`, `Website`, `
 -- Table structure for table `tbl_home`
 --
 
-CREATE TABLE `tbl_home` (
-  `ID` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_home`;
+CREATE TABLE IF NOT EXISTS `tbl_home` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
   `Title` varchar(63) NOT NULL,
   `Text` text NOT NULL,
-  `Image` varchar(63) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `Image` varchar(63) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_home`
 --
 
 INSERT INTO `tbl_home` (`ID`, `Title`, `Text`, `Image`) VALUES
-(1, 'Get Yourself Tested!', 'Knowing Your HIV and STD status helps you choose options to stay healthy!', 'doctor.svg'),
+(1, 'Get Yourself Tested!', 'There is no reason to be ashamed of knowing Your HIV and STD status! Knowing helps you choose options to stay healthy!', 'doctor.svg'),
 (2, 'Talk About PrEP!', 'Talk to your doctor about pre-exposure prophylaxis (PrEP) as it can greatly reduce your risk of infection.', 'drugs.svg'),
-(3, 'Use A Condom!', 'Condoms are highly effective at preventing both HIV, AIDS and other STDs.', 'condom2.svg'),
-(4, 'HIV Treatment!', 'HIV treatment keeps you healthy and minimizes the risk of spreading the disease to others.', 'doctor2.svg'),
-(5, 'Don\'t Inject Drugs!', 'But if you do, only use sterile equipment and water. Most importantly, never share your gear!', 'needle.svg');
+(3, 'HIV Treatment!', 'HIV treatment keeps you healthy and minimizes the risk of spreading the disease to others! Taking responsibility of your health will positively effect you and others in your life.', '760434a1d26777cef91c53b29cf5c6dd.svg'),
+(4, 'Use A Condom!', 'Condoms are more than a way to prevent pregnancy. They are highly effective at preventing both HIV, AIDS and other STDs!', 'f37ba97b208242f15d13519701cb44f1.svg'),
+(5, 'Don\'t Inject Drugs!', 'But if you do, only use sterile equipment and water. And most importantly, never share your gear with anyone! HIV and AIDS can be transmitted through contact with blood, so proceed with caution!', 'needle.svg');
 
 -- --------------------------------------------------------
 
@@ -111,14 +118,16 @@ INSERT INTO `tbl_home` (`ID`, `Title`, `Text`, `Image`) VALUES
 -- Table structure for table `tbl_users`
 --
 
-CREATE TABLE `tbl_users` (
-  `ID` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_users`;
+CREATE TABLE IF NOT EXISTS `tbl_users` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
   `F_Name` varchar(30) NOT NULL,
   `L_Name` varchar(30) NOT NULL,
   `Email` varchar(50) NOT NULL,
   `User_Name` varchar(40) NOT NULL,
-  `User_Pass` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `User_Pass` varchar(255) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_users`
@@ -126,63 +135,9 @@ CREATE TABLE `tbl_users` (
 
 INSERT INTO `tbl_users` (`ID`, `F_Name`, `L_Name`, `Email`, `User_Name`, `User_Pass`) VALUES
 (1, 'Philip', 'Wood', 'philipwood0912@gmail.com', 'Philly0912', '$2y$10$3Hv5.KFWWqE/VrJyB5focuSYFb01fLyyne.LdYxMj.1yTFnz0XLPS'),
-(4, 'Philip', 'Wood', 'a_wood60810@fanshaweonline.ca', 'phil', '$2y$10$jC7sPFVTp2g8f7R6haN0quEkdyT3HpT5dlFvVNTP6sY1Wpyh57Iem');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `tbl_about`
---
-ALTER TABLE `tbl_about`
-  ADD PRIMARY KEY (`ID`);
-
---
--- Indexes for table `tbl_clinics`
---
-ALTER TABLE `tbl_clinics`
-  ADD PRIMARY KEY (`ID`);
-
---
--- Indexes for table `tbl_home`
---
-ALTER TABLE `tbl_home`
-  ADD PRIMARY KEY (`ID`);
-
---
--- Indexes for table `tbl_users`
---
-ALTER TABLE `tbl_users`
-  ADD PRIMARY KEY (`ID`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `tbl_about`
---
-ALTER TABLE `tbl_about`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `tbl_clinics`
---
-ALTER TABLE `tbl_clinics`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
-
---
--- AUTO_INCREMENT for table `tbl_home`
---
-ALTER TABLE `tbl_home`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- AUTO_INCREMENT for table `tbl_users`
---
-ALTER TABLE `tbl_users`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+(4, 'Philip', 'Wood', 'a_wood60810@fanshaweonline.ca', 'phil', '$2y$10$jC7sPFVTp2g8f7R6haN0quEkdyT3HpT5dlFvVNTP6sY1Wpyh57Iem'),
+(5, 'mike', 'prior', '', 'admin', 'admin');
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -62,6 +62,26 @@
         margin: 30px 0px;
     }
 }
+.loginIconCon {
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 5px;
+    .loginIconPad {
+        background-color: white;
+        padding: 5px;
+        border-radius: 5px;
+        max-width:120px;
+    }
+    button {
+        height:50px;
+        width: 100%;
+        border: 2px solid $lightBlue;
+        border-radius: 5px;
+        font-size: 18px;
+        color: $pink;
+    }
+}
 .buttonWrapLogin {
     margin-bottom: 20px;
 }
