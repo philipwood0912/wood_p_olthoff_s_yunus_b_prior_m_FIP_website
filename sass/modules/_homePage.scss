@@ -91,22 +91,20 @@
     padding-right:6px;
 }
 
-#videoCon{
+.videoCon{
     margin: 0 auto;
     margin-top:40px;
-    margin-bottom: 40px;
     background-color: white;
     padding: 5px;
     border-radius: 8px;
+    max-width: 100%;
 
     @include for-tablet-portrait-up {
         margin-top:80px;
-        margin-bottom: 80px;
     }
 
     @include for-desktop-up{
         margin-top:100px;
-        margin-bottom: 100px;
     }
 }
 
