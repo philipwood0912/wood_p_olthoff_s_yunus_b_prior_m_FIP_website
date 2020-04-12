@@ -24,11 +24,6 @@
 
         max-width: 80%;
     }
-
-    @include for-desktop-up{
-
-        max-width: 40%;
-    }
 }
 
 #heroCon{
@@ -38,6 +33,12 @@
 
 #heroImage{
     margin-top: -70px;
+
+    @include for-desktop-up{
+        max-width: 40%;
+        margin: 0 auto;
+        margin-bottom: 60px;
+    }
 }
 
 
@@ -46,6 +47,10 @@
     flex-direction:column;
     justify-content: center;
     margin: 0 auto;
+
+    @include for-desktop-up{
+        max-width:50%;
+    }
 }
 
 .videoCon{
@@ -56,8 +61,21 @@
     padding: 5px;
     border-radius: 8px;
     max-width: 100%;
+
 }
 
 .promoVideo{
     border-radius: 8px 8px 0px 0px;
+}
+
+.float-right{
+    
+    @include for-desktop-up{
+   float: right;}
+}
+.float-left{
+    
+    @include for-desktop-up{
+   float: left;
+}
 }
