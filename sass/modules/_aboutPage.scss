@@ -23,14 +23,10 @@
     margin-top:40px;
 
     @include for-tablet-portrait-up {
-        margin-top:80px;
-
         max-width: 80%;
     }
 
     @include for-desktop-up{
-        margin-top:100px;
-
         max-width: 40%;
     }
 }
@@ -42,9 +38,6 @@
     max-width:90%;
     margin-bottom: 40px;
 
-    @include for-desktop-up {
-        margin-bottom: 80px;
-    }
 }
 
 
@@ -65,15 +58,6 @@
 
 #aboutLogo{
     margin-top: 60px;
-    margin-bottom: -40px;
-
-    @include for-tablet-portrait-up {
-        margin-top:80px;
-    }
-
-    @include for-desktop-up{
-        margin-top:100px;
-    }
 }
 
 .popUpList{

@@ -35,6 +35,37 @@ input:focus, button:focus, textarea:focus {outline:none;}
     }
 }
 
+.dashboard-form{
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.map-form{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    @include for-desktop-up{
+        flex-direction: row;
+    }
+}
+
+#go{
+    max-width: 80%;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.postal-wrp{
+    margin-bottom: 20px;
+}
+
+
+
+
 
 #homeBtn{
     margin-top:20px;

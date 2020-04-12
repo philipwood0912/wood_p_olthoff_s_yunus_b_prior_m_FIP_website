@@ -185,10 +185,9 @@
                                 <div class="labelWrapDashboard"><textarea name="text[]" type="text"></textarea></div>
                             <?php endforeach;?>
                         <?php endif;?>
-                        <div class="buttonWrapSubDash formBut">
-                            <div class="forwardBtn"><a href="mng_content.php?&add=true&about=true&new=true">More Text</a></div>
-                            <button class="buttonMain" name="addabout">Add Content</button>
-                        </div>
+                        <a class="forwardBtn" href="mng_content.php?&add=true&about=true&new=true">More Text</a>
+                            <button class="forwardBtn" name="addabout">Add Content</button>
+                        
                     </form>
                 <?php endif;?>
                 <?php if(isset($edit_item) && isset($_GET['about'])):?>
@@ -206,19 +205,17 @@
                         ?>
                         <form action="mng_content.php" method="post" class="dashboard-form">
                             <input class="hidden" type="text" name="id" value="<?php echo $edit['ID']?>">
-                            <div class="labelWrapDashboard">
                                 <label>Title:</label>
                                 <input type="text" name="title" value="<?php echo $edit['Title']?>">
-                            </div>
-                            <div class="labelWrapDashboard">
                                 <label>Text:</label>
                                 <?php foreach($textArr as $value):?>
-                                    <textarea type="text" name="text[]"><?php echo $value;?></textarea>
+                                    <textarea type="text" name="text[]"><?php echo $value;?></textarea><hr>
                                 <?php endforeach;?>
-                            </div>
-                            <div class="buttonWrapSubDash formBut">
-                                <div class="forwardBtn"><a href="mng_content.php?id=<?php echo $edit['ID']?>&edit=true&about=true&new=true">More Text</a></div>
-                                <button class="buttonMain" name="editabout">Edit Content</button>
+
+                                <span class="forwardBtn" href="mng_content.php?id=<?php echo $edit['ID']?>&edit=true&about=true&new=true">More Text</span>
+                                <hr>
+                            
+                                <button class="forwardBtn" name="editabout">Edit Content</button>
                             </div>
                         </form>
                     <?php endwhile;?>

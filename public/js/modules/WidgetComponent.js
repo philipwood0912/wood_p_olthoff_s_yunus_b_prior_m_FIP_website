@@ -5,11 +5,13 @@ export default {
         <h2 class="postal-msg">{{postalMessage}}</h2>
         <div class="postal-wrp">
             <form @submit.prevent="pullLocation(postal)">
-
+            <div class="mapForm">
                 <label class="inputLabel">Postal Code:</label>
+                
                 <input v-model="postal" maxlength="6" name="postal" placeholder="X1X1X1">
 
-                <button class="forwardBtn" name="submit">Go!</button>
+                <button class="forwardBtn" id="go" name="submit">Go!</button>
+            </div>
             </form>
         </div>
         <mapcomp></mapcomp>
