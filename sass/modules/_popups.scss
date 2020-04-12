@@ -3,20 +3,27 @@
 .blueBorder{
     border: 2px solid $lightBlue;
     border-radius:8px;
-    padding:10px;
+    padding:20px;
 }
 
-.iconCon{
-    padding: 15px;
+.icons{
+    max-width:20%;
+
+    @include for-tablet-portrait-up {
+        max-width: 30%;
+    }
+}
+
+.iconMap{
+    display: flex;
+    flex-direction: row;
 }
 
 .popUp{
     padding:5px;
     border-radius:10px;
     background: $white;
-    max-width:80%;
     margin: 0 auto;
-
     margin-top:40px;
 
     @include for-tablet-portrait-up {
@@ -30,17 +37,15 @@
 
 .popUpTitle{
     color: $pink;
-    font-size:22px;
-    display: flex;
+    font-size:18px;
     margin: 0 auto;
-    padding-top:30px;
-    padding-bottom:30px;
 }
 
 .popUpSmall{
+    text-decoration: none;
     color: $lightBlue;
-    padding: 15px;
 }
+
 
 //ABOUT POP UPS
 .aboutPopUp{
