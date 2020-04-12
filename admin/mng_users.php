@@ -1,24 +1,24 @@
 <?php
-    require_once '../load.php';
-    confirm_logged_in();
-    if(isset($_POST['create'])){
-        $fname = trim($_POST['fname']);
-        $lname = trim($_POST['lname']);
-        $email = trim($_POST['email']);
-        $username = trim($_POST['username']);
-        $password = trim($_POST['password']);
-        if(empty($fname) || empty($lname) || empty($email) || empty($username) || empty($password)){
-            $message_create = "Please fill out the required fields";
-        } else {
-            $message_create = createUser($fname, $lname, $email, $username, $password);
-        }
+require_once '../load.php';
+confirm_logged_in();
+if(isset($_POST['create'])){
+    $fname = trim($_POST['fname']);
+    $lname = trim($_POST['lname']);
+    $email = trim($_POST['email']);
+    $username = trim($_POST['username']);
+    $password = trim($_POST['password']);
+    if(empty($fname) || empty($lname) || empty($email) || empty($username) || empty($password)){
+        $message_create = "Please fill out the required fields";
+    } else {
+        $message_create = createUser($fname, $lname, $email, $username, $password);
     }
-    $users = getAllUsers();
-    if(isset($_GET['id'])){
-        $id = $_GET['id'];
-        //$id = 1000;
-        $message = deleteUser($id);
-    }
+}
+$users = getAllUsers();
+if(isset($_GET['id'])){
+    $id = $_GET['id'];
+    //$id = 1000;
+    $message = deleteUser($id);
+}
 ?>
 
 <!DOCTYPE html>
@@ -32,13 +32,13 @@
 </head>
 <body>
 <header>
-        <img class="headerLogo" src="../public/images/gettested_logo.svg" alt="logo">
-    </header>
+    <a class="headerLogo" href="dashboard.php"><img src="../public/images/gettested_logo.svg" alt="logo"></a>
+</header>
+<div class="sub-dash-wrap">
     <div class="sub-dashboard">
-        <h2>Manage Users</h2>
+        <div class="sub-dash-title"><h2>Manage Users</h2><a href="dashboard.php"><button><i class="fas fa-arrow-circle-left"></i> Go Back</button></a></div>
         <form class="dashboard-form" action="mng_users.php" method="post">
-            <h3>Create New User</h3>
-            <h3><?php echo !empty($message_create)? $message_create:'';?></h3>
+            <h3><?php echo !empty($message_create)? $message_create:'Create New User';?></h3>
             <label class="hidden">First Name</label>
             <input name="fname" type="text" value="" placeholder="First Name">
             <label class="hidden">Last Name</label>
@@ -52,12 +52,10 @@
             <button name="create">Create User</button>
         </form>
         <div class="table-form">
-            <h3><?php echo !empty($message_create)? $message_create:'';?></h3>
             <table>
                 <tr>
                     <th>First Name</th>
                     <th>Last Name</th>
-                    <th>Email</th>
                     <th>Username</th>
                     <th>Delete</th>
                 </tr>
@@ -66,15 +64,14 @@
                         <tr>
                             <td><?php echo $founduser['F_Name'];?></td>
                             <td><?php echo $founduser['L_Name'];?></td>
-                            <td><?php echo $founduser['Email'];?></td>
                             <td><?php echo $founduser['User_Name'];?></td>
-                            <td><?php if($_SESSION['user_id'] === $founduser['ID']){continue;}?><a href="mng_users.php?id=<?php echo $founduser['ID'];?>">Delete</a></td>
+                            <td><?php if($_SESSION['user_id'] === $founduser['ID']){continue;}?><a href="mng_users.php?id=<?php echo $founduser['ID'];?>"><i class="fas fa-times-circle fa-2x"></i></a></td>
                         <tr>
                     <?php endwhile;?>
                 </tbody>
             </table>
         </div>
-        <a href="dashboard.php">Go Back <i class="fas fa-arrow-circle-right"></i></a>
     </div>
+</div>
 </body>
 </html>

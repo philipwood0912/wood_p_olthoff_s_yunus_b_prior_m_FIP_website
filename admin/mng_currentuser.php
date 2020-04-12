@@ -3,14 +3,10 @@
     require_once '../load.php';
     confirm_logged_in();
     $id = $_SESSION['user_id'];
-    //$id = 'RANDOMID';
     $current_user = getSingleUser($id);
     if(!$current_user){
         $message = "Failed to get info";
     }
-    // if($current_user->rowCount()===0){
-    //     $message = "Failed to get info";
-    // } 
     if(isset($_POST['submit'])){
         $fname = trim($_POST['fname']);
         $lname = trim($_POST['lname']);
@@ -30,27 +26,28 @@
 </head>
 <body>
 <header>
-        <img class="headerLogo" src="../public/images/gettested_logo.svg" alt="logo">
+        <a class="headerLogo" href="dashboard.php"><img src="../public/images/gettested_logo.svg" alt="logo"></a>
     </header>
+    <div class="sub-dash-wrap">
     <div class="sub-dashboard">
-    <h2>Edit Current User</h2>
-    <?php echo !empty($message)? $message:'';?>
-    <form class="dashboard-form" action="mng_currentuser.php" method="post">
-    <?php if($current_user):?>
-        <?php while($user_info = $current_user->fetch(PDO::FETCH_ASSOC)):?>
-        <label>First Name</label>
-        <input type="text" name="fname" value="<?php echo $user_info['F_Name'];?>">
-        <label>Last Name</label>
-        <input type="text" name="lname" value="<?php echo $user_info['L_Name'];?>">
-        <label>Email</label>
-        <input type="text" name="email" value="<?php echo $user_info['Email'];?>">
-        <label>Username</label>
-        <input type="text" name="username" value="<?php echo $user_info['User_Name'];?>">
-        <button name="submit">Edit Account</button>
-        <?php endwhile;?>
-    <?php endif;?>
-    </form>
-    <a href="dashboard.php">Go Back <i class="fas fa-arrow-circle-right"></i></a>
+        <div class="sub-dash-title current-user"><h2><?php echo !empty($message)? $message:'Edit Current User';?></h2><a href="dashboard.php"><button><i class="fas fa-arrow-circle-left"></i> Go Back</button></a></div>
+        
+        <form class="dashboard-form" action="mng_currentuser.php" method="post">
+        <?php if($current_user):?>
+            <?php while($user_info = $current_user->fetch(PDO::FETCH_ASSOC)):?>
+            <label>First Name</label>
+            <input type="text" name="fname" value="<?php echo $user_info['F_Name'];?>">
+            <label>Last Name</label>
+            <input type="text" name="lname" value="<?php echo $user_info['L_Name'];?>">
+            <label>Email</label>
+            <input type="text" name="email" value="<?php echo $user_info['Email'];?>">
+            <label>Username</label>
+            <input type="text" name="username" value="<?php echo $user_info['User_Name'];?>">
+            <button name="submit">Edit Account</button>
+            <?php endwhile;?>
+        <?php endif;?>
+        </form>
+    </div>
     </div>
 </body>
 </html>

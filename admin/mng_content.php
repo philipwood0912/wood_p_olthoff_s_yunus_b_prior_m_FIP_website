@@ -44,6 +44,7 @@
         $home_message = editHomeItem($args);
     }
     if(isset($_POST['editabout']) || isset($_POST['addabout'])) {
+        $_SESSION['count'] = 0;
         $text = $_POST['text'];
         $text_check = array();
         for($i = 0; $size = count($text), $i < $size; $i++){
@@ -62,7 +63,6 @@
             );
             $about_message = editAboutItem($args);
         } else if(!isset($_POST['editabout'])) {
-            $_SESSION['count'] = 0;
             $args = array(
                 'title'=>$_POST['title'],
                 'text'=>$full_text
@@ -83,139 +83,137 @@
 </head>
 <body>
 <header>
-        <img class="headerLogo" src="../public/images/gettested_logo.svg" alt="logo">
+        <a class="headerLogo" href="dashboard.php"><img src="../public/images/gettested_logo.svg" alt="logo"></a>
     </header>
-    <div class="sub-dashboard">
-        <h2>Manage Content</h2>
-        <h3>Home Page - <a href="mng_content.php?add=true&home=true">Add Content <i class="fas fa-arrow-circle-right"></i></a></h3>
-        <?php echo !empty($home_message)? $home_message:'';?>
-        <?php if(isset($_GET['add']) && isset($_GET['home'])):?>
-            <form action="mng_content.php" method="post" class="dashboard-form" enctype="multipart/form-data">
-                <label>Title</label>
-                <input name="title" type="text" value="">
-                <label>Text</label>
-                <textarea name="text" type="text" value=""></textarea>
-                <label>Image</label>
-                <input type="file" name="image" value="">
-                <button name="addhome">Add Content</button>
-            </form>
-        <?php endif;?>
-        <?php if(isset($edit_item) && isset($_GET['home'])):?>
-            <?php while($edit = $edit_item->fetch(PDO::FETCH_ASSOC)):?>
+    <div class="sub-dash-wrap">
+        <div class="sub-dashboard">
+            <div class="sub-dash-title"><h2>Manage Content</h2><a href="dashboard.php"><button><i class="fas fa-arrow-circle-left"></i> Go Back</button></a></div>
+            <div class="sub-form-title"><h3><?php echo !empty($home_message)? $home_message:'Home Page';?></h3><a href="mng_content.php?add=true&home=true"><button>Add Content <i class="fas fa-arrow-circle-right"></i></button></a></div>
+            <?php if(isset($_GET['add']) && isset($_GET['home'])):?>
                 <form action="mng_content.php" method="post" class="dashboard-form" enctype="multipart/form-data">
-                    <input class="hidden" type="text" name="id" value="<?php echo $edit['ID']?>">
                     <label>Title</label>
-                    <input type="text" name="title" value="<?php echo $edit['Title']?>">
+                    <input name="title" type="text" value="">
                     <label>Text</label>
-                    <textarea type="text" name="text" value=""><?php echo $edit['Text']?></textarea>
+                    <textarea name="text" type="text" value=""></textarea>
                     <label>Image</label>
-                    <input class="hidden" type="text" name="oldimage" value="<?php echo $edit['Image']?>">
                     <input type="file" name="image" value="">
-                    <button name="edithome">Edit Content</button>
+                    <button name="addhome">Add Content</button>
                 </form>
-            <?php endwhile;?>
-        <?php endif;?>
-        <div class="table-form">
-            <table>
-                <tr>
-                    <th>Content ID</th>
-                    <th>Content Title</th>
-                    <th>Content Text</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
-                </tr>
-                <tbody>
-                    <?php while($content = $home_contents->fetch(PDO::FETCH_ASSOC)):?>
-                        <tr>
-                            <td><?php echo $content['ID'];?></td>
-                            <td><?php echo $content['Title'];?></td>
-                            <td><?php echo $content['Text'];?></td>
-                            <td><a href="mng_content.php?id=<?php echo $content['ID']?>&edit=true&home=true"><i class="fas fa-arrow-circle-right"></i></a></td>
-                            <td><a href="mng_content.php?id=<?php echo $content['ID']?>&delete=true&home=true"><i class="fas fa-times-circle"></i></a></td>
-                        <tr>
-                    <?php endwhile;?>
-                </tbody>
-            </table>
-        </div>
-        <h3>About Page - <a href="mng_content.php?add=true&about=true">Add Content <i class="fas fa-arrow-circle-right"></i></a></h3>
-        <?php echo !empty($about_message)? $about_message:'';?>
-        <?php if(isset($_GET['add']) && isset($_GET['about'])):?>
-            <?php
-                if(isset($_GET['new'])){
-                    $_SESSION['count']++;
-                    $textArr = array();
-                    for($i=0; $i < $_SESSION['count']; $i++){
-                        $textArr[] = "";
-                    }
-                }    
-            ?>
-            <form action="mng_content.php" method="post" class="dashboard-form">
-                <label>Title</label>
-                <input name="title" type="text" value="">
-                <label>Text</label>
-                <textarea name="text[]" type="text"></textarea>
-                <?php if(isset($textArr)):?>
-                    <?php foreach($textArr as $value):?>
-                        <textarea name="text[]" type="text"></textarea>
-                    <?php endforeach;?>
-                <?php endif;?>
-                <a href="mng_content.php?&add=true&about=true&new=true"><button type="button">Add More</button></a>
-                <button name="addabout">Add Content</button>
-            </form>
-        <?php endif;?>
-        <?php if(isset($edit_item) && isset($_GET['about'])):?>
-            <?php while($edit = $edit_item->fetch(PDO::FETCH_ASSOC)):?>
+            <?php endif;?>
+            <?php if(isset($edit_item) && isset($_GET['home'])):?>
+                <?php while($edit = $edit_item->fetch(PDO::FETCH_ASSOC)):?>
+                    <form action="mng_content.php" method="post" class="dashboard-form" enctype="multipart/form-data">
+                        <input class="hidden" type="text" name="id" value="<?php echo $edit['ID']?>">
+                        <label>Title</label>
+                        <input type="text" name="title" value="<?php echo $edit['Title']?>">
+                        <label>Text</label>
+                        <textarea type="text" name="text" value=""><?php echo $edit['Text']?></textarea>
+                        <label>Image</label>
+                        <input class="hidden" type="text" name="oldimage" value="<?php echo $edit['Image']?>">
+                        <input type="file" name="image" value="">
+                        <button name="edithome">Edit Content</button>
+                    </form>
+                <?php endwhile;?>
+            <?php endif;?>
+            <div class="table-form">
+                <table>
+                    <tr>
+                        <th>Popup #</th>
+                        <th>Content Title</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                    <tbody>
+                        <?php $home_index = 1;?>
+                        <?php while($content = $home_contents->fetch(PDO::FETCH_ASSOC)):?>
+                            <tr>
+                                <td><?php echo $home_index;?></td>
+                                <td><?php echo $content['Title'];?></td>
+                                <td><a href="mng_content.php?id=<?php echo $content['ID']?>&edit=true&home=true"><i class="fas fa-arrow-circle-right fa-2x"></i></a></td>
+                                <td><a href="mng_content.php?id=<?php echo $content['ID']?>&delete=true&home=true"><i class="fas fa-times-circle fa-2x"></i></a></td>
+                                <?php $home_index++;?>
+                            <tr>
+                        <?php endwhile;?>
+                    </tbody>
+                </table>
+            </div>
+            <div class="sub-form-title"><h3><?php echo !empty($about_message)? $about_message:'About Page';?></h3><a href="mng_content.php?add=true&about=true"><button>Add Content <i class="fas fa-arrow-circle-right"></i></button></a></div>
+            <?php if(isset($_GET['add']) && isset($_GET['about'])):?>
                 <?php
+                    if(!isset($_GET['new'])){
+                        $_SESSION['count'] = 0;
+                    }
                     if(isset($_GET['new'])){
                         $_SESSION['count']++;
-                        $textArr = explode('^', $edit['Text']);
+                        $textArr = array();
                         for($i=0; $i < $_SESSION['count']; $i++){
                             $textArr[] = "";
                         }
-                    } else {
-                        $textArr = explode('^', $edit['Text']);
-                    }
+                    }    
                 ?>
                 <form action="mng_content.php" method="post" class="dashboard-form">
-                    <input class="hidden" type="text" name="id" value="<?php echo $edit['ID']?>">
                     <label>Title</label>
-                    <input type="text" name="title" value="<?php echo $edit['Title']?>">
+                    <input name="title" type="text" value="">
                     <label>Text</label>
-                    <?php foreach($textArr as $value):?>
-                        <textarea type="text" name="text[]"><?php echo $value;?></textarea>
-                    <?php endforeach;?>
-                    <a href="mng_content.php?id=<?php echo $edit['ID']?>&edit=true&about=true&new=true"><button type="button">Add More</button></a>
-                    <button name="editabout">Edit Content</button>
+                    <textarea name="text[]" type="text"></textarea>
+                    <?php if(isset($textArr)):?>
+                        <?php foreach($textArr as $value):?>
+                            <textarea name="text[]" type="text"></textarea>
+                        <?php endforeach;?>
+                    <?php endif;?>
+                    <a href="mng_content.php?&add=true&about=true&new=true"><button type="button">Add More</button></a>
+                    <button name="addabout">Add Content</button>
                 </form>
-            <?php endwhile;?>
-        <?php endif;?>
-        <div class="table-form">
-            <table>
-                <tr>
-                    <th>Content ID</th>
-                    <th>Content Title</th>
-                    <th>Content Text</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
-                </tr>
-                <tbody>
-                    <?php while($content = $about_contents->fetch(PDO::FETCH_ASSOC)):?>
-                        <?php 
-                            $textArr = explode('^', $content['Text']);
-                            $textPara = implode(' ', $textArr);
-                        ?>
-                        <tr>
-                            <td><?php echo $content['ID'];?></td>
-                            <td><?php echo $content['Title'];?></td>
-                            <td><?php echo $textPara;?></td>
-                            <td><a href="mng_content.php?id=<?php echo $content['ID']?>&edit=true&about=true"><i class="fas fa-arrow-circle-right"></i></a></td>
-                            <td><a href="mng_content.php?id=<?php echo $content['ID']?>&delete=true&about=true"><i class="fas fa-times-circle"></i></a></td>
-                        <tr>
-                    <?php endwhile;?>
-                </tbody>
-            </table>
+            <?php endif;?>
+            <?php if(isset($edit_item) && isset($_GET['about'])):?>
+                <?php while($edit = $edit_item->fetch(PDO::FETCH_ASSOC)):?>
+                    <?php
+                        if(isset($_GET['new'])){
+                            $_SESSION['count']++;
+                            $textArr = explode('^', $edit['Text']);
+                            for($i=0; $i < $_SESSION['count']; $i++){
+                                $textArr[] = "";
+                            }
+                        } else {
+                            $textArr = explode('^', $edit['Text']);
+                        }
+                    ?>
+                    <form action="mng_content.php" method="post" class="dashboard-form">
+                        <input class="hidden" type="text" name="id" value="<?php echo $edit['ID']?>">
+                        <label>Title</label>
+                        <input type="text" name="title" value="<?php echo $edit['Title']?>">
+                        <label>Text</label>
+                        <?php foreach($textArr as $value):?>
+                            <textarea type="text" name="text[]"><?php echo $value;?></textarea>
+                        <?php endforeach;?>
+                        <a href="mng_content.php?id=<?php echo $edit['ID']?>&edit=true&about=true&new=true"><button type="button">Add More</button></a>
+                        <button name="editabout">Edit Content</button>
+                    </form>
+                <?php endwhile;?>
+            <?php endif;?>
+            <div class="table-form">
+                <table>
+                    <tr>
+                        <th>Popup #</th>
+                        <th>Content Title</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                    <tbody>
+                        <?php $about_index = 1;?>
+                        <?php while($content = $about_contents->fetch(PDO::FETCH_ASSOC)):?>
+                            <tr>
+                                <td><?php echo $about_index;?></td>
+                                <td><?php echo $content['Title'];?></td>
+                                <td><a href="mng_content.php?id=<?php echo $content['ID']?>&edit=true&about=true"><i class="fas fa-arrow-circle-right fa-2x"></i></a></td>
+                                <td><a href="mng_content.php?id=<?php echo $content['ID']?>&delete=true&about=true"><i class="fas fa-times-circle fa-2x"></i></a></td>
+                                <?php $about_index++;?>
+                            <tr>
+                        <?php endwhile;?>
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <a href="dashboard.php">Go Back <i class="fas fa-arrow-circle-right"></i></a>
     </div>
 </body>
 </html>
