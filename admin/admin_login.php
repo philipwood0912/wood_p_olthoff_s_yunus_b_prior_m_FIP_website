@@ -27,12 +27,12 @@
     <a class="headerLogo" href="../#"><img src="../public/images/gettested_logo.svg" alt="logo"></a>
 </header>
 <div class="signin-body">
-<div class="loginIconCon">
-    <form action="../#" method="get" class="loginIconPad"><button class="buttonMain"><i class="fas fa-home"></i> Home</button></form>
-</div>
-<div id="signin">
+    
+
+<div class="signin">
     <div class="blueBorder">
-    <h2><?php echo !empty($message)? $message:'Sign in to your account';?></h2>
+        <a href="../#"><button class="backwardBtn homeBtn" id="homeBtn"><i class="fas fa-home"></i> Home</button></a>
+    <h2 class="dash-head"><?php echo !empty($message)? $message:'Sign in to your account';?></h2>
     <form id="signinform" action="admin_login.php" method="post">
         <div class="labelWrapLogin">
             <label>Username:</label>
@@ -42,10 +42,12 @@
             <label>Password:</label>
             <input name="password" type="password" value="" placeholder="Password">
         </div>
-        <div class="buttonWrapLogin">
-            <form action="../#" method="get"><button class="buttonMain"><i class="fas fa-arrow-circle-left fa-1x"></i> Go Back</button></form>
-            <button class="buttonMain" name="submit" type="submit">Sign In <i class="fas fa-arrow-circle-right"></i></button>
+
+        <div class="makeButton"><button class="backwardBtn"><i class="fas fa-arrow-circle-left fa-1x"></i> Go Back</button>
         </div>
+    
+        <button class="forwardBtn" id="signinBtn" name="submit" type="submit">Sign In <i class="fas fa-arrow-circle-right"></i></button>
+        
     </form>
     </div>
 </div>

@@ -13,259 +13,6 @@
 // gets rid of focus outline on buttons / input / textarea
 input:focus, button:focus, textarea:focus {outline:none;}
 // main dashboard styles
-.dashboard-con {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    justify-content: center;
-    text-align: center;
-    margin: 0 auto;
-
-    margin-top:40px;
-}
-.dashboardIconCon {
-    width: 60%;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    padding: 5px;
-    .dashboardIconPad {
-        background-color: white;
-        padding: 5px;
-        border-radius: 5px;
-        max-width:120px;
-    }
-    button {
-        height:50px;
-        width: 100%;
-        border: 2px solid $lightBlue;
-        border-radius: 5px;
-        font-size: 18px;
-        color: $pink;
-    }
-}
-
-.dashboard {
-    background-color: white;
-    padding: 5px;
-    max-width: 80%;
-    border-radius: 8px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    @include for-tablet-portrait-up {
-        max-width: 60%;
-    }
-    @include for-desktop-up {
-        max-width: 40%;
-    }
-    //dashboard content 
-    .dashboardContent {
-        padding: 20px;
-    }
-    h2 {
-        color: $pink;
-        font-size: 40px;
-        line-height: 40px;
-        margin: 0;
-        margin-bottom: 30px;
-    }
-    h3 {
-        color:$darkBlue;
-        font-size: 30px;
-        margin: 0;
-    }
-}
-
-// dashboard nav
-#mainNav {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 0;
-    a {
-        button {
-            max-width:250px;
-            height:40px;
-            margin: 0 auto;
-            border-radius: 5px;
-            background: $white;
-            padding:5px 10px;
-            border: 2px solid $darkBlue;
-            border-radius: 5px;
-            font-size: 20px;
-            color: $pink;
-            margin-top: 20px;
-            cursor: pointer;
-        }
-    }
-} 
-
-// sub dashboard styles
-// sub dashboard home icon
-.dashboardSubIconCon {
-    margin: 0 auto;
-    max-width: 80%;
-    margin-bottom: 20px;
-    padding: 5px;
-    .dashboardSubIconPad {
-        background-color: white;
-        padding: 5px;
-        border-radius: 5px;
-        max-width:120px;
-    }
-    button {
-        height:50px;
-        width: 100%;
-        border: 2px solid $lightBlue;
-        border-radius: 5px;
-        font-size: 18px;
-        color: $pink;
-    }
-}
-// sub dashboard main wrap
-.sub-dash-wrap {
-    padding: 40px 0px;
-}
-// subdashboard
-.sub-dashboard {
-    background-color: $white;
-    margin: 0 auto;
-    padding: 5px;
-    border-radius: 8px;
-    max-width:100%;
-    @include for-tablet-portrait-up {
-        max-width: 80%;
-    }
-    @include for-desktop-up {
-        max-width: 60%;
-    }
-    .dashboardSubContent {
-        padding: 20px;
-    }
-    // sub-dashboard button wrap
-    .buttonWrapSubDash {
-        text-align: center;
-        margin: 0;
-        margin-bottom: 20px;
-        button {
-            max-width:250px;
-            height:40px;
-            border-radius: 5px;
-            background: $white;
-            padding:5px 10px;
-            border: 2px solid $darkBlue;
-            border-radius: 5px;
-            font-size: 20px;
-            color: $pink;
-            cursor: pointer;
-            font-family: $mainFont;
-        }
-    }
-    //subdash button wrap unique
-    .formBut {
-        margin-bottom: 20px;
-    }
-    // sub dash main title wrap
-    .sub-dash-title {
-        width: 100%;
-        margin-top: 10px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        h2 {
-            margin: 0;
-            font-size: 40px;
-            line-height: 40px;
-            color: $pink;
-        }
-    }
-    // current user title style
-    .current-user {
-        margin-bottom: 20px;
-    }
-    // passReset style
-    .passReset {
-        text-align: center;
-        font-size: 30px;
-        margin: 0;
-        margin-top: 25px;
-        margin-bottom: 25px;
-        color: $pink;
-    }
-}
-// sub-dashboard-form title wrap
-.sub-form-title {
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    h3 {
-        margin: 0;
-        color: $pink;
-        font-size: 30px;
-        text-align: center;
-        line-height: 40px;
-    }
-}
-// sub dashboard form styles 
-.dashboard-form {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    max-width:100%;
-    @include for-tablet-landscape-up{
-        max-width: 60%;
-        margin: 0 auto;
-    }
-    h3 {
-        font-size: 30px;
-        color: $darkBlue;
-    }
-    input {
-        width: 65%;
-        margin: 0 auto;
-        font-size: 22px;
-        margin-bottom: 20px;
-        color: $darkGrey;
-        float: right;
-    }
-    textarea {
-        width: 65%;
-        margin: 0 auto;
-        font-size: 22px;
-        color: $darkGrey;
-        margin-bottom: 20px;
-        float: right;
-    }
-    button {
-            max-width:250px;
-            height:40px;
-            margin: 0 auto;
-            border-radius: 5px;
-            background: $white;
-            padding:5px 10px;
-            border: 2px solid $darkBlue;
-            border-radius: 5px;
-            font-size: 20px;
-            color: $pink;
-            cursor: pointer;
-            font-family: $mainFont;
-    }
-    // button:first-child {
-    //     margin-bottom: 15px;
-    // }
-    label {
-        font-size: 22px;
-        color: $darkBlue;
-        margin-bottom: 15px;
-        line-height: 30px;
-    }
-}
 
 .table-form {
     width: 100%;
@@ -285,14 +32,78 @@ input:focus, button:focus, textarea:focus {outline:none;}
         th {
             color: $pink;
         }
-        a {
-            color: $darkGrey;
-            -webkit-transition: .5s ease; 
-            -moz-transition: .5s ease;
-            transition: .5s ease;
-        }
-        a:hover {
-            color: $pink;
-        }
     }
+}
+
+
+#homeBtn{
+    margin-top:20px;
+}
+
+#homeBtn2{
+    margin-top:20px;
+}
+
+#homeBtn3{
+    margin-top:20px;
+}
+
+#homeBtn4{
+    margin-top:20px;
+}
+
+.dash-head{
+    color: $pink;
+}
+
+#signinBtn{
+    margin-bottom:20px;
+}
+
+.user-form{
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.current-user{
+    display: flex;
+    flex-direction: column;
+}
+
+.current-user form{
+    display: flex;
+    flex-direction: column;
+    button{
+        margin-top: 15px;
+    }
+}
+
+#editBtn{
+    margin-top: 15px;
+}
+
+#backBtn{
+    margin-top: 15px;
+}
+
+#backBtn2{
+    margin-top: 15px;
+}
+
+.passCon{
+    display:flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#passreset{
+    margin-top: 15px;
+}
+
+.table-form{
+    margin-top: 20px;
 }

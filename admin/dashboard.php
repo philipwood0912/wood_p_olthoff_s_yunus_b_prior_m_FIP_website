@@ -16,21 +16,22 @@
     <header class="dash-header">
         <a class="headerLogo" href="logout.php"><img src="../public/images/gettested_logo.svg" alt="logo"></a>
     </header>
-    <div class="dashboard-con">
-        <div class="dashboardIconCon">
-            <form action="logout.php" method="get" class="dashboardIconPad"><button class="buttonMain"><i class="fas fa-home"></i> Home</button></form>
-        </div>
-        <div class="dashboard">
+    <div class="signin-body">
+        <div class="signin">
             <div class="blueBorder">
+                <a href="../#"><button class="backwardBtn" id="homeBtn2"><i class="fas fa-home"></i> Home</button></a>
                 <div class="dashboardContent">
-                <h2>Welcome back <?php echo $_SESSION['name'];?></h2>
-                <h3>Admin Settings</h3>
-                <ul id="mainNav">
-                    <form action="mng_currentuser.php" method="get"><button class="buttonMain">Manage Current User <i class="fas fa-arrow-circle-right"></i></button></form>
-                    <form action="mng_users.php" method="get"><button class="buttonMain">Manage All Users <i class="fas fa-arrow-circle-right"></i></button></form>
-                    <form action="mng_content.php" method="get"><button class="buttonMain">Manage Content <i class="fas fa-arrow-circle-right"></i></button></form>
-                    <form action="logout.php" method="get"><button class="buttonMain">Log Out <i class="fas fa-arrow-circle-right"></i></button></form>
-                </ul>
+                <h2 class="dash-head">Welcome To The Site CMS <?php echo $_SESSION['name'];?></h2>
+                <h2 class="popUpSmall">What would you like to change?</h2>
+
+                <form action="mng_currentuser.php" method="get"><button class="forwardBtn">Manage Current User <i class="fas fa-arrow-circle-right"></i></button></form><br>
+
+                    <form action="mng_users.php" method="get"><button class="forwardBtn">Manage All Users <i class="fas fa-arrow-circle-right"></i></button></form><br>
+
+                    <form action="mng_content.php" method="get"><button class="forwardBtn">Manage Content <i class="fas fa-arrow-circle-right"></i></button></form><br>
+                    
+                    <form action="logout.php" method="get"><button class="forwardBtn">Log Out <i class="fas fa-arrow-circle-right"></i></button></form><br>
+                
                 <div>
             <div>
         </div>
