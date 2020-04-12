@@ -17,16 +17,23 @@
         <a class="headerLogo" href="logout.php"><img src="../public/images/gettested_logo.svg" alt="logo"></a>
     </header>
     <div class="dashboard-con">
-    <div class="dashboard">
-        <h2>Welcome back <?php echo $_SESSION['username'];?></h2>
-        <h3>Admin Settings</h3>
-        <ul id="mainNav">
-            <a href="mng_currentuser.php"><button>Manage Current User <i class="fas fa-arrow-circle-right"></i></button></a>
-            <a href="mng_users.php"><button>Manage All Users <i class="fas fa-arrow-circle-right"></i></button></a>
-            <a href="mng_content.php"><button>Manage Content <i class="fas fa-arrow-circle-right"></i></button></a>
-            <a href="logout.php"><button>Log Out <i class="fas fa-arrow-circle-right"></i></button></a>
-        </ul>
-    </div>
+        <div class="dashboardIconCon">
+            <div class="dashboardIconPad"><a href="logout.php"><button class="buttonMain"><i class="fas fa-home"></i> Home</button></a></div>
+        </div>
+        <div class="dashboard">
+            <div class="blueBorder">
+                <div class="dashboardContent">
+                <h2>Welcome back <?php echo $_SESSION['username'];?></h2>
+                <h3>Admin Settings</h3>
+                <ul id="mainNav">
+                    <a href="mng_currentuser.php"><button class="buttonMain">Manage Current User <i class="fas fa-arrow-circle-right"></i></button></a>
+                    <a href="mng_users.php"><button class="buttonMain">Manage All Users <i class="fas fa-arrow-circle-right"></i></button></a>
+                    <a href="mng_content.php"><button class="buttonMain">Manage Content <i class="fas fa-arrow-circle-right"></i></button></a>
+                    <a href="logout.php"><button class="buttonMain">Log Out <i class="fas fa-arrow-circle-right"></i></button></a>
+                </ul>
+                <div>
+            <div>
+        </div>
     </div>
 </body>
 </html>

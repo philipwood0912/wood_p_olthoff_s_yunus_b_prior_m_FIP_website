@@ -24,17 +24,7 @@ Vue.use(VueGoogleMaps, {
      v: '3.26'
     },
     installComponents: true
-  })
-
-//var mykey = config.MY_KEY;
-
-//Vue.use(VueGoogleMaps, {
-    //load: {
-     // key: mykey,
-     // v: '3.26'
-    //},
-    //installComponents: true
-  //})
+})
 
 const vm = new Vue({
     data: {

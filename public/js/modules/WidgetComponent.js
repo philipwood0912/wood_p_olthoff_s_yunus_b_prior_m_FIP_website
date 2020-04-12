@@ -44,7 +44,7 @@ export default {
                 lat2Rad = this.degToRad(lat2),
                 radius = 6371; // appox estimate of earths radius
 
-                //formula - full explainion @ https://github.com/philipwood0912/haversine_test
+                //formula - full explaination @ https://github.com/philipwood0912/haversine_test
                 return radius * 2 * Math.asin(
                     Math.sqrt(
                         Math.pow(Math.sin(dlatRad/2), 2) +
