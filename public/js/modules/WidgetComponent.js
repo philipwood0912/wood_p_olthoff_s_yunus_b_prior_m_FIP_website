@@ -6,8 +6,8 @@ export default {
         <div class="postal-wrp">
             <form @submit.prevent="pullLocation(postal)">
 
-                <label class="hidden">Postal Code:</label>
-                <input v-model="postal" maxlength="6" name="postal" placeholder="Enter Your Postal Code">
+                <label class="inputLabel">Postal Code:</label>
+                <input v-model="postal" maxlength="6" name="postal" placeholder="X1X1X1">
 
                 <button class="arrow-btn" name="submit">Go!</button>
             </form>

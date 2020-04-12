@@ -42,6 +42,7 @@
         color: $pink;
     }
 }
+
 .dashboard {
     background-color: white;
     padding: 5px;
@@ -71,7 +72,7 @@
         margin: 0;
     }
 }
-.dashboardContent {
+
     padding: 20px;
 }
 #mainNav {
@@ -97,9 +98,11 @@
     }
 } 
 
+
 .sub-dash-wrap {
     padding: 50px 0px 50px 0px;
 }
+
 .sub-dashboard {
     background-color: $white;
     margin: 0 auto;
