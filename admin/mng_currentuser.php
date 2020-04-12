@@ -39,6 +39,12 @@
     <a class="headerLogo" href="dashboard.php"><img src="../public/images/gettested_logo.svg" alt="logo"></a>
 </header>
 <div class="sub-dash-wrap">
+<<<<<<< HEAD
+=======
+    <div class="dashboardSubIconCon">
+        <form action="logout.php" method="get" class="dashboardSubIconPad"><button class="buttonMain"><i class="fas fa-home"></i> Home</button></form>
+    </div>
+>>>>>>> dfe8ccab25dcf5e7ad8cebef23db44fa3fd57be3
     <div class="sub-dashboard">
         <div class="blueBorder">
         <div class="loginIconPad"><a href="../#"><button class="backwardBtn"><i class="fas fa-home"></i> Home</button></a></div>
@@ -79,8 +85,13 @@
                         <input type="text" name="newpass" value="">
                     </div>
                     <div class="buttonWrapSubDash">
+<<<<<<< HEAD
                         <a href="dashboard.php"><button class="backwardBtn" type="button"><i class="fas fa-arrow-circle-left"></i> Go Back</button></a>
                         <button class="forwardBtn" name="passreset">Edit Password</button>
+=======
+                        <div class="forwardBtn"><a href="dashboard.php"><i cslass="fas fa-arrow-circle-left"></i> Go Back</a></div>
+                        <button class="buttonMain" name="passreset">Edit Password</button>
+>>>>>>> dfe8ccab25dcf5e7ad8cebef23db44fa3fd57be3
                     </div>
                 <?php endif;?>
                 </form>

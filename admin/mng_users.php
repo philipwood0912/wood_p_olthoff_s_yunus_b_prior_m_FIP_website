@@ -35,6 +35,12 @@ if(isset($_GET['id'])){
     <a class="headerLogo" href="dashboard.php"><img src="../public/images/gettested_logo.svg" alt="logo"></a>
 </header>
 <div class="sub-dash-wrap">
+<<<<<<< HEAD
+=======
+    <div class="dashboardSubIconCon">
+        <form action="logout.php" method="get" class="dashboardSubIconPad"><button class="buttonMain"><i class="fas fa-home"></i> Home</button></form>
+    </div>
+>>>>>>> dfe8ccab25dcf5e7ad8cebef23db44fa3fd57be3
     <div class="sub-dashboard">
         <div class="blueBorder">
             
@@ -63,7 +69,7 @@ if(isset($_GET['id'])){
                         <input name="password" type="text" value="" placeholder="Password">
                     </div>
                     <div class="buttonWrapSubDash">
-                        <a href="dashboard.php"><button type="button" class="buttonMain"><i class="fas fa-arrow-circle-left"></i> Go Back</button></a>
+                        <div class="forwardBtn"><a href="dashboard.php"><i class="fas fa-arrow-circle-left"></i> Go Back</a></div>
                         <button class="buttonMain" name="create">Create User</button>
                     </div>
                 </form>
