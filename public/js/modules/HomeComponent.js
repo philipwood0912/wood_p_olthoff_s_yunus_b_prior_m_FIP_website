@@ -4,7 +4,7 @@ export default {
     <div id="homeCon"> 
         <h1 class="hidden"> Home Page </h1>
 
-        <div id="heroCon"> 
+        <div class="imgPaddingAbt">
             <img src="./public/images/heroImgWeb.svg" alt="hero image with text" id="heroImage">
         </div>
 

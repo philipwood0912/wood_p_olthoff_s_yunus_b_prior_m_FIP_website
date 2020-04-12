@@ -12,46 +12,27 @@
   }
 
 #aboutCon{
-    width:100%;
-    margin-top:40px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+    max-width:95%;
     margin: 0 auto;
 
+    margin-top:40px;
+
     @include for-tablet-portrait-up {
-        width:80%;
         margin-top:80px;
+
+        max-width: 80%;
     }
 
     @include for-desktop-up{
         margin-top:100px;
-        width:50%;
-    }
 
-}
-
-#aboutHero{
-    margin-top:20px;
-    @include for-tablet-portrait-up {
-        margin-top:40px;
+        max-width: 40%;
     }
-
-    @include for-desktop-up{
-        margin-top:60px;
-    }
-}
-
-.aboutIntro{
-    margin: 0 auto;
-    padding:10px;
-    max-width: 100%;
-    margin-top:40px;
-    @include for-tablet-portrait-up {
-        margin-top:80px;
-    }
-
-    @include for-desktop-up{
-        margin-top:100px;
-    }
-    
 }
 
 
@@ -59,56 +40,50 @@
     display:flex;
     margin: 0 auto;
     max-width:90%;
-
-    margin-top:40px;
-
-    @include for-tablet-portrait-up {
-        margin-top:80px;
-    }
-
-    @include for-desktop-up{
-        margin-top:100px;
-    }
+    margin-bottom: 40px;
 }
 
 
-#socialCon{
-    color: $white;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-top: 40px;
-    background: $darkBlue;
-    padding: 10px;
+.aboutPop{
+    padding:5px;
+    border-radius:10px;
+    background: $white;
+    margin-top:50px;
+    margin-bottom: 50px;
 }
 
-#imgCon{
-    margin: 0 auto;
-
-    margin-top:40px;
-
-    @include for-tablet-portrait-up {
-        margin-top:80px;
-    }
-
-    @include for-desktop-up{
-        margin-top:100px;
-    }
+.aboutPop ul{
+    text-align: left;
+    text-decoration: none;
+    list-style: none;
+    padding-right: 20px;
 }
 
 #aboutLogo{
-    display: flex;
-    width: 80%;
+    margin-top: 60px;
+    margin-bottom: -40px;
+
+    @include for-tablet-portrait-up {
+        margin-top:80px;
+    }
+
+    @include for-desktop-up{
+        margin-top:100px;
+    }
+}
+
+.popUpList{
+    color: $darkBlue;
+    line-height:26px;
+    padding: 3px;
+}
+
+.abtVideoCon{
     margin: 0 auto;
-}
-
-.aboutList{
-    padding-left:0;
+    margin-top:30px;
+    margin-bottom: 30px;
+    background-color: $white;
     padding: 5px;
-}
-
-.aboutList li{
-    list-style: none;
-    text-decoration: none;
-
+    border-radius: 8px;
+    max-width: 100%;
 }
