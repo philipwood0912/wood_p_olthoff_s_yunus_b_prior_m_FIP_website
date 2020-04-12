@@ -78,6 +78,7 @@
 .aboutPic{
     margin: 0 auto;
     max-width: 100%;
+    border-radius:8px;
 
     @include for-tablet-portrait-up {
         margin-top:80px;

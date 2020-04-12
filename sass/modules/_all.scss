@@ -66,18 +66,18 @@ video{
     width:100%;
 }
   
-  i:hover {
+i:hover {
     cursor: pointer;
   }
 
 input{
     background-color: $grey;
     border-radius: 5px;
+    color: $grey2;
+    text-align: left;
+    padding: 3px;
 }
 
-button{
-    cursor: pointer;
-}
 
 
 .animated {
@@ -86,12 +86,20 @@ button{
     background-position: left top;
     padding-top:95px;
     margin-bottom:60px;
-    -webkit-animation-duration: 4s;
-    animation-duration: 4s;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
+    transition: all .25s ease-out;
  }
  
+ 
+ .fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    transition: all .25s ease-out;
+ }
+
  @-webkit-keyframes fadeIn {
     0% {opacity: 0.3;}
     100% {opacity: 1;}
@@ -100,9 +108,4 @@ button{
  @keyframes fadeIn {
     0% {opacity: 0.3;}
     100% {opacity: 1;}
- }
- 
- .fadeIn {
-    -webkit-animation-name: fadeIn;
-    animation-name: fadeIn;
  }

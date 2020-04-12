@@ -44,24 +44,27 @@ if(isset($_GET['id'])){
                 <div class="dash-head"><h2>Manage Users</h2>
                 </div>
                 <form action="mng_users.php" method="post" class="user-form">
-                    <h3><?php echo !empty($message_create)? $message_create:'Create New User';?></h3>
-                        <label>First Name:</label>
+                    <h3 class="dash-head"><?php echo !empty($message_create)? $message_create:'Create New User';?></h3>
+                        <label class="inputLabel">First Name:</label>
                         <input name="fname" type="text" value="" placeholder="First Name">
-                        <label>Last Name:</label>
+                        <label class="inputLabel">Last Name:</label>
                         <input name="lname" type="text" value="" placeholder="Last Name">
-                        <label>Email:</label>
+                        <label class="inputLabel">Email:</label>
                         <input name="email" type="email" value="" placeholder="Email">
-                        <label>Username:</label>
+                        <label class="inputLabel">Username:</label>
                         <input name="username" type="text" value="" placeholder="Username">
-                        <label>Password:</label>
+                        <label class="inputLabel">Password:</label>
                         <input name="password" type="text" value="" placeholder="Password">
-
-                        <a href="dashboard.php" class="backwardBtn" id="backBtn2"><i class="fas fa-arrow-circle-left"></i> Go Back</a>
+                        <hr>
 
                         <button class="forwardBtn" name="create">Create User</button>
+                        <hr>
+                        
+                        <button class="backwardBtn"><i class="fas fa-arrow-circle-left"></i> Go Back</button>
                     </div>
                 </form>
                 <div class="table-form">
+                    <h2 class="dash-head"> User List</h2>
                     <table>
                         <tr>
                             <th>First Name</th>

@@ -51,13 +51,13 @@
                     <?php if($current_user):?>
 
                     <?php while($user_info = $current_user->fetch(PDO::FETCH_ASSOC)):?>
-                        <label>First Name:</label>
+                        <label class="inputLabel">First Name:</label>
                         <input type="text" name="fname" value="<?php echo $user_info['F_Name'];?>">
-                        <label>Last Name:</label>
+                        <label class="inputLabel">Last Name:</label>
                         <input type="text" name="lname" value="<?php echo $user_info['L_Name'];?>">
-                        <label>Email:</label>
+                        <label class="inputLabel">Email:</label>
                         <input type="text" name="email" value="<?php echo $user_info['Email'];?>">
-                        <label>Username:</label>
+                        <label class="inputLabel">Username:</label>
                         <input type="text" name="username" value="<?php echo $user_info['User_Name'];?>">
                   
                     <button class="forwardBtn" name="submit" id="editBtn">Edit Account</button>
@@ -70,20 +70,21 @@
                 <form action="mng_currentuser.php" method="post">
                 <?php if($current_user):?>
                         <div class="passCon">
-                            <label>Old Password:</label>
+                            <label class="inputLabel">Old Password:</label>
                             <input type="text" name="oldpass" value="">
                     
 
-                            <label>New Password:</label>
+                            <label class="inputLabel">New Password:</label>
                             <input type="text" name="newpass" value="">
                         </div>  
+
+                        <button class="backwardBtn" id="backBtn"><i class="fas fa-arrow-circle-left fa-1x"></i> Go Back</button>
                     
                         <button class="forwardBtn" name="submit" id="passreset">Reset Password</button>
-
-                    <div class="makeButton"><button class="backwardBtn" id="backBtn"><i class="fas fa-arrow-circle-left fa-1x"></i> Go Back</button>
-        </div>
+                        
+                        
                 <?php endif;?>
-                </form>
+                </form><br>
             </div>
         </div>
     </div>

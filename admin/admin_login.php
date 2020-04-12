@@ -31,22 +31,25 @@
 
 <div class="signin">
     <div class="blueBorder">
-        <a href="../#"><button class="backwardBtn homeBtn" id="homeBtn"><i class="fas fa-home"></i> Home</button></a>
-    <h2 class="dash-head"><?php echo !empty($message)? $message:'Sign in to your account';?></h2>
+
+        <button class="backwardBtn homeBtn" id="homeBtn"><i class="fas fa-home"></i> Home</button>
+
+        <button class="forwardBtn"><i class="fas fa-arrow-circle-left"></i> Go Back</button>
+
+    <h2 class="dash-head"><?php echo !empty($message)? $message:'Sign In to Your Account';?></h2>
     <form id="signinform" action="admin_login.php" method="post">
         <div class="labelWrapLogin">
-            <label>Username:</label>
-            <input name="username" type="text" value="" placeholder="Username">
+            <label class="inputLabel">Username:</label>
+            <input name="username" type="text" value="" placeholder="Username" >
         </div>
         <div class="labelWrapLogin">
-            <label>Password:</label>
+            <label class="inputLabel">Password:</label>
             <input name="password" type="password" value="" placeholder="Password">
         </div>
 
-        <div class="makeButton"><button class="backwardBtn"><i class="fas fa-arrow-circle-left fa-1x"></i> Go Back</button>
-        </div>
+        
     
-        <button class="forwardBtn" id="signinBtn" name="submit" type="submit">Sign In <i class="fas fa-arrow-circle-right"></i></button>
+        <button class="forwardBtn" id="signinBtn" name="submit" type="submit">Sign In<i class="fas fa-arrow-circle-right"></i></button>
         
     </form>
     </div>
