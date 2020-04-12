@@ -4,21 +4,27 @@ export default {
     <div class="learnCon">
     
         <h1 class="hidden">Get The Facts</h1>
-        <img src="./public/images/factImg1.svg" alt="Fact Information 1" id="factImg1">
 
-    
-        <div id="imgCon">
-            <img src="./public/images/hiv_transmission.svg" alt="HIV transmission methods" class="threeicons">
+        <div class="imgPaddingAbt">
+            <img src="./public/images/factImg1.svg" alt="Fact Information 1" id="factImg1">
         </div>
     
+        <div class="imgPaddingAbt">
+            <img src="./public/images/hiv_transmission.svg" alt="HIV transmission methods" class="aboutPic">
+        </div>
     
-        <img src="./public/images/didYouKnow.svg" alt="Did You Know?" id="didYouKnow">
-
-        <img src="./public/images/factImg2.svg" alt="Fact Information 2" id="factImg2">
-
-        <img src="./public/images/hiv-aids.svg" alt="Hiv& Aids" id="hivAndAids">
-        
-        <img src="./public/images/factImg3.svg" alt="Fact Information 3" id="factImg3">
+        <div class="imgPaddingAbt">
+            <img src="./public/images/didYouKnow.svg" alt="Did You Know?" id="didYouKnow">
+        </div>
+        <div class="imgPaddingAbt">
+            <img src="./public/images/factImg2.svg" alt="Fact Information 2" id="factImg2">
+        </div>
+        <div class="imgPaddingAbt">
+            <img src="./public/images/hiv-aids.svg" alt="Hiv& Aids" id="hivAndAids">
+        </div>
+        <div class="imgPaddingAbt">   
+            <img src="./public/images/factImg3.svg" alt="Fact Information 3" id="factImg3">
+        </div>
 
         <div class="learnPopUp" id="widgetCon">
             <div class="blueBorder">
