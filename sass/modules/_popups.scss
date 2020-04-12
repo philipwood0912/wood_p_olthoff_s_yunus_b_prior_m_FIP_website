@@ -2,8 +2,7 @@
 //styling for popup box border
 .blueBorder{
     border: 2px solid $lightBlue;
-    border-radius:8px;
-    padding:20px;
+    border-radius: 8px;
 }
 
 .icons{
@@ -16,7 +15,19 @@
 
 .iconMap{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-top:15px;
+}
+
+.iconMap img{
+    width:15%;
+    margin: 0 auto;
+
+    @include for-tablet-portrait-up {
+        width: 10%;
+    }
 }
 
 .popUp{
@@ -39,13 +50,32 @@
     color: $pink;
     font-size:18px;
     margin: 0 auto;
+    margin-top: 10px;
+
+    @include for-tablet-portrait-up {
+        font-size:20px;
+    }
+
+    @include for-desktop-up{
+        font-size:26px;
+    }
 }
 
 .popUpSmall{
     text-decoration: none;
     color: $lightBlue;
-}
+    padding: 12px;
 
+    @include for-tablet-portrait-up {
+        font-size:16px;
+        padding: 18px;
+    }
+
+    @include for-desktop-up{
+        font-size:18px;
+        padding: 20px;
+    }
+}
 
 //ABOUT POP UPS
 .aboutPopUp{

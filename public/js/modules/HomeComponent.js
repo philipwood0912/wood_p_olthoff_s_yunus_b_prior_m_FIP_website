@@ -6,8 +6,6 @@ export default {
 
         <div id="heroCon"> 
             <img src="./public/images/heroImgWeb.svg" alt="hero image with text" id="heroImage">
-
-            <i class="fas fa-chevron-down fa-3x" id="chevronDown"> </i>
         </div>
 
         <div id="homeBottom">
@@ -39,7 +37,7 @@ export default {
             <div class="blueBorder">
                 <div class="iconMap">
                     <img class="icons" alt="icon" src="./public/images/condom1.svg">
-                    <h3 class="mapTitle">Get Tested Now!</h3>
+                    <h3 class="pinkTitle">Get Tested Now!</h3>
                 </div>
 
                 <p class="popUpSmall">Enter your postal code below to find the clinic closest you.</p>
