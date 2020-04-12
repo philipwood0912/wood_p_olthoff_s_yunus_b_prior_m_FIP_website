@@ -24,7 +24,7 @@
 </head>
 <body>
 <header class="login-header">
-    <img class="headerLogo" src="../public/images/gettested_logo.svg" alt="logo">
+    <a class="headerLogo" href="../#"><img src="../public/images/gettested_logo.svg" alt="logo"></a>
 </header>
 <div class="signin-body">
 <div id="signin">

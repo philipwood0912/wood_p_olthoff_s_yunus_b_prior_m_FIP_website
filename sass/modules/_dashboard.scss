@@ -11,14 +11,6 @@
     @media (min-width: 1800px) { @content; }
   }
 
-// .dash-header {
-//     img {
-//         width:40%;
-//         @include for-desktop-up{
-//         width:25%;
-//         }
-//     }
-// }
 .dashboard-con {
     width: 100%;
     height: 80vh;
@@ -46,24 +38,26 @@
         max-width: 40%;
     }
     h2 {
-        color:$pink;
+        color: $black;
         font-size: 40px;
         line-height: 40px;
         margin: 0;
         margin-bottom: 30px;
     }
     h3 {
-        color:$lightBlue;
+        color:$darkGrey;
         font-size: 30px;
         margin: 0;
     }
 }
-
+.sub-dash-wrap {
+    padding: 50px 0px 50px 0px;
+}
 .sub-dashboard {
     background-color: $white;
     margin: 0 auto;
-    margin-top: 60px;
-    padding: 30px 30px 0px 30px;
+    //margin-top: 60px;
+    padding: 30px;
     max-width:100%;
     @include for-tablet-portrait-up {
         max-width: 80%;
@@ -89,25 +83,61 @@
             border-radius: 5px;
             background: $white;
             padding:5px 10px;
-            border: 2px solid $lightBlue;
+            border: 2px solid $darkGrey;
             border-radius: 5px;
             font-size: 20px;
-            color: $pink;
+            color: $darkGrey;
             cursor: pointer;
             font-family: $mainFont;
             margin-left: 20px;
+            -webkit-transition: .5s ease;
+            -moz-transition: .5s ease;
+            transition: .5s ease;
+        }
+        button:hover {
+            color: $black;
+            border-color: $black;
         }
     }
-    
-
-    h2 {
-        color: $pink;
-        font-size: 30px;
-        margin-bottom:50px;
+    .current-user {
+        margin-bottom: 20px;
     }
+}
+.sub-form-title {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     h3 {
-        color: $lightBlue;
-        font-size: 26px;
+        margin: 0;
+        color: $black;
+        font-size: 30px;
+        text-align: center;
+        line-height: 40px;
+    }
+    button {
+        max-width:250px;
+        height:40px;
+        margin: 0 auto;
+        border-radius: 5px;
+        background: $white;
+        padding: 5px 10px;
+        border: 2px solid $darkGrey;
+        border-radius: 5px;
+        font-size: 20px;
+        color: $darkGrey;
+        cursor: pointer;
+        font-family: $mainFont;
+        margin-left: 20px;
+        -webkit-transition: .5s ease;
+        -moz-transition: .5s ease;
+        transition: .5s ease;
+    }
+    button:hover {
+        color: $black;
+        border-color: $black;
     }
 }
 #mainNav {
@@ -123,38 +153,55 @@
             border-radius: 5px;
             background: $white;
             padding:5px 10px;
-            border: 2px solid $lightBlue;
+            border: 2px solid $darkGrey;
             border-radius: 5px;
             font-size: 20px;
-            color: $pink;
+            color: $darkGrey;
             margin-top: 20px;
             cursor: pointer;
+            -webkit-transition: .5s ease;
+            -moz-transition: .5s ease;
+            transition: .5s ease;
+        }
+        button:hover {
+            color: $black;
+            border-color: $black;
         }
     }
 }
+input:focus, button:focus, textarea:focus {outline:none;}
 .dashboard-form {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 40px;
     max-width:100%;
-
+    padding-bottom: 20px;
     @include for-tablet-landscape-up{
         max-width: 60%;
         margin: 0 auto;
     }
+    h3 {
+        font-size: 30px;
+    }
     input {
-        width: 60%;
+        width: 65%;
         margin: 0 auto;
         font-size: 22px;
-        text-align: center;
         margin-bottom: 20px;
+        color: $darkGrey;
+    }
+    input:hover {
+        color: $black;
     }
     textarea {
-        width: 60%;
+        width: 65%;
         margin: 0 auto;
         font-size: 22px;
+        color: $darkGrey;
         margin-bottom: 20px;
+    }
+    textarea:hover {
+        color: $black;
     }
     button {
             max-width:250px;
@@ -163,17 +210,27 @@
             border-radius: 5px;
             background: $white;
             padding:5px 10px;
-            border: 2px solid $lightBlue;
+            border: 2px solid $darkGrey;
             border-radius: 5px;
             font-size: 20px;
-            color: $pink;
+            color: $darkGrey;
             cursor: pointer;
             font-family: $mainFont;
-            margin-top: 10px;
+            //margin-top: 10px;
+            -webkit-transition: .5s ease;
+            -moz-transition: .5s ease;
+            transition: .5s ease;
+    }
+    button:hover {
+        color: $black;
+        border-color: $black;
+    }
+    button:first-child {
+        margin-bottom: 15px;
     }
     label {
         font-size: 27px;
-        color: $lightBlue;
+        color: $black;
         margin-bottom: 15px;
     }
 }
@@ -184,14 +241,24 @@
     margin-bottom: 25px;
     table {
         width: 100%;
-        border: 2px solid $darkBlue;
+        border: 2px solid $black;
         tr, td, tr th {
-            border: 2px solid $darkBlue;
-            color: $darkBlue;
+            border: 2px solid $black;
+            color: $darkGrey;
             font-size: 20px;
         }
         td, tr th {
             padding: 10px;
+            text-align: center;
+        }
+        a {
+            color: $darkGrey;
+            -webkit-transition: .5s ease; 
+            -moz-transition: .5s ease;
+            transition: .5s ease;
+        }
+        a:hover {
+            color: $black;
         }
     }
 }

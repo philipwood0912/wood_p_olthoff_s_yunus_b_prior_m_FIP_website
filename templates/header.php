@@ -1,5 +1,5 @@
 <header>
-        <img class="headerLogo" src="public/images/gettested_logo.svg" alt="logo">
+        <a class="headerLogo" href="#/"><img src="public/images/gettested_logo.svg" alt="logo"></a>
 
         <div id="burger">
             <div :class="{'active': isActive}" @click="showTopMenu = !showTopMenu, isActive = !isActive"><i class="fas fa-bars" ></i></div>
