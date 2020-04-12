@@ -25,7 +25,7 @@ export default {
 
             <div class="videoCon">
                 <div class="blueBorder">
-                    <video  id="promoVideo" controls>
+                    <video  class="promoVideo" controls poster="./public/images/vid_poster.jpg">
                         <source src="./public/video/promo_video_2020.mp4" type="video/mp4">
                         <source src="./public/video/promo_video_2020.ogg" type="video/ogg">
                         Your browser does not support the video tag.
@@ -33,10 +33,13 @@ export default {
                 </div>
             </div>
 
-            <div class="videoCon">
+            <div class="videoCon mapContainer">
                 <div class="blueBorder mapBorder">
                     <div class="iconMap">
-                        <img alt="icon" src="./public/images/condom1.svg">
+                        <img class="mapicons" alt="icon" src="./public/images/condom1.svg">
+                        <img class="mapicons" alt="icon" src="./public/images/needle.svg">
+                        <img class="mapicons" alt="icon" src="./public/images/doctor2.svg">
+
                         <h3 class="popUpTitle">Get Tested Now!</h3>
                     
 

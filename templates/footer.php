@@ -1,11 +1,13 @@
 <footer> 
     
     <div id="socialCon">
+        <h2 class="followUs">Find us on Social Media!</h2>
         <div id="socialIconCon">
             <i class="fab fa-youtube fa-2x"></i>
             <i class="fab fa-facebook fa-2x"></i>
             <i class="fab fa-twitter fa-2x"></i>
             <i class="fab fa-instagram fa-2x"></i>
+            <a href=""><img src="../public/images/tiktok.svg"></a>
         </div>
     </div>
 

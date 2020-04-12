@@ -27,7 +27,7 @@ export default {
                 <h3>Address: {{windowInfoAddress}}</h3>
                 <h3>Phone: {{windowInfoPhone}}</h3>
                 <h4>Distance: {{windowInfoDistance}}</h4>
-                <h4>Website:  <a target="_blank" :href="windowInfoWebsite">Click Here</a></h4>
+                <a target="_blank" :href="windowInfoWebsite">Go to Website <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
     </div>

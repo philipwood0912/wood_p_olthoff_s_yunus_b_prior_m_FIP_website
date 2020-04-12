@@ -15,26 +15,34 @@ footer{
     text-align: center;
     margin: 0 auto;
     max-width: 100%;
+    background-color: $white;
 }
 
 #footerNav{
     display: flex;
-    flex-direction: column;
-    text-decoration: none;
+    flex-direction: row;
     margin: 0 auto;
-    background: $darkBlue;
     justify-content: center;
-    padding:20px;
+    width:80%;
+
+    @include for-tablet-portrait-up{
+        width: 50%;
+    }
+
+    @include for-big-desktop-up{
+        width:30%;
+    }
 }
 
 .footerLink{
     display: flex;
     text-decoration: none;
-    opacity: 0.8;
-    color: $white;
+    color: $darkBlue;
     margin: 0 auto;
     margin-top:5px;
     margin-bottom: 5px;
+    padding:5px;
+    border-radius: 8px;
 
     @include for-tablet-portrait-up {
         margin-top:10px;
@@ -43,21 +51,30 @@ footer{
 }
 
 .footerLink:hover{
-    opacity:1.0;
+    box-shadow: 0 0 4px 4px $grey;
+    transition: all .25s ease-out;
 }
 
 #copyright{
-    background: $darkBlue;
-    color:$white;
+    color: $darkBlue;
     font-size: 14px;
+    padding: 15px;
 }
 
 #socialCon{
-    color: $white;
-    background: $darkBlue;
+    color: $darkBlue;
+    background: $white;
     display:flex;
     flex-direction: column;
-    
+    margin: 0 auto;
+}
+
+.followUs{
+    color: $pink;
+    font-size: 20px;
+    padding-left:20px;
+    padding-right:20px;
+    line-height: 26px;
 }
 
 #socialIconCon{
@@ -66,7 +83,7 @@ footer{
     justify-content: space-between;
     margin: 0 auto;
     width:50%;
-    padding-top:20px;
+    margin-bottom: 10px;
     @include for-tablet-portrait-up{
         width:40%;
     }
@@ -77,22 +94,11 @@ footer{
 
 .fab{
     opacity:0.8;
-    margin-top:10px;
+    padding: 3px;
 }
 .fab:hover{
     opacity:1.0;
-}
-
-#socialTxt{
-    color: $white;
-    background: $darkBlue;
-
-
-    @include for-tablet-portrait-up {
-        margin-top:80px;
-    }
-
-    @include for-desktop-up{
-        margin-top:100px;
-    }
+    box-shadow: 0 0 4px 4px $grey;
+    border-radius: 3px;
+    transition: all .25s ease-out;
 }
