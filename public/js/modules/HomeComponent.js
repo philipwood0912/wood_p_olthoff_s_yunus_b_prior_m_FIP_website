@@ -34,7 +34,7 @@ export default {
             </div>
 
             <div class="videoCon">
-                <div class="blueBorder">
+                <div class="blueBorder mapBorder">
                     <div class="iconMap">
                         <img alt="icon" src="./public/images/condom1.svg">
                         <h3 class="popUpTitle">Get Tested Now!</h3>
