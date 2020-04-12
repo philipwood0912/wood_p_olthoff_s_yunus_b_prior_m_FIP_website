@@ -14,6 +14,16 @@
         $email = trim($_POST['email']);
         $message = editUser($id, $fname, $lname, $email, $username);
     }
+    if(isset($_POST['passreset'])){
+        $id = $_SESSION['user_id'];
+        $oldpass = trim($_POST['oldpass']);
+        $newpass = trim($_POST['newpass']);
+        if(empty($oldpass) || empty($newpass)){
+            $message_pass = "Please fill out required fields";
+        } else {
+            $message_pass = passwordReset($id, $oldpass, $newpass);
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,6 +55,16 @@
             <input type="text" name="username" value="<?php echo $user_info['User_Name'];?>">
             <button name="submit">Edit Account</button>
             <?php endwhile;?>
+        <?php endif;?>
+        </form>
+        <h3 class="passReset"><?php echo !empty($message_pass)? $message_pass:'Reset Password';?></h3>
+        <form class="dashboard-form" action="mng_currentuser.php" method="post">
+        <?php if($current_user):?>
+            <label>Old Password</label>
+            <input type="text" name="oldpass" value="">
+            <label>New Password</label>
+            <input type="text" name="newpass" value="">
+            <button name="passreset">Edit Password</button>
         <?php endif;?>
         </form>
     </div>

@@ -50,7 +50,6 @@
     }
 
     function editUser($id, $fname, $lname, $email, $username){
-        $password_hash = password_hash($password, PASSWORD_DEFAULT);
         $pdo = Database::getInstance()->getConnection();
         $edit_query = 'UPDATE tbl_users SET F_Name =:fname, L_Name =:lname, Email =:email, User_Name =:username WHERE ID =:id';
         $edit_user = $pdo->prepare($edit_query);
@@ -64,7 +63,7 @@
             )
         );
         if($user_success){
-            redirect_to('dashboard.php');
+            redirect_to('mng_currentuser.php');
         } else {
             return "Something went wrong";
         }
@@ -90,7 +89,37 @@
         if($delete_success && $count > 0 ){
             redirect_to('mng_users.php');
         } else {
-            return 'user does not exist';
+            return 'User does not exist!';
         }
         
+    }
+    function passwordReset($id, $oldpass, $newpass){
+        $pdo = Database::getInstance()->getConnection();
+        $find_query = 'SELECT User_Pass FROM tbl_users WHERE ID =:id';
+        $find_user = $pdo->prepare($find_query);
+        $find_success = $find_user->execute(array(':id'=>$id));
+        if($find_success){
+            $pull_pass = $find_user->fetch(PDO::FETCH_ASSOC);
+            $pass_verify = password_verify($oldpass, $pull_pass['User_Pass']);
+            if($pass_verify){
+                $hash_pass = password_hash($newpass, PASSWORD_DEFAULT);
+                $reset_query = 'UPDATE tbl_users SET User_Pass =:hashpass WHERE ID =:id';
+                $reset_pass = $pdo->prepare($reset_query);
+                $reset_success = $reset_pass->execute(
+                    array(
+                        ':hashpass'=>$hash_pass,
+                        ':id'=>$id
+                    )
+                );
+                if($reset_success){
+                    return "Password has been reset!";
+                } else {
+                    return "Something went wrong";
+                }
+            } else {
+                return "Old password is incorrect";
+            }
+        } else {
+            return "User not found";
+        } 
     }

@@ -27,7 +27,7 @@ function login($username, $password){
         if($pass_ver){
             redirect_to('dashboard.php');
         } else {
-            return 'wrong password';
+            return 'Wrong password';
         }
     } else {
         return 'User does not exist!';
