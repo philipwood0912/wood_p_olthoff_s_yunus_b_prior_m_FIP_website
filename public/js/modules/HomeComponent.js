@@ -10,7 +10,7 @@ export default {
 
         <div id="homeBottom">
                 <div v-for="(content, index) in this.$parent.homeContent" :key="index">
-                    <div class="popUp" :id="content.id">
+                    <div :class="'popUp ' + content.class" :id="content.id">
                         <div class="blueBorder">
                             <div class="iconCon">
                                 <img class="icons" alt="icon" :src="'./public/images/' + content.image">

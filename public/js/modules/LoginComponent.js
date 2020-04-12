@@ -4,7 +4,6 @@ export default {
             <div id="signin">
                 <div class="signin-con">
                     <h2>Sign in to your account</h2>
-                    <h2>YOO</h2>
 
                     <h3><?php echo !empty($message)? $message:'';?></h3>
 
@@ -20,9 +19,4 @@ export default {
             </div>
         </div>
     `,
-    data: function() {
-        return {
-            hello: 1,
-        }
-    }
 }
