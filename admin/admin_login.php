@@ -31,11 +31,11 @@
 
 <div class="signin">
     <div class="blueBorder">
+        <div class="buttonWrap">
+        <form action="../#" method="get"><button class="backwardBtn homeBtn" id="homeBtn"><i class="fas fa-home"></i> Home</button></form>
 
-        <button class="backwardBtn homeBtn" id="homeBtn"><i class="fas fa-home"></i> Home</button>
-
-        <button class="forwardBtn"><i class="fas fa-arrow-circle-left"></i> Go Back</button>
-
+        <form action="../#" method="get"><button class="forwardBtn"><i class="fas fa-arrow-circle-left"></i> Go Back</button></form>
+        </div>
     <h2 class="dash-head"><?php echo !empty($message)? $message:'Sign In to Your Account';?></h2>
     <form id="signinform" action="admin_login.php" method="post">
         <div class="labelWrapLogin">
@@ -47,8 +47,6 @@
             <input name="password" type="password" value="" placeholder="Password">
         </div>
 
-        
-    
         <button class="forwardBtn" id="signinBtn" name="submit" type="submit">Sign In<i class="fas fa-arrow-circle-right"></i></button>
         
     </form>

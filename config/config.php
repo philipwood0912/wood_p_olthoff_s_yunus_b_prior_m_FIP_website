@@ -8,7 +8,7 @@ class Database
 
     private $username = "root";
 
-    private $password = ""; //No pass on windows
+    private $password = "root"; //No pass on windows
 
     private static $instance = null;
 
