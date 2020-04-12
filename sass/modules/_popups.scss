@@ -6,28 +6,21 @@
 }
 
 .icons{
-    max-width:20%;
+    margin-top:20px;
+    max-width:30%;
 
     @include for-tablet-portrait-up {
-        max-width: 30%;
+        max-width: 20%;
     }
 }
 
 .iconMap{
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
     margin: 0 auto;
-    padding-top:15px;
 }
 
 .iconMap img{
-    width:15%;
+    width:30%;
     margin: 0 auto;
-
-    @include for-tablet-portrait-up {
-        width: 10%;
-    }
 }
 
 .popUp{
@@ -36,6 +29,7 @@
     background: $white;
     margin: 0 auto;
     margin-top:40px;
+    max-width: 100%;
 
     @include for-tablet-portrait-up {
         margin-top:80px;
@@ -48,32 +42,33 @@
 
 .popUpTitle{
     color: $pink;
-    font-size:18px;
+    font-size:28px;
     margin: 0 auto;
-    margin-top: 10px;
+    margin-top: 30px;
 
     @include for-tablet-portrait-up {
-        font-size:20px;
+        font-size:32px;
     }
 
     @include for-desktop-up{
-        font-size:26px;
+        font-size: 40px;
     }
 }
 
 .popUpSmall{
     text-decoration: none;
     color: $lightBlue;
-    padding: 12px;
+    line-height: 22px;
+    padding: 20px;
 
     @include for-tablet-portrait-up {
-        font-size:16px;
-        padding: 18px;
+        font-size:20px;
+        line-height: 24px;
     }
 
     @include for-desktop-up{
-        font-size:18px;
-        padding: 20px;
+        font-size: 22px;
+        line-height: 26px;
     }
 }
 

@@ -10,40 +10,43 @@ export default {
 
         <div id="homeBottom">
 
-            <div v-for="(content, index) in this.$parent.homeContent" :key="index">
-                <div class="popUp" :id="content.id">
-                    <div class="blueBorder">
-                        <div class="iconCon">
-                            <img class="icons" alt="icon" :src="'./public/images/' + content.image">
-                            <h3 class="popUpTitle">{{content.title}}</h3>
+                <div v-for="(content, index) in this.$parent.homeContent" :key="index">
+                    <div class="popUp" :id="content.id">
+                        <div class="blueBorder">
+                            <div class="iconCon">
+                                <img class="icons" alt="icon" :src="'./public/images/' + content.image">
+                                <h3 class="popUpTitle">{{content.title}}</h3>
+                            </div>
+                            <p class="popUpSmall">{{content.text}}</p>
                         </div>
-                        <p class="popUpSmall">{{content.text}}</p>
+                    </div>
+                </div>
+            
+
+            <div class="videoCon">
+                <div class="blueBorder">
+                    <video  id="promoVideo" controls>
+                        <source src="./public/video/promo_video_2020.mp4" type="video/mp4">
+                        <source src="./public/video/promo_video_2020.ogg" type="video/ogg">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <div class="videoCon">
+                <div class="blueBorder">
+                    <div class="iconMap">
+                        <img alt="icon" src="./public/images/condom1.svg">
+                        <h3 class="popUpTitle">Get Tested Now!</h3>
+                    
+
+                        <p class="popUpSmall">Enter your postal code below to find the clinic closest you.</p>
+
+                        <widget></widget>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div id="videoCon">
-            <div class="blueBorder">
-                <video  id="promoVideo" controls>
-                    <source src="./public/video/promo_video_2020.mp4" type="video/mp4">
-                    <source src="./public/video/promo_video_2020.ogg" type="video/ogg">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-
-        <div class="popUpMap">
-            <div class="blueBorder">
-                <div class="iconMap">
-                    <img class="icons" alt="icon" src="./public/images/condom1.svg">
-                    <h3 class="pinkTitle">Get Tested Now!</h3>
-                </div>
-
-                <p class="popUpSmall">Enter your postal code below to find the clinic closest you.</p>
-                <widget></widget>
-            </div>
-            </div>
     </div>
 `,
     components: {
