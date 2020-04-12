@@ -34,43 +34,31 @@ if(isset($_GET['id'])){
 <header>
     <a class="headerLogo" href="dashboard.php"><img src="../public/images/gettested_logo.svg" alt="logo"></a>
 </header>
-<div class="sub-dash-wrap">
-<<<<<<< HEAD
-=======
-    <div class="dashboardSubIconCon">
-        <form action="logout.php" method="get" class="dashboardSubIconPad"><button class="buttonMain"><i class="fas fa-home"></i> Home</button></form>
-    </div>
->>>>>>> dfe8ccab25dcf5e7ad8cebef23db44fa3fd57be3
-    <div class="sub-dashboard">
+<div class="signin-body">
+    <div class="signin">
         <div class="blueBorder">
+        
+            <a href="../#"><button class="backwardBtn homeBtn" id="homeBtn4"><i class="fas fa-home"></i> Home</button></a>
             
-            <div class="dashboardSubContent">
-                <div class="sub-dash-title"><h2>Manage Users</h2></div>
-                <form class="dashboard-form" action="mng_users.php" method="post">
+            <div class="dashboardContent">
+                <div class="dash-head"><h2>Manage Users</h2>
+                </div>
+                <form action="mng_users.php" method="post" class="user-form">
                     <h3><?php echo !empty($message_create)? $message_create:'Create New User';?></h3>
-                    <div class="labelWrapDashboard">
                         <label>First Name:</label>
                         <input name="fname" type="text" value="" placeholder="First Name">
-                    </div>
-                    <div class="labelWrapDashboard">
                         <label>Last Name:</label>
                         <input name="lname" type="text" value="" placeholder="Last Name">
-                    </div>
-                    <div class="labelWrapDashboard">
                         <label>Email:</label>
                         <input name="email" type="email" value="" placeholder="Email">
-                    </div>
-                    <div class="labelWrapDashboard">
                         <label>Username:</label>
                         <input name="username" type="text" value="" placeholder="Username">
-                    </div>
-                    <div class="labelWrapDashboard">
                         <label>Password:</label>
                         <input name="password" type="text" value="" placeholder="Password">
-                    </div>
-                    <div class="buttonWrapSubDash">
-                        <div class="forwardBtn"><a href="dashboard.php"><i class="fas fa-arrow-circle-left"></i> Go Back</a></div>
-                        <button class="buttonMain" name="create">Create User</button>
+
+                        <a href="dashboard.php" class="backwardBtn" id="backBtn2"><i class="fas fa-arrow-circle-left"></i> Go Back</a>
+
+                        <button class="forwardBtn" name="create">Create User</button>
                     </div>
                 </form>
                 <div class="table-form">

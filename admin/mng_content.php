@@ -85,18 +85,16 @@
 <header>
     <a class="headerLogo" href="dashboard.php"><img src="../public/images/gettested_logo.svg" alt="logo"></a>
 </header>
-<div class="sub-dash-wrap">
-    <div class="dashboardSubIconCon">
-        <form action="logout.php" method="get" class="dashboardSubIconPad"><button class="buttonMain"><i class="fas fa-home"></i> Home</button></form>
-    </div>
-    <div class="sub-dashboard">
+
+<div class="signin-body">
+    <div class="signin">
         <div class="blueBorder">
-            <div class="dashboardSubContent">
-                <div class="sub-dash-title"><h2>Manage Content</h2></div>
-                <div class="sub-form-title"><h3><?php echo !empty($home_message)? $home_message:'Home Page';?></h3></div>
+        <a href="../#"><button class="backwardBtn homeBtn" id="homeBtn"><i class="fas fa-home"></i> Home</button></a>
+                <div class="sub-dash-title"><h2 class="dash-head">Manage Content</h2></div>
+                <div class="sub-form-title"><h3 class="popUpSmall"><?php echo !empty($home_message)? $home_message:'Home Page';?></h3></div>
                 <div class="buttonWrapSubDash">
-                    <form action="dashboard.php" method="get"><button class="buttonMain"><i class="fas fa-arrow-circle-left"></i> Go Back</button></form>
-                    <form action="mng_content.php?add=true&home=true" method="get"><button class="buttonMain">Add Content <i class="fas fa-arrow-circle-right"></i></button></form>
+                    <form action="dashboard.php" method="get"><button class="backwardBtn"><i class="fas fa-arrow-circle-left"></i> Go Back</button></form>
+                    <form action="mng_content.php?add=true&home=true" method="get"><button class="forwardBtn">Add Content <i class="fas fa-arrow-circle-right"></i></button></form>
                 </div>
                 <?php if(isset($_GET['add']) && isset($_GET['home'])):?>
                     <form action="mng_content.php" method="post" class="dashboard-form" enctype="multipart/form-data">
@@ -162,10 +160,10 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="sub-form-title"><h3><?php echo !empty($about_message)? $about_message:'About Page';?></h3></div>
+                <div class="sub-form-title"><h3 class="popUpSmall"><?php echo !empty($about_message)? $about_message:'About Page';?></h3></div>
                 <div class="buttonWrapSubDash">
-                    <form action="dashboard.php" method="get"><button class="buttonMain"><i class="fas fa-arrow-circle-left"></i> Go Back</button></form>
-                    <form action="mng_content.php?add=true&about=true" method="get"><button class="buttonMain">Add Content <i class="fas fa-arrow-circle-right"></i></button></form>
+                    <form action="dashboard.php" method="get"><button class="backwardBtn"><i class="fas fa-arrow-circle-left"></i> Go Back</button></form>
+                    <form action="mng_content.php?add=true&about=true" method="get"><button class="forwardBtn">Add Content <i class="fas fa-arrow-circle-right"></i></button></form>
                 </div>
                 <?php if(isset($_GET['add']) && isset($_GET['about'])):?>
                     <?php
@@ -254,7 +252,6 @@
                         </tbody>
                     </table>
                 </div>
-            </div>
         </div>
     </div>
 </div>

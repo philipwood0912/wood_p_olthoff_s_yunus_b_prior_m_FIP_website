@@ -27,18 +27,11 @@
     <a class="headerLogo" href="../#"><img src="../public/images/gettested_logo.svg" alt="logo"></a>
 </header>
 <div class="signin-body">
-<<<<<<< HEAD
     
 
 <div class="signin">
-=======
-<div class="loginIconCon">
-    <form action="../#" method="get" class="loginIconPad"><button class="buttonMain"><i class="fas fa-home"></i> Home</button></form>
-</div>
-<div id="signin">
->>>>>>> dfe8ccab25dcf5e7ad8cebef23db44fa3fd57be3
     <div class="blueBorder">
-        <a href="../#"><button class="backwardBtn homeBtn"><i class="fas fa-home fa-2x"></i> Home</button></a>
+        <a href="../#"><button class="backwardBtn homeBtn" id="homeBtn"><i class="fas fa-home"></i> Home</button></a>
     <h2 class="dash-head"><?php echo !empty($message)? $message:'Sign in to your account';?></h2>
     <form id="signinform" action="admin_login.php" method="post">
         <div class="labelWrapLogin">
@@ -49,15 +42,12 @@
             <label>Password:</label>
             <input name="password" type="password" value="" placeholder="Password">
         </div>
-        <div class="buttonWrapLogin">
-<<<<<<< HEAD
-            <a href="../#"><button type="button" class="backwardBtn"><i class="fas fa-arrow-circle-left fa-1x"></i> Go Back</button></a>
-            <button class="forwardBtn" name="submit" type="submit">Sign In <i class="fas fa-arrow-circle-right"></i></button>
-=======
-            <form action="../#" method="get"><button class="buttonMain"><i class="fas fa-arrow-circle-left fa-1x"></i> Go Back</button></form>
-            <button class="buttonMain" name="submit" type="submit">Sign In <i class="fas fa-arrow-circle-right"></i></button>
->>>>>>> dfe8ccab25dcf5e7ad8cebef23db44fa3fd57be3
+
+        <div class="makeButton"><button class="backwardBtn"><i class="fas fa-arrow-circle-left fa-1x"></i> Go Back</button>
         </div>
+    
+        <button class="forwardBtn" id="signinBtn" name="submit" type="submit">Sign In <i class="fas fa-arrow-circle-right"></i></button>
+        
     </form>
     </div>
 </div>

@@ -8,6 +8,7 @@
     background-color: $darkBlue;
     background-size: 200% 100%;
     margin-bottom: 20px;
+    margin: 0 auto;
 
     background-position: right bottom;
     transition: all .25s ease-out;
@@ -24,12 +25,14 @@
 }
 
 .backwardBtn{
+    text-decoration: none;
     width:40%;
     padding: 8px;
     border-radius: 5px;
     color: $white;
     background-color: $darkBlue;
     background: linear-gradient(to left, $white 50%, $darkBlue 50%);
+    margin: 0 auto;
     
     background-size: 200% 100%;
     margin-bottom: 20px;

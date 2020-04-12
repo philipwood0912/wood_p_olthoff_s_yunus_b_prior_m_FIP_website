@@ -38,61 +38,50 @@
 <header>
     <a class="headerLogo" href="dashboard.php"><img src="../public/images/gettested_logo.svg" alt="logo"></a>
 </header>
-<div class="sub-dash-wrap">
-<<<<<<< HEAD
-=======
-    <div class="dashboardSubIconCon">
-        <form action="logout.php" method="get" class="dashboardSubIconPad"><button class="buttonMain"><i class="fas fa-home"></i> Home</button></form>
-    </div>
->>>>>>> dfe8ccab25dcf5e7ad8cebef23db44fa3fd57be3
-    <div class="sub-dashboard">
+<div class="signin-body">
+    <div class="signin">
         <div class="blueBorder">
-        <div class="loginIconPad"><a href="../#"><button class="backwardBtn"><i class="fas fa-home"></i> Home</button></a></div>
-            <div class="dashboardSubContent">
-                <div class="sub-dash-title current-user"><h2><?php echo !empty($message)? $message:'Edit Current User';?></h2></div>
-                <form class="dashboard-form" action="mng_currentuser.php" method="post">
-                <?php if($current_user):?>
+            <div href="../#">
+                <button class="backwardBtn" id="homeBtn3"><i class="fas fa-home"></i> Home</button>
+            </div>
+            
+            <div class="dashboardContent">
+                    <h2 class="dash-head"><?php echo !empty($message)? $message:'Edit Current User';?></h2></div>
+                    <form action="mng_currentuser.php" method="post" class="user-form">
+                    <?php if($current_user):?>
+
                     <?php while($user_info = $current_user->fetch(PDO::FETCH_ASSOC)):?>
-                    <div class="labelWrapDashboard">
                         <label>First Name:</label>
                         <input type="text" name="fname" value="<?php echo $user_info['F_Name'];?>">
-                    </div>
-                    <div class="labelWrapDashboard">
                         <label>Last Name:</label>
                         <input type="text" name="lname" value="<?php echo $user_info['L_Name'];?>">
-                    </div>
-                    <div class="labelWrapDashboard">
                         <label>Email:</label>
                         <input type="text" name="email" value="<?php echo $user_info['Email'];?>">
-                    </div>
-                    <div class="labelWrapDashboard">
                         <label>Username:</label>
                         <input type="text" name="username" value="<?php echo $user_info['User_Name'];?>">
-                    </div>
-                    <button class="forwardBtn" name="submit">Edit Account</button>
+                  
+                    <button class="forwardBtn" name="submit" id="editBtn">Edit Account</button>
                     <?php endwhile;?>
-                <?php endif;?>
-                </form>
-                <h3 class="passReset"><?php echo !empty($message_pass)? $message_pass:'Reset Password';?></h3>
-                <form class="dashboard-form" action="mng_currentuser.php" method="post">
+                    <?php endif;?>
+                    </form>
+
+                    <h3 class="dash-head"><?php echo !empty($message_pass)? $message_pass:'Reset Password';?></h3>
+
+                <form action="mng_currentuser.php" method="post">
                 <?php if($current_user):?>
-                    <div class="labelWrapDashboard">
-                        <label>Old Password:</label>
-                        <input type="text" name="oldpass" value="">
-                    </div>
-                    <div class="labelWrapDashboard">
-                        <label>New Password:</label>
-                        <input type="text" name="newpass" value="">
-                    </div>
-                    <div class="buttonWrapSubDash">
-<<<<<<< HEAD
-                        <a href="dashboard.php"><button class="backwardBtn" type="button"><i class="fas fa-arrow-circle-left"></i> Go Back</button></a>
-                        <button class="forwardBtn" name="passreset">Edit Password</button>
-=======
-                        <div class="forwardBtn"><a href="dashboard.php"><i cslass="fas fa-arrow-circle-left"></i> Go Back</a></div>
-                        <button class="buttonMain" name="passreset">Edit Password</button>
->>>>>>> dfe8ccab25dcf5e7ad8cebef23db44fa3fd57be3
-                    </div>
+                        <div class="passCon">
+                            <label>Old Password:</label>
+                            <input type="text" name="oldpass" value="">
+                    
+
+                            <label>New Password:</label>
+                            <input type="text" name="newpass" value="">
+                        </div>  
+                    
+                        <button class="forwardBtn" name="submit" id="passreset">Reset Password</button>
+
+                    <div class="makeButton"><button class="backwardBtn" id="backBtn"><i class="fas fa-arrow-circle-left fa-1x"></i> Go Back</button>
+        </div>
                 <?php endif;?>
                 </form>
             </div>

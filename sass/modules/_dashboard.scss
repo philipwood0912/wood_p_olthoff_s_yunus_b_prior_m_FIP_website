@@ -13,99 +13,6 @@
 // gets rid of focus outline on buttons / input / textarea
 input:focus, button:focus, textarea:focus {outline:none;}
 // main dashboard styles
-.dashboard-con {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    justify-content: center;
-    text-align: center;
-    margin: 0 auto;
-
-    margin-top:40px;
-}
-<<<<<<< HEAD
-=======
-.dashboardIconCon {
-    width: 60%;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    padding: 5px;
-    .dashboardIconPad {
-        background-color: white;
-        padding: 5px;
-        border-radius: 5px;
-        max-width:120px;
-    }
-    button {
-        height:50px;
-        width: 100%;
-        border: 2px solid $lightBlue;
-        border-radius: 5px;
-        font-size: 18px;
-        color: $pink;
-    }
-}
-
-.dashboard {
-    background-color: white;
-    padding: 5px;
-    max-width: 80%;
-    border-radius: 8px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    @include for-tablet-portrait-up {
-        max-width: 60%;
-    }
-    @include for-desktop-up {
-        max-width: 40%;
-    }
-    //dashboard content 
-    .dashboardContent {
-        padding: 20px;
-    }
-    h2 {
-        color: $pink;
-        font-size: 40px;
-        line-height: 40px;
-        margin: 0;
-        margin-bottom: 30px;
-    }
-    h3 {
-        color:$darkBlue;
-        font-size: 30px;
-        margin: 0;
-    }
-}
-
-// dashboard nav
-#mainNav {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 0;
-    a {
-        button {
-            max-width:250px;
-            height:40px;
-            margin: 0 auto;
-            border-radius: 5px;
-            background: $white;
-            padding:5px 10px;
-            border: 2px solid $darkBlue;
-            border-radius: 5px;
-            font-size: 20px;
-            color: $pink;
-            margin-top: 20px;
-            cursor: pointer;
-        }
-    }
-} 
->>>>>>> dfe8ccab25dcf5e7ad8cebef23db44fa3fd57be3
-
 
 .table-form {
     width: 100%;
@@ -129,14 +36,74 @@ input:focus, button:focus, textarea:focus {outline:none;}
 }
 
 
-.homeBtn{
+#homeBtn{
     margin-top:20px;
 }
 
-.homeBtn i{
-    margin-right:10px;
+#homeBtn2{
+    margin-top:20px;
+}
+
+#homeBtn3{
+    margin-top:20px;
+}
+
+#homeBtn4{
+    margin-top:20px;
 }
 
 .dash-head{
     color: $pink;
+}
+
+#signinBtn{
+    margin-bottom:20px;
+}
+
+.user-form{
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.current-user{
+    display: flex;
+    flex-direction: column;
+}
+
+.current-user form{
+    display: flex;
+    flex-direction: column;
+    button{
+        margin-top: 15px;
+    }
+}
+
+#editBtn{
+    margin-top: 15px;
+}
+
+#backBtn{
+    margin-top: 15px;
+}
+
+#backBtn2{
+    margin-top: 15px;
+}
+
+.passCon{
+    display:flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#passreset{
+    margin-top: 15px;
+}
+
+.table-form{
+    margin-top: 20px;
 }
