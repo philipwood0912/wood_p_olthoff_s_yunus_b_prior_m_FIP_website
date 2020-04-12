@@ -1,17 +1,18 @@
 .popUpMap {
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
     padding: 5px;
+    width: 100%;
     background: $white;
     border-radius:8px;
-    width: 100%;
-    margin: 0 auto;
+    margin-bottom: 10px;
 }
 
 .postal-wrp {
         display: flex;
         display: column;
         margin: 0 auto;
-        width:100%;
     form {
         text-align: center;
         margin: 0 auto;
