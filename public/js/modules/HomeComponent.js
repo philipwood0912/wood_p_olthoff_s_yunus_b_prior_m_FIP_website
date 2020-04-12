@@ -23,27 +23,26 @@ export default {
                     </div>
                 </div>
             </div>
-
-            <button class="button"> <span class="buttonTxt"> Get The Facts </span></button>
-
         </div>
 
         <div id="videoCon">
-            <video  id="promoVideo" controls>
-                <source src="./public/video/promo_video_2020.mp4" type="video/mp4">
-                <source src="./public/video/promo_video_2020.ogg" type="video/ogg">
-                Your browser does not support the video tag.
-            </video>
+            <div class="blueBorder">
+                <video  id="promoVideo" controls>
+                    <source src="./public/video/promo_video_2020.mp4" type="video/mp4">
+                    <source src="./public/video/promo_video_2020.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
         </div>
 
         <div class="popUpMap">
             <div class="blueBorder">
-                <div class="iconCon iconMap">
+                <div class="iconMap">
                     <img class="icons" alt="icon" src="./public/images/condom1.svg">
-                    <h3 class="popUpTitle">Get Tested Now!</h3>
+                    <h3 class="mapTitle">Get Tested Now!</h3>
                 </div>
 
-                <p class="popUpSmall">Find a clinic near you.</p>
+                <p class="popUpSmall">Enter your postal code below to find the clinic closest you.</p>
                 <widget></widget>
             </div>
             </div>

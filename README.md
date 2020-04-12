@@ -1,5 +1,5 @@
 
-![logo](images/logo.png)
+![logo](public/images/logo.png)
 
   
   

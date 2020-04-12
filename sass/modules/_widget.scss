@@ -3,51 +3,41 @@
     padding: 5px;
     background: $white;
     border-radius:8px;
-
-    width: 80%;
-
-    margin-top:40px;
-
-    @include for-tablet-portrait-up {
-        margin-top:80px;
-    }
-
-    @include for-desktop-up{
-        margin-top:100px;
-    }
+    width: 100%;
+    margin: 0 auto;
 }
 
 .postal-wrp {
-    display: flex;
+        display: flex;
         display: column;
-        width: 100%;
         margin: 0 auto;
+        width:100%;
     form {
-        justify-content: center;
         text-align: center;
-        margin-bottom: 20px;
-        width: 100%;
         margin: 0 auto;
-        button{
-            color: $lightBlue;
-            background: none;
-            width:40%
-        }
-        input{
+        padding-top:10px;
+        padding-bottom: 10px;
+    input{
             padding:10px;
+            margin: 0 auto;
+            border-radius: 3px;
+            margin-bottom: 20px;
         }
     }
 }
 
 .widgetCon{
     display: flex;
-    flex-direction:column;}
+    flex-direction:column;
+    margin: 0 auto;
+    padding: 10px;
+}
 
 .postal-msg {
     font-size: 20px;
-    color: $lightBlue;
-
+    color: $red;
 }
+
 #map {
     position: relative;
     margin: 0 auto;
@@ -60,7 +50,6 @@
         text-align: left;
         #infowindow {
             background-color: rgba(0,0,0,0.6);
-            padding: 5px;
             h2, h3, h4, a {
                 text-decoration: none;
                 margin: 0;
@@ -75,4 +64,29 @@
             }
         }
     }
+}
+
+.arrow-btn{
+    width:40%;
+    padding: 5px;
+    border-radius: 5px;
+    background: linear-gradient(to right, $darkBlue 50%, $white 50%);
+    background-size: 200% 100%;
+    margin-bottom: 10px;
+    background-position: right bottom;
+    transition: all 0.5s ease-out;
+    color: $darkBlue;
+}
+
+.arrow-btn:hover{
+        text-decoration: none;
+        background-color: $darkBlue;
+        color: white;
+        opacity: 1.0;
+        background-position: left bottom;
+}
+
+.mapTitle{
+    color: $pink;
+    font-size:22px;
 }

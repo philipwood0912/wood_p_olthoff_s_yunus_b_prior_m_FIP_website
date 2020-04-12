@@ -5,6 +5,7 @@
             <i class="fab fa-youtube fa-2x"></i>
             <i class="fab fa-facebook fa-2x"></i>
             <i class="fab fa-twitter fa-2x"></i>
+            <i class="fab fa-instagram fa-2x"></i>
         </div>
     </div>
 
@@ -20,6 +21,6 @@
         <a class="footerLink" href="admin/admin_login.php">Admin Login</a>
     </div>
     
-    <div id="copyright"> Copyright <?php echo date('Y'); ?> 
+    <div id="copyright"><i class="far fa-copyright"></i> Copyright <?php echo date('Y'); ?> 
     </div>
 </footer>
