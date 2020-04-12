@@ -1,0 +1,34 @@
+//from home
+.button{
+    max-width:180px;
+    height:40px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background: $white;
+    padding:3px;
+    margin-top:40px;
+
+    @include for-tablet-portrait-up {
+        margin-top:80px;
+    }
+
+    @include for-desktop-up{
+        margin-top:100px;
+    }
+    
+}
+
+.buttonTxt{
+    border: 2px solid $lightBlue;
+    border-radius: 5px;
+    font-size: 18px;
+    color: $pink;
+    padding-top:4px;
+    padding-bottom:4px;
+    padding-left:6px;
+    padding-right:6px;
+}
+
+button{
+    cursor: pointer;
+}

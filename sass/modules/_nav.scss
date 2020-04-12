@@ -7,7 +7,6 @@
     width:100%;
     text-align: center;
     padding:6px;
-    transition: .25s ease-out;
 
     @include for-tablet-portrait-up {
         font-size: 20px;
@@ -20,13 +19,15 @@
   background-color: $red;
   box-shadow: 0 0 4px 4px $grey;
   color: $white;
+
+  transition: all .25s ease-out;
 }
 
 
 
 .active {
     transform: rotate(90deg);
-    transition: .5s ease;
+    transition: all .25s ease-out;
 }
 
 #menu-overlay {
@@ -77,7 +78,6 @@
   width: 100%;
 
   border-radius: 5px;
-  transition: .25s ease-out;
 }
 
 .desk:hover{
@@ -85,49 +85,6 @@
   opacity: 0.8;
   background-color: $red;
   box-shadow: 0 0 6px 6px $grey;
+  transition: all .25s ease-out;
 }
 
-
-@keyframes fadeIn {
-  0% {
-    opacity:0.3;
-  }
-  100% {
-    opacity:1;
-  }
-}
-
-@-moz-keyframes fadeIn {
-  0% {
-    opacity:0.3;
-  }
-  100% {
-    opacity:1;
-  }
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity:0.3;
-  }
-  100% {
-    opacity:1;
-  }
-}
-
-@-o-keyframes fadeIn {
-  0% {
-    opacity:0.3;
-  }
-  100% {
-    opacity:1;
-  }
-}
-
-@-ms-keyframes fadeIn {
-  0% {
-    opacity:0.3;
-  }
-  100% {
-    opacity:1;
-}}

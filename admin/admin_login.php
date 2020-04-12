@@ -27,17 +27,21 @@
     <a class="headerLogo" href="../#"><img src="../public/images/gettested_logo.svg" alt="logo"></a>
 </header>
 <div class="signin-body">
-<div id="signin">
-    <a id="gohome" href="../index.php"><button><i class="fas fa-arrow-circle-left fa-1x"></i> Go Back</button></a>
-    <h2><?php echo !empty($message)? $message:'Sign in to your account';?></h2>
-    <form id="signinform" action="admin_login.php" method="post">
-        <label class="hidden">Username</label>
-        <input name="username" type="text" value="" placeholder="Username">
-        <label class="hidden">Password</label>
-        <input name="password" type="password" value="" placeholder="Password">
-        <button name="submit" type="submit">Sign In <i class="fas fa-arrow-circle-right"></i></button>
-    </form>
-</div>
+    <div id="signin">
+        <a id="gohome" href="../index.php"><button><i class="fas fa-arrow-circle-left fa-1x"></i> Go Back</button></a>
+
+        <h2><?php echo !empty($message)? $message:'Sign in to your account';?></h2>
+        <form id="signinform" action="admin_login.php" method="post">
+
+            <label class="hidden">Username</label>
+            <input name="username" type="text" value="" placeholder="Username">
+            <label class="hidden">Password</label>
+            <input name="password" type="password" value="" placeholder="Password">
+            
+            <button name="submit" type="submit">Sign In <i class="fas fa-arrow-circle-right"></i></button>
+
+        </form>
+    </div>
 </div>
 </body>
 </html>

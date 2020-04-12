@@ -5,7 +5,7 @@ export default {
 
     <div class="abtVideoCon">
                 <div class="blueBorder">
-                    <video  id="promoVideo" controls>
+                    <video  class="promoVideo" controls>
                         <source src="./public/video/promo_video_2020.mp4" type="video/mp4">
                         <source src="./public/video/promo_video_2020.ogg" type="video/ogg">
                         Your browser does not support the video tag.
