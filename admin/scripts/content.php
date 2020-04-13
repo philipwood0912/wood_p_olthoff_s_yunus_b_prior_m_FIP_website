@@ -1,5 +1,6 @@
 <?php
-
+// function to grab all from table - takes table as parameter
+// add returns results to be processed
 function getAll($tbl){
     $pdo = Database::getInstance()->getConnection();
 
@@ -12,6 +13,8 @@ function getAll($tbl){
         return 'There was a problem..';
     }
 };
+// function to grab specific item from table - takes id and table as parameters
+// returns results to be processed
 function getItem($id, $tbl){
     $pdo = Database::getInstance()->getConnection();
     $queryAll = 'SELECT * FROM '.$tbl.' WHERE ID =:id';
@@ -23,6 +26,7 @@ function getItem($id, $tbl){
     );
     return $results;
 }
+// function to delete specific item from table - takes id and table as parameters 
 function deleteItem($id, $tbl){
     $pdo = Database::getInstance()->getConnection();
     $delete_query = 'DELETE FROM '.$tbl.' WHERE ID =:id';
@@ -33,12 +37,16 @@ function deleteItem($id, $tbl){
         )
     );
     $count = $delete_item->rowCount();
+    // if delete was a success and row count from execution is greater than 0 redirect to content page
     if($delete_success && $count > 0 ){
         redirect_to('mng_content.php');
     } else {
         return "Something went wrong..";
     }
 }
+// function to add item to home section - takes args (array) as parameter
+// code is same as we learned in class
+// extension type only svg
 function addHomeItem($args){
     try {
         $pdo = Database::getInstance()->getConnection();
@@ -75,6 +83,10 @@ function addHomeItem($args){
         return $error;
     }
 }
+// function to edit home item already in section - takes args (array) as parameter
+// code is similar to what we learned in class - modified a bit to delete image if new one is uploaded
+// or to run normal edit if no image is selected to be uploaded
+// extension type is only svg
 function editHomeItem($args){
     try{
         $pdo = Database::getInstance()->getConnection();
@@ -125,7 +137,7 @@ function editHomeItem($args){
         return $error;
     }
 }
-
+// function to edit specific about item in section - takes args (array) as parameter
 function editAboutItem($args){
     $pdo = Database::getInstance()->getConnection();
     $update_query = 'UPDATE tbl_about SET Title =:title, Text =:text WHERE ID =:id';
@@ -143,6 +155,7 @@ function editAboutItem($args){
         return 'Something went wrong..';
     }
 }
+// function to add item to about section - takes args (array) as parameter
 function addAboutItem($args){
     $pdo = Database::getInstance()->getConnection();
     $insert_query = 'INSERT INTO tbl_about(Title, Text) VALUES(:title, :text)';
