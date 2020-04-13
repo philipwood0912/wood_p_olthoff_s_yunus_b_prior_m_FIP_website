@@ -36,6 +36,10 @@
     margin-top:50px;
     margin-bottom: 50px;
     max-width: 100%;
+
+    @include for-desktop-up{
+        max-width: 60%;
+    }
 }
 
 .popUpTitle{
