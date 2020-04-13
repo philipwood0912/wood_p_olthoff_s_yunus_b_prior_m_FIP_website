@@ -170,8 +170,8 @@
                                 <tr>
                                     <td><?php echo $home_index;?></td>
                                     <td><?php echo $content['Title'];?></td>
-                                    <td><a href="mng_content.php?id=<?php echo $content['ID']?>&edit=true&home=true"><i class="fas fa-arrow-circle-right fa-2x"></i></a></td>
-                                    <td><a href="mng_content.php?id=<?php echo $content['ID']?>&delete=true&home=true"><i class="fas fa-times-circle fa-2x"></i></a></td>
+                                    <td><a href="mng_content.php?id=<?php echo $content['ID']?>&edit=true&home=true"><i class="fas fa-arrow-circle-right"></i></a></td>
+                                    <td><a href="mng_content.php?id=<?php echo $content['ID']?>&delete=true&home=true"><i class="fas fa-times-circle"></i></a></td>
                                     <?php $home_index++;?>
                                 <tr>
                             <?php endwhile;?>
@@ -250,7 +250,7 @@
                                 <a class="forwardBtn" href="mng_content.php?id=<?php echo $edit['ID']?>&edit=true&about=true&new=true">More Text</a>
                                 <hr>
                             
-                                <button class="forwardBtn" name="editabout">Edit Content</button>
+                                <button class="forwardBtn broke" name="editabout">Edit Content</button>
                             </div>
                         </form>
                     <?php endwhile;?>
@@ -270,8 +270,8 @@
                                 <tr>
                                     <td><?php echo $about_index;?></td>
                                     <td><?php echo $content['Title'];?></td>
-                                    <td><a href="mng_content.php?id=<?php echo $content['ID']?>&edit=true&about=true"><i class="fas fa-arrow-circle-right fa-2x"></i></a></td>
-                                    <td><a href="mng_content.php?id=<?php echo $content['ID']?>&delete=true&about=true"><i class="fas fa-times-circle fa-2x"></i></a></td>
+                                    <td><a href="mng_content.php?id=<?php echo $content['ID']?>&edit=true&about=true"><i class="fas fa-arrow-circle-right"></i></a></td>
+                                    <td><a href="mng_content.php?id=<?php echo $content['ID']?>&delete=true&about=true"><i class="fas fa-times-circle"></i></a></td>
                                     <?php $about_index++;?>
                                 <tr>
                             <?php endwhile;?>

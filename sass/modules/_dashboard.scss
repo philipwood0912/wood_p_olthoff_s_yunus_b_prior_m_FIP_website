@@ -35,10 +35,19 @@ input:focus, button:focus, textarea:focus {outline:none;}
     }
 }
 
+a{
+    text-decoration: none;
+}
+
 .dashboard-form{
     display: flex;
     flex-direction: column;
     max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.labelWrapDashboard{
     margin: 0 auto;
     padding: 10px;
 }
