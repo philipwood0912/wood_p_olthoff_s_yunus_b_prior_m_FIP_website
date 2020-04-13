@@ -13,7 +13,21 @@
 // gets rid of focus outline on buttons / input / textarea
 input:focus, button:focus, textarea:focus {outline:none;}
 // main dashboard styles
-
+.signin-body {
+    padding-bottom: 20px;
+}
+.shift {
+    margin-bottom: 10px;
+}
+.dashPad {
+    padding: 0px 20px 20px 20px;
+}
+.dashPadContent {
+    padding: 0px 20px 30px 20px;
+}
+.tableContent {
+    margin-bottom: 15px;
+}
 .table-form {
     width: 100%;
     margin: 0 auto;
@@ -78,6 +92,7 @@ a{
 
 #homeBtn{
     margin-top:20px;
+    margin-bottom: 10px;
 }
 
 #homeBtn2{
@@ -146,4 +161,11 @@ a{
 
 .table-form{
     margin-top: 20px;
+    margin-bottom: 15px;
+}
+.buttonShift {
+    margin-bottom: 20px;
+}
+.textareaShift {
+    margin-top: 10px;
 }
