@@ -36,12 +36,20 @@
     }
     if(isset($_POST['addhome'])){
         // if addhome is set, create args array and add new item to home according to args
-        $args = array(
-            'title'=>$_POST['title'],
-            'text'=>$_POST['text'],
-            'image'=>$_FILES['image']
-        );
-        $home_message = addHomeItem($args);
+        // set varibles to check if they are empty and return message if they are, if not run function
+        $image = $_FILES['image'];
+        $text = $_POST['text'];
+        $title = $_POST['title'];
+        if(empty($image) || empty($text) || empty($title)){
+            $home_message = "Please add some content...";
+        } else {
+            $args = array(
+                'title'=>$_POST['title'],
+                'text'=>$_POST['text'],
+                'image'=>$_FILES['image']
+            );
+            $home_message = addHomeItem($args);
+        }
     }
     if(isset($_POST['edithome'])){
         // if edithome is set, create args array and edit item in home according to args
