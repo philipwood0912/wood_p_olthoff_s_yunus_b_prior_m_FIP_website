@@ -1,31 +1,41 @@
 <?php
     require_once '../load.php';
     confirm_logged_in();
+    // set variables and pull table content to be processed
     $home_tbl = "tbl_home";
     $about_tbl = "tbl_about";
     $home_contents = getAll($home_tbl);
     $about_contents = getAll($about_tbl);
 
     if(isset($_GET['edit'])){
+        // if edit is set, get id
         $id = $_GET['id'];
         if(isset($_GET['home'])){
+            // if home is set, get item according to id and table
             $edit_item = getItem($id, $home_tbl);
         } else if (isset($_GET['about']) && !isset($_GET['new'])){
+            // if about is set and new is not
+            // reset session count and git item according to id and table
             $_SESSION['count'] = 0;
             $edit_item = getItem($id, $about_tbl);
         } else if (isset($_GET['about']) && isset($_GET['new'])){
+            // if about is set and new is set and item according to id and table
             $edit_item = getItem($id, $about_tbl);
         }
     }
     if(isset($_GET['delete'])){
+        // if delete is set, get id
         $id = $_GET['id'];
         if($_GET['home']){
+            // if home is true, delete item according to id and table
             $home_message = deleteItem($id, $home_tbl);
         } else if($_GET['about']){
+            // if about is true, delete item according to id and table
             $about_message = deleteItem($id, $about_tbl);
         }
     }
     if(isset($_POST['addhome'])){
+        // if addhome is set, create args array and add new item to home according to args
         $args = array(
             'title'=>$_POST['title'],
             'text'=>$_POST['text'],
@@ -34,6 +44,7 @@
         $home_message = addHomeItem($args);
     }
     if(isset($_POST['edithome'])){
+        // if edithome is set, create args array and edit item in home according to args
         $args = array(
             'id'=>$_POST['id'],
             'title'=>$_POST['title'],
@@ -44,18 +55,28 @@
         $home_message = editHomeItem($args);
     }
     if(isset($_POST['editabout']) || isset($_POST['addabout'])) {
+        // if editabout or addabout is set, first reset session count to 0
         $_SESSION['count'] = 0;
+        // text is coming in as an array
         $text = $_POST['text'];
         $text_check = array();
+        // run for loop to check for empty values in array
         for($i = 0; $size = count($text), $i < $size; $i++){
             if($text[$i] == ""){
+                // if text is empty, continue iteration
                 continue;
             } else {
+                // else add to new array
                 $text_check[] = $text[$i];
             }
         }
+        // create new string from array, adding them all together with ^
+        // I did this so I could split string on client side and render as individual
+        // lines opposed to a chunk of text
+        // this allows CMS users to add and remove lines with ease 
         $full_text = implode('^', $text_check);
         if(!isset($_POST['addabout'])) {
+            // if addabout is not set, create args array and edit about item according to args
             $args = array(
                 'id'=>$_POST['id'],
                 'title'=>$_POST['title'],
@@ -63,6 +84,7 @@
             );
             $about_message = editAboutItem($args);
         } else if(!isset($_POST['editabout'])) {
+            // if editabout is not set, create args array and add about item according to args
             $args = array(
                 'title'=>$_POST['title'],
                 'text'=>$full_text
@@ -94,7 +116,7 @@
                 <div class="sub-form-title"><h3 class="popUpSmall"><?php echo !empty($home_message)? $home_message:'Home Page';?></h3></div>
                 
                <a href="mng_content.php?add=true&home=true" class="forwardBtn">Add Content <i class="fas fa-arrow-circle-right"></i></a>
-                
+                <!-- Render add home form when add content button is clicked -->
                 <?php if(isset($_GET['add']) && isset($_GET['home'])):?>
                     <form action="mng_content.php" method="post" class="dashboard-form" enctype="multipart/form-data">
                         <div class="labelWrapDashboard">
@@ -114,6 +136,7 @@
                         </div>
                     </form>
                 <?php endif;?>
+                <!-- Render home edit item form when edit button in table is clicked -->
                 <?php if(isset($edit_item) && isset($_GET['home'])):?>
                     <?php while($edit = $edit_item->fetch(PDO::FETCH_ASSOC)):?>
                         <form action="mng_content.php" method="post" class="dashboard-form" enctype="multipart/form-data">
@@ -141,6 +164,7 @@
                             <th>Delete</th>
                         </tr>
                         <tbody>
+                            <!-- Render table for home - index increments at the end of each loop -->
                             <?php $home_index = 1;?>
                             <?php while($content = $home_contents->fetch(PDO::FETCH_ASSOC)):?>
                                 <tr>
@@ -157,16 +181,20 @@
                 <div class="sub-form-title"><h3 class="popUpSmall"><?php echo !empty($about_message)? $about_message:'About Page';?></h3></div>
 
                 <a href="mng_content.php?add=true&about=true" class="forwardBtn">Add Content <i class="fas fa-arrow-circle-right"></i></a>
-                
+                <!-- Render add about form on add content button click with option to add more text lines -->
                 <?php if(isset($_GET['add']) && isset($_GET['about'])):?>
                     <?php
                         if(!isset($_GET['new'])){
+                            // if new is not set, reset session count to 0
                             $_SESSION['count'] = 0;
                         }
                         if(isset($_GET['new'])){
+                            // if new is set, session count increments
+                            // used to render blank input fields to add more text to about page
                             $_SESSION['count']++;
                             $textArr = array();
                             for($i=0; $i < $_SESSION['count']; $i++){
+                                // on each loop text array gets new value
                                 $textArr[] = "";
                             }
                         }    
@@ -180,6 +208,7 @@
                             <label>Text:</label>
                             <textarea name="text[]" type="text"></textarea>
                         </div>
+                        <!-- if text array is set render blank inputs according to length of text array -->
                         <?php if(isset($textArr)):?>
                             <?php foreach($textArr as $value):?>
                                 <div class="labelWrapDashboard"><textarea name="text[]" type="text"></textarea></div>
@@ -190,16 +219,21 @@
                         
                     </form>
                 <?php endif;?>
+                <!-- Render about edit item form when edit button in table is clicked -->
                 <?php if(isset($edit_item) && isset($_GET['about'])):?>
                     <?php while($edit = $edit_item->fetch(PDO::FETCH_ASSOC)):?>
                         <?php
                             if(isset($_GET['new'])){
+                                // if new is set, session count increments
                                 $_SESSION['count']++;
+                                // text array is created by spliting text pulled from database on ^ character
                                 $textArr = explode('^', $edit['Text']);
                                 for($i=0; $i < $_SESSION['count']; $i++){
+                                    // extra slots are added according to session count
                                     $textArr[] = "";
                                 }
                             } else {
+                                // else create text array from spliting text from database
                                 $textArr = explode('^', $edit['Text']);
                             }
                         ?>
@@ -208,6 +242,7 @@
                                 <label>Title:</label>
                                 <input type="text" name="title" value="<?php echo $edit['Title']?>">
                                 <label>Text:</label>
+                                <!-- Loop through text array adding new input field for each value -->
                                 <?php foreach($textArr as $value):?>
                                     <textarea type="text" name="text[]"><?php echo $value;?></textarea><hr>
                                 <?php endforeach;?>
@@ -229,6 +264,7 @@
                             <th>Delete</th>
                         </tr>
                         <tbody>
+                            <!-- Render about table content, index increments at end of each loop -->
                             <?php $about_index = 1;?>
                             <?php while($content = $about_contents->fetch(PDO::FETCH_ASSOC)):?>
                                 <tr>

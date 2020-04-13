@@ -1,5 +1,7 @@
 <?php
     require_once '../load.php';
+    //function to grab clinics for map widget
+    // returns encoded array
     function getClinics(){
         $pdo = Database::getInstance()->getConnection();
         $clinic_query = 'SELECT * FROM tbl_clinics';

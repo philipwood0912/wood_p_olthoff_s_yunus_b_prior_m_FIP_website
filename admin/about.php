@@ -1,7 +1,8 @@
 <?php 
 
     require_once '../load.php';
-
+    // function to grab about page content
+    // return encoded array with content
     function grabAboutContent(){
         $pdo = Database::getInstance()->getConnection();
         $about_query = 'SELECT * FROM tbl_about';

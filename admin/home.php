@@ -1,6 +1,7 @@
 <?php
     require_once '../load.php';
-
+    // function to grab home page content
+    // returns encoded array
     function grabHomeContent(){
         $count = 1;
         $pdo = Database::getInstance()->getConnection();
@@ -11,6 +12,9 @@
             $count++;
             $result = array();
             $result['content_id'] = $data['ID'];
+            // modulo operator - returns remainder of $count divided by 2
+            // $count increments on each loop
+            // returns pattern 0 1 0 1 0
             $num = $count % 2;
             if($num !== 1){
                 $result['class'] = "float-left";

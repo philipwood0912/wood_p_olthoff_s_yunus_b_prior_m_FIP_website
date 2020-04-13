@@ -1,6 +1,7 @@
 <?php
 require_once '../load.php';
 confirm_logged_in();
+// this page is pretty straight forward, most code we covered in class
 if(isset($_POST['create'])){
     $fname = trim($_POST['fname']);
     $lname = trim($_POST['lname']);

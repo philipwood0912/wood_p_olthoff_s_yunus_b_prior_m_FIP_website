@@ -7,6 +7,7 @@
     if(!$current_user){
         $message = "Failed to get info";
     }
+    // this one is pretty straight forward..
     if(isset($_POST['submit'])){
         $fname = trim($_POST['fname']);
         $lname = trim($_POST['lname']);
@@ -15,6 +16,7 @@
         $message = editUser($id, $fname, $lname, $email, $username);
     }
     if(isset($_POST['passreset'])){
+        // if passreset is set, get id from session and run function if fields are not empty
         $id = $_SESSION['user_id'];
         $oldpass = trim($_POST['oldpass']);
         $newpass = trim($_POST['newpass']);
