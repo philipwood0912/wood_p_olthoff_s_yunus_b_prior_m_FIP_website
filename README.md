@@ -1,5 +1,5 @@
 
-![logo](public/images/logo.png)
+![logo](public/images/gettested_logo.png)
 
   
   
@@ -233,7 +233,7 @@ Using command line: Change directories to either htdocs (Mac) or www (Windows) w
 
 ```
 $ cd /Applications/MAMP/htdocs
-$ git clone https://github.com/philipwood0912/FIP_website
+$ git clone https://github.com/philipwood0912/wood_p_olthoff_s_yunus_b_prior_m_FIP_website.git
 ```
 
   
@@ -301,7 +301,7 @@ Create / Use database and import .sql file:
 ```
 mysql> CREATE DATABASE db_fip;
 mysql> USE db_fip;
-mysql> SOURCE /Applications/MAMP/htdocs/FIP_website/database/db_fip.sql;
+mysql> SOURCE /Applications/MAMP/htdocs/wood_p_olthoff_s_yunus_b_prior_m_FIP_website/database/db_fip.sql;
 ```
 
   
@@ -359,7 +359,7 @@ Create config.js and add it to the config folder.
   
 
 ```
-$ cd /Applications/MAMP/htdocs/FIP_website/config
+$ cd /Applications/MAMP/htdocs/wood_p_olthoff_s_yunus_b_prior_m_FIP_website/config
 $ touch config.js
 ```
 
@@ -378,8 +378,8 @@ Now add this to config.js using a code editor of your choice:
   
 
 ```javascript
-var  config = {
-MY_KEY :  'api key goes here'
+var config = {
+MY_KEY :  'api key goes here as a string'
 }
 ```
 
@@ -428,7 +428,7 @@ Or on a Mac navigate to URL:
   
 
 ```
-http://localhost:8888/FIP_website/
+http://localhost:8888/wood_p_olthoff_s_yunus_b_prior_m_FIP_website/
 ```
 
   
