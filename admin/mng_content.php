@@ -110,30 +110,23 @@
 
 <div class="signin-body">
     <div class="signin">
-        <div class="blueBorder">
+        <div class="blueBorder dashPadContent">
             <form action="logout.php" method="get"><button class="backwardBtn homeBtn" id="homeBtn"><i class="fas fa-home"></i> Home</button></form>
-                <div class="sub-dash-title"><h2 class="dash-head">Manage Content</h2></div>
-                <div class="sub-form-title"><h3 class="popUpSmall"><?php echo !empty($home_message)? $home_message:'Home Page';?></h3></div>
+            <div class="sub-dash-title"><h2 class="dash-head">Manage Content</h2></div>
+            <div class="sub-form-title"><h3 class="popUpSmall"><?php echo !empty($home_message)? $home_message:'Home Page';?></h3></div>
                 
                <a href="mng_content.php?add=true&home=true" class="forwardBtn">Add Content <i class="fas fa-arrow-circle-right"></i></a>
                 <!-- Render add home form when add content button is clicked -->
                 <?php if(isset($_GET['add']) && isset($_GET['home'])):?>
                     <form action="mng_content.php" method="post" class="dashboard-form" enctype="multipart/form-data">
-                        <div class="labelWrapDashboard">
-                            <label>Title:</label>
+                            <label class="inputLabel shift">Title:</label>
                             <input name="title" type="text" value="">
-                        </div>
-                        <div class="labelWrapDashboard">
-                            <label>Text:</label>
+                            <label class="inputLabel shift">Text:</label>
                             <textarea name="text" type="text" value=""></textarea>
-                        </div>
-                        <div class="labelWrapDashboard">
-                            <label>Image:</label>
+                            <label class="inputLabel shift">Image:</label>
                             <input type="file" name="image" value="">
-                        </div>
-                        <div class="buttonWrapSubDash formBut">
-                            <button class="buttonMain" name="addhome">Add Content</button>
-                        </div>
+                            <hr>
+                            <button class="forwardBtn" name="addhome">Add Content</button>
                     </form>
                 <?php endif;?>
                 <!-- Render home edit item form when edit button in table is clicked -->
@@ -141,17 +134,17 @@
                     <?php while($edit = $edit_item->fetch(PDO::FETCH_ASSOC)):?>
                         <form action="mng_content.php" method="post" class="dashboard-form" enctype="multipart/form-data">
                             <input class="hidden" type="text" name="id" value="<?php echo $edit['ID']?>">
-                                <label>Title:</label>
+                                <label class="inputLabel shift">Title:</label>
                                 <input type="text" name="title" value="<?php echo $edit['Title']?>">
                            
-                                <label>Text:</label>
+                                <label class="inputLabel shift">Text:</label>
                                 <textarea type="text" name="text" value=""><?php echo $edit['Text']?></textarea>
-                                <label>Image:</label>
+                                <label class="inputLabel shift">Image:</label>
                                 <input class="hidden" type="text" name="oldimage" value="<?php echo $edit['Image']?>">
                             
                             <input type="file" name="image" value="">
-                            
-                            <button class="buttonMain" name="edithome">Edit Content</button>
+                            <hr>
+                            <button class="forwardBtn" name="edithome">Edit Content</button>
                         </form>
                     <?php endwhile;?>
                 <?php endif;?>
@@ -200,21 +193,19 @@
                         }    
                     ?>
                     <form id="addabout" action="mng_content.php" method="post" class="dashboard-form">
-                        <div class="labelWrapDashboard">
-                            <label>Title:</label>
+                            <label class="inputLabel shift">Title:</label>
                             <input name="title" type="text" value="">
-                        </div>
-                        <div class="labelWrapDashboard">
-                            <label>Text:</label>
+                            <label class="inputLabel shift">Text:</label>
                             <textarea name="text[]" type="text"></textarea>
-                        </div>
                         <!-- if text array is set render blank inputs according to length of text array -->
                         <?php if(isset($textArr)):?>
                             <?php foreach($textArr as $value):?>
-                                <div class="labelWrapDashboard"><textarea name="text[]" type="text"></textarea></div>
+                                <textarea class="textareaShift" name="text[]" type="text"></textarea>
                             <?php endforeach;?>
                         <?php endif;?>
-                        <a class="forwardBtn" href="mng_content.php?&add=true&about=true&new=true">More Text</a>
+                        <hr>
+                        <a class="forwardBtn buttonShift" href="mng_content.php?&add=true&about=true&new=true">More Text</a>
+                        <hr>
                         <button class="forwardBtn" name="addabout">Add Content</button>
                         
                     </form>
@@ -239,9 +230,9 @@
                         ?>
                         <form action="mng_content.php" method="post" class="dashboard-form">
                             <input class="hidden" type="text" name="id" value="<?php echo $edit['ID']?>">
-                                <label>Title:</label>
+                                <label class="inputLabel shift">Title:</label>
                                 <input type="text" name="title" value="<?php echo $edit['Title']?>">
-                                <label>Text:</label>
+                                <label class="inputLabel shift">Text:</label>
                                 <!-- Loop through text array adding new input field for each value -->
                                 <?php foreach($textArr as $value):?>
                                     <textarea type="text" name="text[]"><?php echo $value;?></textarea><hr>
@@ -251,7 +242,6 @@
                                 <hr>
                             
                                 <button class="forwardBtn broke" name="editabout">Edit Content</button>
-                            </div>
                         </form>
                     <?php endwhile;?>
                 <?php endif;?>
@@ -277,10 +267,8 @@
                             <?php endwhile;?>
                         </tbody>
                     </table>
-
-                <a href="dashboard.php" class="backwardBtn"><i class="fas fa-arrow-circle-left"></i> Go Back</a>
-                
-            </div> 
+                </div>
+            <a href="dashboard.php" class="backwardBtn backButContent"><i class="fas fa-arrow-circle-left"></i> Go Back</a>
         </div>
     </div>
 </div>

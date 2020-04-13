@@ -37,7 +37,7 @@ if(isset($_GET['id'])){
 </header>
 <div class="signin-body">
     <div class="signin">
-        <div class="blueBorder">
+        <div class="blueBorder dashPad">
         
             <form action="logout.php" method="get"><button class="backwardBtn homeBtn" id="homeBtn4"><i class="fas fa-home"></i> Home</button></form>
             
@@ -46,15 +46,15 @@ if(isset($_GET['id'])){
                 </div>
                 <form action="mng_users.php" method="post" class="user-form">
                     <h3 class="dash-head"><?php echo !empty($message_create)? $message_create:'Create New User';?></h3>
-                        <label class="inputLabel">First Name:</label>
+                        <label class="inputLabel shift">First Name:</label>
                         <input name="fname" type="text" value="" placeholder="First Name">
-                        <label class="inputLabel">Last Name:</label>
+                        <label class="inputLabel shift">Last Name:</label>
                         <input name="lname" type="text" value="" placeholder="Last Name">
-                        <label class="inputLabel">Email:</label>
+                        <label class="inputLabel shift">Email:</label>
                         <input name="email" type="email" value="" placeholder="Email">
-                        <label class="inputLabel">Username:</label>
+                        <label class="inputLabel shift">Username:</label>
                         <input name="username" type="text" value="" placeholder="Username">
-                        <label class="inputLabel">Password:</label>
+                        <label class="inputLabel shift">Password:</label>
                         <input name="password" type="text" value="" placeholder="Password">
                         <hr>
 
