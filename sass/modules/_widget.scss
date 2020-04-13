@@ -58,6 +58,37 @@
     width: 100%;
     height: 350px;
     //border: 2px solid $darkBlue;
+    #info-wrp {
+        position: absolute;
+        bottom: 0;
+        text-align: left;
+        width: 100%;
+        #infowindow {
+            background-color: rgba(250, 250, 250, 1);
+            padding: 15px 10px 5px 10px;
+            border: 2px solid $darkBlue;
+            h3, h4, a {
+                text-decoration: none;
+                margin: 0;
+                font-weight: normal;
+                color: $darkBlue;
+                margin-bottom: 5px;
+                font-size: 20px;
+            }
+            h2 {
+                margin: 0;
+                font-weight: normal;
+                color: $darkBlue;
+                font-size: 27px;
+                margin-bottom: 10px;
+                line-height: 25px;
+
+            }
+            a:hover {
+                opacity: 0.6;
+            }
+        }
+    }
 }
 
 .mapTitle{
